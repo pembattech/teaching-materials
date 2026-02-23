@@ -1,0 +1,75 @@
+<style>
+    .box {
+        position: relative;
+        animation: move 2s infinite;
+    }
+
+    @keyframes move {
+        from {
+            left: 0;
+        }
+
+        to {
+            left: 200px;
+        }
+    }
+</style>
+
+
+<div class="box">
+    PEMBA
+</div>
+
+
+<h1>1️⃣ Smooth Button Hover Effect</h1>
+<style>
+    .btn {
+        padding: 12px 24px;
+        background: #3498db;
+        color: white;
+        border: none;
+        transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    .btn:hover {
+        background: #2c3e50;
+        transform: scale(1.1);
+    }
+</style>
+<button class="btn">Hover Me</button>
+
+
+
+<h1>
+    3️⃣ Card Lift Effect
+</h1>
+<style>
+    .card {
+        width: 200px;
+        padding: 20px;
+        background: white;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    }
+</style>
+<div class="card">Card</div>
+
+<h1>Fade In Effect</h1>
+<style>
+    .fade {
+        opacity: 0;
+        animation: fadeIn 2s forwards;
+    }
+
+    @keyframes fadeIn {
+        to {
+            opacity: 1;
+        }
+    }
+</style>
+<div class="fade">Hello</div>

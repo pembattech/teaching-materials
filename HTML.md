@@ -1,4 +1,6 @@
-## Introduction to HTML
+<!-- TODO: create Table of Content -->
+
+# **Introduction to HTML**
 
 * **HTML (HyperText Markup Language)** is the standard language used to create web pages.
 * It defines the **structure and content** of a webpage.
@@ -14,7 +16,7 @@
 
 
 
-## HTML Elements
+## **HTML Elements**
 
 * An **HTML element** consists of an **opening tag**, **content**, and a **closing tag**.
 
@@ -54,7 +56,7 @@
 
 ---
 
-## Types of HTML Elements
+## **Types of HTML Elements**
 
 HTML elements are mainly divided into two types:
 
@@ -97,7 +99,7 @@ Common inline elements:
 ---
 
 
-## HTML Attributes
+## **HTML Attributes**
 
 * **Attributes** provide extra information about an HTML element.
 * They are written inside the **opening tag**.
@@ -132,11 +134,7 @@ Example:
 
 ---
 
-Here is a **simple Practice Activity slide** you can add after the Attributes slide:
-
----
-
-## 📝 Practice Activity: HTML Attributes
+## 📝 **Practice Activity: HTML Attributes**
 
 ### 🔹 Activity 1: Identify the Attribute
 
@@ -187,22 +185,7 @@ Example Answer:
 
 ---
 
-If you want, I can now create:
-
-* A **mini quiz with answers slide**
-* A **homework assignment slide**
-* Or a **complete beginner HTML project slide** 🚀
-
-
-
-
----
-
-Here’s a **clean, beginner-friendly slide with examples** for these text formatting tags:
-
----
-
-## Text Formatting Tags in HTML
+# **Text Formatting Tags in HTML**
 
 ### 🔹 Italic `<i>`
 
@@ -214,7 +197,6 @@ Makes text slanted.
 
 **Output:** This is *italic* text.
 
----
 
 ### 🔹 Bold `<b>`
 
@@ -226,7 +208,6 @@ Makes text bold.
 
 **Output:** This is **bold** text.
 
----
 
 ### 🔹 Underline `<u>`
 
@@ -238,7 +219,6 @@ Underlines the text.
 
 **Output:** This is <u>underlined</u> text.
 
----
 
 ### 🔹 Superscript `<sup>`
 
@@ -250,7 +230,6 @@ Positions text slightly above the baseline.
 
 **Output:** 2³ = 8
 
----
 
 ### 🔹 Subscript `<sub>`
 
@@ -262,14 +241,11 @@ Positions text slightly below the baseline.
 
 **Output:** H₂O is water
 
----
-
-
-Here’s a **fully rewritten, beginner-friendly slide** on hyperlinks that explains the **`target` attribute** in detail and covers **document fragments** clearly:
 
 ---
+---
 
-## 🔗 Hyperlinks in HTML
+# 🔗 **Hyperlinks in HTML**
 
 Hyperlinks allow users to **navigate to other pages, websites, or sections within a page**. They are created using the `<a>` (anchor) tag.
 
@@ -328,17 +304,8 @@ Hyperlinks allow users to **navigate to other pages, websites, or sections withi
 
 ---
 
-### ✅ Key Points
 
-* `<a>` tags create **clickable links**
-* `href` specifies the **destination**
-* `target` controls **where the link opens**
-* `#id` (document fragment) lets users **jump to sections on the same page**
-* Links can be **external, internal, or section-specific**
-
----
-
-html```
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -429,7 +396,7 @@ html```
 
 ---
 
-## 🌱 What is CSS?
+# 🎨 **CSS**
 
 **CSS (Cascading Style Sheets)** is used to style HTML elements — colors, layout, spacing, fonts, animations, etc.
 
@@ -438,7 +405,7 @@ CSS = design/style
 
 ---
 
-### 📌 Basic CSS Syntax
+## 📌 Basic CSS Syntax
 
 ```
 selector {
@@ -459,7 +426,7 @@ p {
 
 ---
 
-## 🎯 Ways to Add CSS
+## 🎯 **Ways to Add CSS**
 
 ### 1. Inline (not recommended)
 
@@ -483,7 +450,7 @@ p { color: red; }
 
 ---
 
-## 🎨 Common CSS Properties
+## 🎨 **Common CSS Properties**
 
 | Property           | Description           | Example CSS                         | Result                      |
 | ------------------ | --------------------- | ----------------------------------- | --------------------------- |
@@ -503,7 +470,7 @@ p { color: red; }
 
 ---
 
-## 🧱 Selectors Basics
+## 🧱 **Selectors Basics**
 
 | Selector | Example  | Meaning                   |
 | -------- | -------- | ------------------------- |
@@ -521,7 +488,7 @@ Example:
 
 ---
 
-## 📦 Box Model (Very Important Concept)
+## 📦 **Box Model (Very Important Concept)**
 
 Every element is a box:
 
@@ -538,32 +505,11 @@ padding: 15px;
 
 ---
 
-## 🧪 Mini Practice Example
 
-HTML:
-
-```html
-<div class="card">Hello CSS</div>
-```
-
-CSS:
-
-```css
-.card {
-  background: lightblue;
-  padding: 20px;
-  margin: 10px;
-  border-radius: 10px;
-  text-align: center;
-}
-```
+## 🧾 **More CSS Properties Table**
 
 
-
-# 🧾 CSS Properties Reference Table
-
-
-## 🟡 Advanced Layout & Effects
+## 🟡 **Advanced Layout & Effects**
 
 | Property     | Description               | Example                                   | Effect                     |
 | ------------ | ------------------------- | ----------------------------------------- | -------------------------- |
@@ -580,7 +526,7 @@ CSS:
 
 ---
 
-## 🔴 More Advanced Animation
+## 🔴 **More Advanced Animation**
 
 | Property     | Description             | Example                                             | Effect            |
 | ------------ | ----------------------- | --------------------------------------------------- | ----------------- |
@@ -602,24 +548,12 @@ CSS:
 ```
 
 ---
-
-✅ **Learning Order Recommendation**
-
-```
-Text → Box Model → Position → Effects → Animation
-```
-
-
-
 ---
 
+# **HTML Table**
+An HTML table is used to display data in rows and columns.
 
-
-Here’s a **simple beginner guide to HTML tables** with examples and explanations:
-
----
-
-## 🧱 Basic HTML Table Example
+## 🧱 **Basic HTML Table Example**
 
 ```html
 <table border="1">
@@ -654,7 +588,7 @@ Here’s a **simple beginner guide to HTML tables** with examples and explanatio
 
 ---
 
-## 📚 Important Table Tags
+## 📚 **Important Table Tags**
 
 | Tag       | Use                |
 | --------- | ------------------ |
@@ -662,17 +596,15 @@ Here’s a **simple beginner guide to HTML tables** with examples and explanatio
 | `<tr>`    | Table row          |
 | `<th>`    | Header cell (bold) |
 | `<td>`    | Data cell          |
+| `<caption>`  | Adds a title to the table       |
+| `<thead>`    | Groups the header section       |
+| `<tbody>`    | Groups the main body data       |
+| `<tfoot>`    | Groups the footer (like totals) |
+| `<colgroup>` | Groups columns for styling      |
+| `<col>`      | Specifies column properties     |
+| `colspan`    | Merges columns                  |
+| `rowspan`    | Merges rows                     |
 
----
-
-## 🎯 Table Structure Rule
-
-```
-table
- └── tr (row)
-      ├── th (header)
-      └── td (data)
-```
 
 ---
 
@@ -695,21 +627,20 @@ th {
 
 ---
 
-✅ **Practice Task for You**
-Try creating a table for:
+### ✅ **Practice Task**
+
+Create a table that includes the following columns:
 
 * Subject
 * Marks
 * Grade
 
----
+![Student Result Table](./assets/studentResultTable.png)
 
 ---
+---
 
-# 🖼️ Image Tag (`<img>`)
-
-### ✅ Purpose
-
+# 🖼️ **Image Tag (`<img>`)**
 Displays an image on a webpage.
 
 ### 📌 Syntax
@@ -721,24 +652,11 @@ Displays an image on a webpage.
 ### 🧾 Example
 
 ```html
-<img src="cat.jpg" alt="Cute cat" width="300">
+<img src="cat.jpg" alt="Cute cat">
 ```
 
-### 🔑 Attributes
 
-| Attribute | Meaning             |
-| --------- | ------------------- |
-| `src`     | Image file path     |
-| `alt`     | Text if image fails |
-| `width`   | Image width         |
-| `height`  | Image height        |
-
----
-
-# 🌐 Iframe Tag (`<iframe>`)
-
-### ✅ Purpose
-
+# 🌐 **Iframe Tag (`<iframe>`)**
 Embeds another webpage, video, or map inside your page.
 
 ### 📌 Syntax
@@ -774,20 +692,6 @@ src="https://www.youtube.com/embed/VIDEO_ID">
 | `allowfullscreen` | Allows full screen video |
 
 ---
-
-# 🧠 Difference Between `<img>` and `<iframe>`
-
-| Feature     | `<img>`    | `<iframe>`        |
-| ----------- | ---------- | ----------------- |
-| Content     | Image only | Any webpage/video |
-| Interactive | ❌          | ✅                 |
-| Loads page  | ❌          | ✅                 |
-
-
-
-
-Great! Let’s make a **mini practice project** for beginners using **images (`<img>`) and iframes (`<iframe>`)** so you can try hands-on.
-
 ---
 
 ## 🏗 Mini Project: Travel Page
@@ -799,96 +703,7 @@ Create a simple travel page with images of places and an embedded map using an i
 ---
 
 ### **HTML Code Example**
-
-```html
-<!DOCTYPE html>
-<html>
-<head>
-  <title>My Travel Page</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-    }
-    img {
-      width: 300px;
-      height: auto;
-      margin: 10px;
-      border-radius: 10px;
-    }
-    iframe {
-      margin-top: 20px;
-      border: 2px solid #ccc;
-      border-radius: 10px;
-    }
-  </style>
-</head>
-<body>
-
-  <h1>My Favorite Travel Places</h1>
-
-  <h2>Mountains</h2>
-  <img src="mountains.jpg" alt="Mountains">
-
-  <h2>Beach</h2>
-  <img src="beach.jpg" alt="Beach">
-
-  <h2>Map to My City</h2>
-  <iframe
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.5002!2d85.32396!3d27.7172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb190d5bbf7b6f%3A0x6f5ef3f77c7a89a6!2sKathmandu%2C%20Nepal!5e0!3m2!1sen!2sus!4v1670000000000!5m2!1sen!2sus"
-    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">
-  </iframe>
-
-</body>
-</html>
-```
-
----
-
-### ✅ What You Learned
-
-1. **Images**
-
-```html
-<img src="file.jpg" alt="description">
-```
-
-* Displays a picture.
-* Can set width/height.
-
-2. **Iframes**
-
-```html
-<iframe src="url"></iframe>
-```
-
-* Embeds a webpage or map/video.
-* Can set width/height and borders.
-
-3. **Styling**
-
-* `img { width: 300px; }` → resizes images.
-* `iframe { border-radius: 10px; }` → makes edges rounded.
-
----
-
-### 📝 Practice Ideas
-
-1. Add **3 more images** of your favorite places.
-2. Embed a **YouTube video** of travel using `<iframe>`.
-3. Change the **border color** of images and iframe using CSS.
-
----
-
-If you want, I can make a **ready-to-use template** with **multiple images + YouTube video + Google Map** that you can just open in a browser and see it live.
-
-Do you want me to make that?
-
-
-
-Perfect! Here’s a **ready-to-use beginner HTML template** with **multiple images, a YouTube video, and a Google Map**. You can copy it into a `.html` file and open in your browser.
-
----
+<!-- TODO: create a real one, put here an image of the website instead of code -->
 
 ```html
 <!DOCTYPE html>
@@ -955,571 +770,3 @@ Perfect! Here’s a **ready-to-use beginner HTML template** with **multiple imag
 ```
 
 ---
-
-### ✅ What this template includes:
-
-1. **4 images** (`mountains.jpg`, `beach.jpg`, `forest.jpg`, `waterfall.jpg`)
-2. **Embedded YouTube video**
-3. **Embedded Google Map**
-4. **Basic styling**: borders, rounded corners, centered content
-
----
-
-💡 **Next Steps for Practice**:
-
-* Replace the `src` of images with your own pictures.
-* Change the YouTube video link to your favorite video.
-* Change the map to any location you like.
-* Try adding CSS hover effects on images.
-
----
-
-If you want, I can make a **more interactive version** where hovering over an image **plays a shadow effect or zoom effect**, which is beginner-friendly but looks modern.
-
-Do you want me to do that next?
-
-
----
-
-
-
-# **1. What is a Webpage Layout?**
-
-A **webpage layout** is the **arrangement of different sections on a webpage**, such as:
-
-* **Header** – top section, usually contains the logo or title
-* **Navigation** – menu or links
-* **Main content** – the main area of the page
-* **Sidebar** – extra info, ads, or links
-* **Footer** – bottom section, copyright info
-
-### Example:
-
-```
-[ Header ]
-[ Navigation ]
-[ Main Content ] [ Sidebar ]
-[ Footer ]
-```
-
-A good layout makes a website **easy to read and visually appealing**.
-
----
-
-# **2. What is Flexbox?**
-
-**Flexbox (Flexible Box)** is a **CSS layout module** that makes it easy to **arrange elements in a row or column** and control **spacing, alignment, and order**.
-
-✅ Why use Flexbox?
-
-* Align items **horizontally or vertically**
-* Make **responsive layouts**
-* Space elements evenly without complex calculations
-
----
-
-# **3. How to Use Flexbox**
-
-1. Make a container **flexible**:
-
-```css
-.container {
-  display: flex;
-}
-```
-
-2. Add child elements:
-
-```html
-<div class="container">
-  <div class="box">Box 1</div>
-  <div class="box">Box 2</div>
-  <div class="box">Box 3</div>
-</div>
-```
-
-3. Add some CSS for boxes:
-
-```css
-.box {
-  background-color: lightblue;
-  padding: 20px;
-  margin: 10px;
-  text-align: center;
-}
-```
-
-✅ Result: Boxes sit **horizontally in a row**.
-
----
-
-# **4. Important Flexbox Properties**
-
-### **Container Properties (applied to parent)**
-
-| Property          | Description                      | Example                                                 |
-| ----------------- | -------------------------------- | ------------------------------------------------------- |
-| `display: flex;`  | Makes container a flex container | `.container { display: flex; }`                         |
-| `gap`             | Space between items (vertical/horizontal) | `gap: 10px;`                                      |
-| `flex-direction`  | Direction of items (row/column)  | `flex-direction: row;` or `column;`                     |
-| `justify-content` | Horizontal alignment of items    | `justify-content: center; space-between; space-around;` |
-| `align-items`     | Vertical alignment of items      | `align-items: center; flex-start; flex-end;`            |
-| `flex-wrap`       | Allow items to wrap to next line | `flex-wrap: wrap;`                                      |
-
-
-### **Item Properties (applied to child)**
-
-| Property     | Description                   | Example                 |
-| ------------ | ----------------------------- | ----------------------- |
-| `flex`       | Grow/shrink space             | `flex: 1;`              |
-| `align-self` | Overrides container alignment | `align-self: flex-end;` |
-| `order`      | Change visual order           | `order: 2;`             |
-
----
-
-# **5. Simple Example with Flexbox**
-
-```html
-<div class="container" style="display:flex; justify-content: space-around; align-items: center; height:150px; background-color:#eee;">
-  <div style="background-color: lightblue; padding:20px;">Box 1</div>
-  <div style="background-color: lightgreen; padding:20px;">Box 2</div>
-  <div style="background-color: pink; padding:20px;">Box 3</div>
-</div>
-```
-
-✅ Result: Three boxes are **evenly spaced horizontally** and **centered vertically**.
-
----
-
-# **6. Beginner Tips**
-
-* Start with `display: flex;`
-* Experiment with `justify-content` and `align-items`
-* Use `flex-direction: column;` for vertical layouts
-* Use `flex-wrap: wrap;` to make layouts responsive
-
----
-
-
-
-Absolutely! Let’s do a **beginner-friendly introduction to CSS Grid** with step-by-step explanations and examples.
-
----
-
-# **1. What is CSS Grid?**
-
-**CSS Grid** is a layout system that lets you **create rows and columns** easily. It is **great for building two-dimensional layouts**, unlike flexbox which is mostly one-dimensional (row or column).
-
-✅ You can create things like:
-
-```
-[ Header Header Header ]
-[ Sidebar Main Main ]
-[ Footer Footer Footer ]
-```
-
----
-
-# **2. Basic Grid Example**
-
-```html
-<div class="grid-container">
-  <div class="item">1</div>
-  <div class="item">2</div>
-  <div class="item">3</div>
-  <div class="item">4</div>
-  <div class="item">5</div>
-  <div class="item">6</div>
-</div>
-```
-
-```css
-.grid-container {
-  display: grid;                /* Make it a grid container */
-  grid-template-columns: repeat(3, 100px); /* 3 columns of 100px each */
-  grid-template-rows: 100px;    /* Each row 100px height */
-  gap: 10px;                    /* Space between grid items */
-}
-
-.item {
-  background-color: lightgreen;
-  text-align: center;
-  line-height: 100px; /* Center text vertically */
-  border: 1px solid #333;
-}
-```
-
-✅ **Result:**
-A grid with **3 columns and 2 rows**. Items automatically flow into the grid cells.
-
----
-
-# **3. Important Grid Properties**
-
-### **Container Properties (applied to parent)**
-
-| Property                | Description                      |
-| ----------------------- | -------------------------------- |
-| `display: grid`         | Make a grid container            |
-| `grid-template-columns` | Defines column sizes             |
-| `grid-template-rows`    | Defines row sizes                |
-| `gap`                   | Space between rows & columns     |
-| `grid-auto-flow`        | Controls how items fill the grid |
-
-### **Item Properties (applied to child)**
-
-| Property       | Description                      |
-| -------------- | -------------------------------- |
-| `grid-column`  | Span or position of columns      |
-| `grid-row`     | Span or position of rows         |
-| `justify-self` | Horizontal alignment inside cell |
-| `align-self`   | Vertical alignment inside cell   |
-
----
-
-# **4. Example: Responsive Grid with 3 Columns**
-
-```css
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
-  gap: 15px;
-}
-
-.item {
-  background-color: lightcoral;
-  padding: 30px;
-  text-align: center;
-}
-```
-
-* `1fr` = fraction of available space
-* `repeat(3, 1fr)` = 3 columns, each taking equal space
-* `gap: 15px` = 15px spacing between items
-
----
-
-# **5. Advanced Grid Example (Span & Position)**
-
-```html
-<div class="grid-container">
-  <div class="item a">Header</div>
-  <div class="item b">Sidebar</div>
-  <div class="item c">Main</div>
-  <div class="item d">Footer</div>
-</div>
-```
-
-```css
-.grid-container {
-  display: grid;
-  grid-template-columns: 200px 1fr;
-  grid-template-rows: 80px 1fr 50px;
-  gap: 10px;
-}
-
-.a { grid-column: 1 / 3; background-color: lightblue; }
-.b { grid-row: 2; background-color: lightgreen; }
-.c { grid-row: 2; background-color: lightpink; }
-.d { grid-column: 1 / 3; background-color: lightgray; }
-```
-
-✅ **Result:**
-
-* Header spans **2 columns**
-* Sidebar in left column
-* Main content in right column
-* Footer spans full width
-
----
-
-### 💡 Beginner Tips
-
-1. Start with **`display: grid` and `grid-template-columns`**
-2. Use **`gap`** instead of margins for spacing
-3. Use **fractional units (`fr`)** for responsive grids
-4. Learn **span items** with `grid-column` and `grid-row`
-
----
-
-If you want, I can **create a visual image showing a basic CSS grid layout with gaps and columns**, like I did for flexbox, so you can **see the grid structure clearly**.
-
-Do you want me to make that image?
-
-
-Perfect! Let’s make a **Bento Grid with actual content**. I’ll pick a **“Travel Destinations”** theme so each box has a title, image, and short description. This will make it look like a real portfolio or dashboard.
-
----
-
-## **HTML + CSS: Travel Bento Grid**
-
-```html
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Travel Bento Grid</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f0f0f0;
-      padding: 20px;
-    }
-
-    h2 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    .bento-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: repeat(2, 200px);
-      gap: 15px;
-    }
-
-    .bento-grid div {
-      background-color: white;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      padding: 10px;
-    }
-
-    /* Make Item 1 bigger */
-    .item1 { grid-column: span 2; grid-row: span 2; }
-
-    img {
-      width: 100%;
-      height: 120px;
-      object-fit: cover;
-      border-radius: 8px;
-    }
-
-    h3 {
-      margin: 5px 0;
-      font-size: 18px;
-      color: #333;
-    }
-
-    p {
-      font-size: 14px;
-      color: #666;
-      margin: 0;
-    }
-  </style>
-</head>
-<body>
-
-<h2>Top Travel Destinations</h2>
-
-<div class="bento-grid">
-  <div class="item1">
-    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Bali Beach">
-    <h3>Bali, Indonesia</h3>
-    <p>Beautiful beaches, lush rice terraces, and vibrant culture make Bali a top destination.</p>
-  </div>
-  <div>
-    <img src="https://images.unsplash.com/photo-1549887534-9a511f515b62" alt="Paris">
-    <h3>Paris, France</h3>
-    <p>The city of lights and love, famous for the Eiffel Tower and art museums.</p>
-  </div>
-  <div>
-    <img src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad" alt="New York">
-    <h3>New York, USA</h3>
-    <p>The bustling city that never sleeps, full of iconic landmarks and skyscrapers.</p>
-  </div>
-  <div>
-    <img src="https://images.unsplash.com/photo-1534081333815-ae5019106622" alt="Tokyo">
-    <h3>Tokyo, Japan</h3>
-    <p>Modern skyscrapers, ancient temples, and delicious cuisine in a single city.</p>
-  </div>
-  <div>
-    <img src="https://images.unsplash.com/photo-1493558103817-58b2924bce98" alt="Rome">
-    <h3>Rome, Italy</h3>
-    <p>Historic ruins, art, and Italian cuisine in the eternal city of Rome.</p>
-  </div>
-  <div>
-    <img src="https://images.unsplash.com/photo-1549887534-6df39b46e01c" alt="Sydney">
-    <h3>Sydney, Australia</h3>
-    <p>Famous for its Opera House, beaches, and vibrant city life.</p>
-  </div>
-</div>
-
-</body>
-</html>
-```
-
----
-
-### ✅ How it Works
-
-1. **Item 1 (Bali)** is **big** → `grid-column: span 2; grid-row: span 2;`
-2. Other items fit **small boxes** automatically.
-3. **Images** use `object-fit: cover` → maintain aspect ratio without stretching.
-4. **Box shadow and border-radius** → make it look modern and clean.
-5. **Gap** between items → `gap: 15px;`
-
----
-
-💡 **Next Steps for Learning:**
-
-* Replace images with your own content.
-* Add **hover effects** to boxes (like zoom or shadow).
-* Make the grid **responsive** for mobile using `@media` queries.
-
----
-
-If you want, I can make a **visual image of this Bento Grid with real content** so you can **see the layout before coding it**.
-
-Do you want me to make that image?
-
-
-
----
-Absolutely! Let’s break down **media queries** for beginners step by step so it’s easy to understand and practice.
-
----
-
-# **1. What is a Media Query?**
-
-A **media query** is a **CSS technique** that allows you to **apply styles based on the device’s screen size or type**.
-
-✅ Example use cases:
-
-* Make text bigger on small screens
-* Change layout on mobile
-* Hide certain elements on smaller devices
-
----
-
-# **2. Basic Syntax**
-
-```css
-@media (condition) {
-  /* CSS rules go here */
-}
-```
-
-* `@media` → starts the media query
-* `(condition)` → e.g., `max-width: 600px`
-* CSS rules inside `{}` apply only if condition is true
-
----
-
-# **3. Simple Example: Change background color on small screens**
-
-```css
-body {
-  background-color: lightblue;
-}
-
-@media (max-width: 600px) {
-  body {
-    background-color: lightgreen;
-  }
-}
-```
-
-✅ Explanation:
-
-* Default background → light blue
-* On screens **600px or smaller**, background changes → light green
-
----
-
-# **4. Media Query for Text Size**
-
-```css
-p {
-  font-size: 18px;
-}
-
-@media (max-width: 500px) {
-  p {
-    font-size: 14px; /* smaller text on mobile */
-  }
-}
-```
-
-* Makes paragraph text smaller on phones or small screens
-
----
-
-# **5. Media Query for Layout (Flex Example)**
-
-```css
-.container {
-  display: flex;
-  gap: 20px;
-}
-
-@media (max-width: 700px) {
-  .container {
-    flex-direction: column; /* stack items vertically on small screens */
-  }
-}
-```
-
-✅ Explanation:
-
-* Desktop: items are **side by side**
-* Mobile: items **stack vertically** for better readability
-
----
-
-# **6. Beginner Tips**
-
-1. Start with **max-width** → style smaller screens
-2. Use `min-width` for **desktop-first design**
-3. Combine multiple conditions:
-
-```css
-@media (max-width: 600px) and (orientation: portrait) {
-  /* Styles for small, vertical screens */
-}
-```
-
-4. Always **test your page** by resizing the browser
-
----
-
-# **7. Example: Responsive Bento Grid with Media Query**
-
-```css
-.bento-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 15px;
-}
-
-/* On small screens, show 2 columns instead of 4 */
-@media (max-width: 800px) {
-  .bento-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* On very small screens, show 1 column */
-@media (max-width: 500px) {
-  .bento-grid {
-    grid-template-columns: 1fr;
-  }
-}
-```
-
-✅ Result:
-
-* Desktop → 4 columns
-* Tablet → 2 columns
-* Mobile → 1 column (stacked)
-
----
-
-If you want, I can **combine your Bento Grid example with a full beginner-friendly responsive media query**, so it **automatically adapts for mobile and tablet screens**.
-
-Do you want me to do that?
-
-
