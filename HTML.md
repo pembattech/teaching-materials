@@ -2,57 +2,51 @@
 
 # **Introduction to HTML**
 
-* **HTML (HyperText Markup Language)** is the standard language used to create web pages.
-* It defines the **structure and content** of a webpage.
-* HTML uses **elements (called tags)** to organize content such as headings, paragraphs, links, and images.
-* Tags are written inside **angle brackets** `< >`.
-* Most elements have:
+- **HTML (HyperText Markup Language)** is the standard language used to create web pages.
+- It defines the **structure and content** of a webpage.
+- HTML uses **elements (called tags)** to organize content such as headings, paragraphs, links, and images.
+- Tags are written inside **angle brackets** `< >`.
+- Most elements have:
+  - an **opening tag** (e.g., `<p>`)
+  - a **closing tag** (e.g., `</p>`)
 
-  * an **opening tag** (e.g., `<p>`)
-  * a **closing tag** (e.g., `</p>`)
-* HTML files are saved with the **.html** file extension.
+- HTML files are saved with the **.html** file extension.
 
 ---
 
-
-
 ## **HTML Elements**
 
-* An **HTML element** consists of an **opening tag**, **content**, and a **closing tag**.
-
-  * Example:
+- An **HTML element** consists of an **opening tag**, **content**, and a **closing tag**.
+  - Example:
 
     ```html
     <title>Hello World</title>
     ```
 
-* Elements can contain text or other elements.
-
-  * Example:
+- Elements can contain text or other elements.
+  - Example:
 
     ```html
     <body>
-        <p>Welcome to the world</p>
+      <p>Welcome to the world</p>
     </body>
     ```
 
-* Elements can include **attributes** that provide additional information.
-
-  * Example:
+- Elements can include **attributes** that provide additional information.
+  - Example:
 
     ```html
     <a href="https://www.google.com">Google</a>
     ```
 
-* Some elements are **empty (self-closing)**, meaning they do not have content or a closing tag.
-
-  * Example:
+- Some elements are **empty (self-closing)**, meaning they do not have content or a closing tag.
+  - Example:
 
     ```html
-    <br>
+    <br />
     ```
 
-* HTML tags are **not case-sensitive**, but lowercase is recommended for best practice.
+- HTML tags are **not case-sensitive**, but lowercase is recommended for best practice.
 
 ---
 
@@ -62,9 +56,9 @@ HTML elements are mainly divided into two types:
 
 ### 1️⃣ Block-Level Elements
 
-* Take up the **full width** of the page
-* Always start on a **new line**
-* Can contain other block and inline elements
+- Take up the **full width** of the page
+- Always start on a **new line**
+- Can contain other block and inline elements
 
 Examples:
 
@@ -81,9 +75,9 @@ Common block elements:
 
 ### 2️⃣ Inline Elements
 
-* Do **not start on a new line**
-* Only take up as much width as needed
-* Usually used inside block elements
+- Do **not start on a new line**
+- Only take up as much width as needed
+- Usually used inside block elements
 
 Examples:
 
@@ -98,12 +92,11 @@ Common inline elements:
 
 ---
 
-
 ## **HTML Attributes**
 
-* **Attributes** provide extra information about an HTML element.
-* They are written inside the **opening tag**.
-* Attributes are written in **name="value"** format.
+- **Attributes** provide extra information about an HTML element.
+- They are written inside the **opening tag**.
+- Attributes are written in **name="value"** format.
 
 Example:
 
@@ -113,23 +106,21 @@ Example:
 
 In this example:
 
-* `href` is the attribute name
-* `"https://www.google.com"` is the value
+- `href` is the attribute name
+- `"https://www.google.com"` is the value
 
 ---
 
 ### Common HTML Attributes
 
-* **class** – Used to apply CSS styles to elements
-* **id** – Used to uniquely identify an element
-* **style** – Used to add inline CSS styles
+- **class** – Used to apply CSS styles to elements
+- **id** – Used to uniquely identify an element
+- **style** – Used to add inline CSS styles
 
 Example:
 
 ```html
-<p id="intro" class="text" style="color:blue;">
-  Welcome!
-</p>
+<p id="intro" class="text" style="color:blue;">Welcome!</p>
 ```
 
 ---
@@ -141,7 +132,7 @@ Example:
 Look at the code:
 
 ```html
-<img src="photo.jpg" alt="My Photo">
+<img src="photo.jpg" alt="My Photo" />
 ```
 
 👉 Questions:
@@ -157,7 +148,7 @@ Look at the code:
 Correct the mistake:
 
 ```html
-<p id=intro>Welcome to my website</p>
+<p id="intro">Welcome to my website</p>
 ```
 
 👉 Hint: Attribute values must be inside **quotes**.
@@ -174,8 +165,8 @@ Correct Answer:
 
 Write an `<a>` tag that:
 
-* Links to Google
-* Uses a class called `"link"`
+- Links to Google
+- Uses a class called `"link"`
 
 Example Answer:
 
@@ -195,8 +186,7 @@ Makes text slanted.
 <p>This is <i>italic</i> text.</p>
 ```
 
-**Output:** This is *italic* text.
-
+**Output:** This is _italic_ text.
 
 ### 🔹 Bold `<b>`
 
@@ -208,7 +198,6 @@ Makes text bold.
 
 **Output:** This is **bold** text.
 
-
 ### 🔹 Underline `<u>`
 
 Underlines the text.
@@ -218,7 +207,6 @@ Underlines the text.
 ```
 
 **Output:** This is <u>underlined</u> text.
-
 
 ### 🔹 Superscript `<sup>`
 
@@ -230,7 +218,6 @@ Positions text slightly above the baseline.
 
 **Output:** 2³ = 8
 
-
 ### 🔹 Subscript `<sub>`
 
 Positions text slightly below the baseline.
@@ -241,8 +228,8 @@ Positions text slightly below the baseline.
 
 **Output:** H₂O is water
 
-
 ---
+
 ---
 
 # 🔗 **Hyperlinks in HTML**
@@ -257,8 +244,8 @@ Hyperlinks allow users to **navigate to other pages, websites, or sections withi
 <a href="https://www.google.com">Visit Google</a>
 ```
 
-* `href` = URL the link points to
-* Text between `<a>` and `</a>` = **clickable text**
+- `href` = URL the link points to
+- Text between `<a>` and `</a>` = **clickable text**
 
 ---
 
@@ -268,12 +255,11 @@ Hyperlinks allow users to **navigate to other pages, websites, or sections withi
 <a href="https://www.google.com" target="_blank">Google</a>
 ```
 
-* `target="_blank"` → Opens link in a **new browser tab**
-* Other target options:
-
-  * `_self` → Opens link in the **same tab** (default)
-  * `_parent` → Opens link in the **parent frame**
-  * `_top` → Opens link in the **full body of the window**, breaking out of frames
+- `target="_blank"` → Opens link in a **new browser tab**
+- Other target options:
+  - `_self` → Opens link in the **same tab** (default)
+  - `_parent` → Opens link in the **parent frame**
+  - `_top` → Opens link in the **full body of the window**, breaking out of frames
 
 > **Tip:** Use `_blank` for external sites to keep users on your page
 
@@ -285,7 +271,7 @@ Hyperlinks allow users to **navigate to other pages, websites, or sections withi
 <a href="about.html">About Us</a>
 ```
 
-* Links to another page within your website
+- Links to another page within your website
 
 ---
 
@@ -298,101 +284,158 @@ Hyperlinks allow users to **navigate to other pages, websites, or sections withi
 <h2 id="contact">Contact Us</h2>
 ```
 
-* `#contact` → Jumps to the element with `id="contact"`
-* This is called a **document fragment**
-* Useful for **single-page navigation** or table-of-contents links
+- `#contact` → Jumps to the element with `id="contact"`
+- This is called a **document fragment**
+- Useful for **single-page navigation** or table-of-contents links
 
 ---
-
 
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document Fragment Long Example</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-        }
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background-color: #f8f8f8;
-            padding: 15px;
-            border-bottom: 1px solid #ccc;
-        }
-        nav a {
-            margin-right: 20px;
-            text-decoration: none;
-            color: #0077cc;
-            font-weight: bold;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        section {
-            margin-top: 100px;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            min-height: 1000px; /* Make sections long for scrolling */
-        }
-        h2 {
-            color: #333;
-        }
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 20px;
+      }
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: #f8f8f8;
+        padding: 15px;
+        border-bottom: 1px solid #ccc;
+      }
+      nav a {
+        margin-right: 20px;
+        text-decoration: none;
+        color: #0077cc;
+        font-weight: bold;
+      }
+      nav a:hover {
+        text-decoration: underline;
+      }
+      section {
+        margin-top: 100px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        min-height: 1000px; /* Make sections long for scrolling */
+      }
+      h2 {
+        color: #333;
+      }
     </style>
-</head>
-<body>
-
+  </head>
+  <body>
     <h1>Welcome to My Website</h1>
 
     <!-- Navigation Links (Document Fragments) -->
     <nav>
-        <a href="#about">About Us</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
+      <a href="#about">About Us</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
     </nav>
 
     <!-- Sections -->
     <section id="about">
-        <h2>About Us</h2>
-        <p>Welcome to our company. We are committed to providing the best services possible. Our journey started many years ago, and since then, we have grown into a large team of dedicated professionals. Our mission is to provide high-quality solutions for all your needs. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sit amet sapien sit amet urna pretium viverra. Sed vehicula, risus at porttitor efficitur, dolor odio tempus felis, sed fermentum elit justo at lectus. Integer posuere quam a fermentum aliquam. Fusce nec est at arcu cursus tincidunt.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras at urna nec nulla tincidunt sodales. Etiam auctor lectus nec turpis fringilla, id viverra justo dignissim. Proin ut erat nec urna suscipit bibendum. Phasellus tincidunt, lorem vel tempus pretium, nisl erat scelerisque erat, nec egestas lectus nisl id felis. Mauris sed porta metus, et sagittis sapien. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum sit amet quam vitae sapien feugiat vehicula. </p>
-        <p>Curabitur eget felis nec urna fringilla imperdiet. Vivamus non bibendum urna. Integer gravida elit ut ex ultricies, nec fermentum lectus scelerisque. Cras tincidunt nisl nec tortor mattis, nec scelerisque lorem porta. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+      <h2>About Us</h2>
+      <p>
+        Welcome to our company. We are committed to providing the best services
+        possible. Our journey started many years ago, and since then, we have
+        grown into a large team of dedicated professionals. Our mission is to
+        provide high-quality solutions for all your needs. Lorem ipsum dolor sit
+        amet, consectetur adipiscing elit. Suspendisse sit amet sapien sit amet
+        urna pretium viverra. Sed vehicula, risus at porttitor efficitur, dolor
+        odio tempus felis, sed fermentum elit justo at lectus. Integer posuere
+        quam a fermentum aliquam. Fusce nec est at arcu cursus tincidunt.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras at urna
+        nec nulla tincidunt sodales. Etiam auctor lectus nec turpis fringilla,
+        id viverra justo dignissim. Proin ut erat nec urna suscipit bibendum.
+        Phasellus tincidunt, lorem vel tempus pretium, nisl erat scelerisque
+        erat, nec egestas lectus nisl id felis. Mauris sed porta metus, et
+        sagittis sapien. Vestibulum ante ipsum primis in faucibus orci luctus et
+        ultrices posuere cubilia curae; Vestibulum sit amet quam vitae sapien
+        feugiat vehicula.
+      </p>
+      <p>
+        Curabitur eget felis nec urna fringilla imperdiet. Vivamus non bibendum
+        urna. Integer gravida elit ut ex ultricies, nec fermentum lectus
+        scelerisque. Cras tincidunt nisl nec tortor mattis, nec scelerisque
+        lorem porta. Pellentesque habitant morbi tristique senectus et netus et
+        malesuada fames ac turpis egestas.
+      </p>
     </section>
 
     <section id="services">
-        <h2>Services</h2>
-        <p>Our services are designed to help you achieve your goals. We specialize in:</p>
-        <ul>
-            <li>Web Development – Building responsive, modern websites</li>
-            <li>Graphic Design – Creating visually stunning designs</li>
-            <li>SEO Optimization – Helping your website rank higher on search engines</li>
-        </ul>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget felis nec urna fringilla imperdiet. Vivamus non bibendum urna. Integer gravida elit ut ex ultricies, nec fermentum lectus scelerisque. Cras tincidunt nisl nec tortor mattis, nec scelerisque lorem porta. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut risus vitae nulla porttitor hendrerit.</p>
-        <p>Fusce in purus at nunc posuere tincidunt. Suspendisse potenti. Etiam ut risus non lacus blandit fringilla. Sed feugiat augue id diam ullamcorper, vel pulvinar arcu efficitur. Phasellus nec nisl id nisi ullamcorper volutpat. Donec rhoncus metus sed nisi venenatis, nec laoreet justo sagittis. Proin nec nisi a nulla efficitur mattis in ac arcu. Nullam nec erat eu nisi tincidunt luctus. </p>
+      <h2>Services</h2>
+      <p>
+        Our services are designed to help you achieve your goals. We specialize
+        in:
+      </p>
+      <ul>
+        <li>Web Development – Building responsive, modern websites</li>
+        <li>Graphic Design – Creating visually stunning designs</li>
+        <li>
+          SEO Optimization – Helping your website rank higher on search engines
+        </li>
+      </ul>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget
+        felis nec urna fringilla imperdiet. Vivamus non bibendum urna. Integer
+        gravida elit ut ex ultricies, nec fermentum lectus scelerisque. Cras
+        tincidunt nisl nec tortor mattis, nec scelerisque lorem porta.
+        Pellentesque habitant morbi tristique senectus et netus et malesuada
+        fames ac turpis egestas. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit. Donec ut risus vitae nulla porttitor hendrerit.
+      </p>
+      <p>
+        Fusce in purus at nunc posuere tincidunt. Suspendisse potenti. Etiam ut
+        risus non lacus blandit fringilla. Sed feugiat augue id diam
+        ullamcorper, vel pulvinar arcu efficitur. Phasellus nec nisl id nisi
+        ullamcorper volutpat. Donec rhoncus metus sed nisi venenatis, nec
+        laoreet justo sagittis. Proin nec nisi a nulla efficitur mattis in ac
+        arcu. Nullam nec erat eu nisi tincidunt luctus.
+      </p>
     </section>
 
     <section id="contact">
-        <h2>Contact</h2>
-        <p>If you have any questions, feel free to reach out to us. We are always happy to help. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sit amet sapien sit amet urna pretium viverra. Sed vehicula, risus at porttitor efficitur, dolor odio tempus felis, sed fermentum elit justo at lectus. Integer posuere quam a fermentum aliquam. Fusce nec est at arcu cursus tincidunt.</p>
-        <p>Email: info@example.com</p>
-        <p>Phone: 123-456-7890</p>
-        <p>Address: 123 Main Street, City, Country</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at felis ut urna ultrices dictum. Proin auctor turpis vel felis cursus, id fermentum est ultrices. Integer eu nunc id nulla luctus consectetur. Morbi euismod eros in lacus placerat, ac fermentum justo mattis. Vestibulum convallis dolor a urna tempus, a aliquet eros porttitor. Mauris vitae mi sed neque ullamcorper mattis. </p>
-        <p>Thank you for visiting our website! We hope you find all the information you need and enjoy exploring our services.</p>
+      <h2>Contact</h2>
+      <p>
+        If you have any questions, feel free to reach out to us. We are always
+        happy to help. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Suspendisse sit amet sapien sit amet urna pretium viverra. Sed vehicula,
+        risus at porttitor efficitur, dolor odio tempus felis, sed fermentum
+        elit justo at lectus. Integer posuere quam a fermentum aliquam. Fusce
+        nec est at arcu cursus tincidunt.
+      </p>
+      <p>Email: info@example.com</p>
+      <p>Phone: 123-456-7890</p>
+      <p>Address: 123 Main Street, City, Country</p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at felis ut
+        urna ultrices dictum. Proin auctor turpis vel felis cursus, id fermentum
+        est ultrices. Integer eu nunc id nulla luctus consectetur. Morbi euismod
+        eros in lacus placerat, ac fermentum justo mattis. Vestibulum convallis
+        dolor a urna tempus, a aliquet eros porttitor. Mauris vitae mi sed neque
+        ullamcorper mattis.
+      </p>
+      <p>
+        Thank you for visiting our website! We hope you find all the information
+        you need and enjoy exploring our services.
+      </p>
     </section>
-
-</body>
+  </body>
 </html>
 ```
-
 
 ---
 
@@ -407,7 +450,7 @@ CSS = design/style
 
 ## 📌 Basic CSS Syntax
 
-```
+````
 selector {
   property: value;
 }
@@ -420,7 +463,7 @@ p {
   color: blue;
   font-size: 18px;
 }
-```
+````
 
 ➡ This makes all `<p>` text blue and size 18px.
 
@@ -438,35 +481,36 @@ p {
 
 ```html
 <style>
-p { color: red; }
+  p {
+    color: red;
+  }
 </style>
 ```
 
 ### 3. External (best practice)
 
 ```html
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css" />
 ```
 
 ---
 
 ## 🎨 **Common CSS Properties**
 
-| Property           | Description           | Example CSS                         | Result                      |
-| ------------------ | --------------------- | ----------------------------------- | --------------------------- |
-| `color`            | Changes text color    | `p { color: red; }`                 | Paragraph text becomes red  |
-| `background-color` | Sets background color | `div { background-color: yellow; }` | Div background turns yellow |
-| `font-size`        | Controls text size    | `h1 { font-size: 30px; }`           | Heading text becomes larger |
-| `margin`           | Space outside element | `.box { margin: 20px; }`            | Adds outer spacing          |
-| `padding`          | Space inside element  | `.box { padding: 15px; }`           | Adds inner spacing          |
-| `border`           | Adds outline          | `.box { border: 2px solid black; }` | Creates border around box   |
-| `width`            | Sets element width    | `img { width: 200px; }`             | Image width fixed           |
-| `height`           | Sets element height   | `img { height: 150px; }`            | Image height fixed          |
-| `text-align`       | Aligns text           | `h1 { text-align: center; }`        | Text moves to center        |
-| `display`          | Controls layout type  | `span { display: block; }`          | Inline becomes block        |
-| `text-decoration` | Adds underline, line-through, etc. | `a { text-decoration: underline; }` | Underlines text |
-| `font-weight`     | Controls boldness                  | `p { font-weight: bold; }`          | Makes text bold |
-
+| Property           | Description                        | Example CSS                         | Result                      |
+| ------------------ | ---------------------------------- | ----------------------------------- | --------------------------- |
+| `color`            | Changes text color                 | `p { color: red; }`                 | Paragraph text becomes red  |
+| `background-color` | Sets background color              | `div { background-color: yellow; }` | Div background turns yellow |
+| `font-size`        | Controls text size                 | `h1 { font-size: 30px; }`           | Heading text becomes larger |
+| `margin`           | Space outside element              | `.box { margin: 20px; }`            | Adds outer spacing          |
+| `padding`          | Space inside element               | `.box { padding: 15px; }`           | Adds inner spacing          |
+| `border`           | Adds outline                       | `.box { border: 2px solid black; }` | Creates border around box   |
+| `width`            | Sets element width                 | `img { width: 200px; }`             | Image width fixed           |
+| `height`           | Sets element height                | `img { height: 150px; }`            | Image height fixed          |
+| `text-align`       | Aligns text                        | `h1 { text-align: center; }`        | Text moves to center        |
+| `display`          | Controls layout type               | `span { display: block; }`          | Inline becomes block        |
+| `text-decoration`  | Adds underline, line-through, etc. | `a { text-decoration: underline; }` | Underlines text             |
+| `font-weight`      | Controls boldness                  | `p { font-weight: bold; }`          | Makes text bold             |
 
 ---
 
@@ -505,9 +549,7 @@ padding: 15px;
 
 ---
 
-
 ## 🧾 **More CSS Properties Table**
-
 
 ## 🟡 **Advanced Layout & Effects**
 
@@ -542,15 +584,21 @@ padding: 15px;
 }
 
 @keyframes move {
-  from { left: 0; }
-  to { left: 200px; }
+  from {
+    left: 0;
+  }
+  to {
+    left: 200px;
+  }
 }
 ```
 
 ---
+
 ---
 
 # **HTML Table**
+
 An HTML table is used to display data in rows and columns.
 
 ## 🧱 **Basic HTML Table Example**
@@ -590,12 +638,12 @@ An HTML table is used to display data in rows and columns.
 
 ## 📚 **Important Table Tags**
 
-| Tag       | Use                |
-| --------- | ------------------ |
-| `<table>` | Creates table      |
-| `<tr>`    | Table row          |
-| `<th>`    | Header cell (bold) |
-| `<td>`    | Data cell          |
+| Tag          | Use                             |
+| ------------ | ------------------------------- |
+| `<table>`    | Creates table                   |
+| `<tr>`       | Table row                       |
+| `<th>`       | Header cell (bold)              |
+| `<td>`       | Data cell                       |
 | `<caption>`  | Adds a title to the table       |
 | `<thead>`    | Groups the header section       |
 | `<tbody>`    | Groups the main body data       |
@@ -605,23 +653,23 @@ An HTML table is used to display data in rows and columns.
 | `colspan`    | Merges columns                  |
 | `rowspan`    | Merges rows                     |
 
-
 ---
 
 ## ✨ Simple Styled Table (Beginner CSS)
 
 ```html
 <style>
-table {
-  border-collapse: collapse;
-}
-th, td {
-  border: 1px solid black;
-  padding: 8px;
-}
-th {
-  background-color: lightblue;
-}
+  table {
+    border-collapse: collapse;
+  }
+  th,
+  td {
+    border: 1px solid black;
+    padding: 8px;
+  }
+  th {
+    background-color: lightblue;
+  }
 </style>
 ```
 
@@ -631,32 +679,34 @@ th {
 
 Create a table that includes the following columns:
 
-* Subject
-* Marks
-* Grade
+- Subject
+- Marks
+- Grade
 
 ![Student Result Table](./assets/studentResultTable.png)
 
 ---
+
 ---
 
 # 🖼️ **Image Tag (`<img>`)**
+
 Displays an image on a webpage.
 
 ### 📌 Syntax
 
 ```html
-<img src="image.jpg" alt="description">
+<img src="image.jpg" alt="description" />
 ```
 
 ### 🧾 Example
 
 ```html
-<img src="cat.jpg" alt="Cute cat">
+<img src="cat.jpg" alt="Cute cat" />
 ```
 
-
 # 🌐 **Iframe Tag (`<iframe>`)**
+
 Embeds another webpage, video, or map inside your page.
 
 ### 📌 Syntax
@@ -674,8 +724,7 @@ Embeds another webpage, video, or map inside your page.
 ### 🧾 Example (YouTube Video)
 
 ```html
-<iframe width="400" height="250"
-src="https://www.youtube.com/embed/VIDEO_ID">
+<iframe width="400" height="250" src="https://www.youtube.com/embed/VIDEO_ID">
 </iframe>
 ```
 
@@ -692,6 +741,7 @@ src="https://www.youtube.com/embed/VIDEO_ID">
 | `allowfullscreen` | Allows full screen video |
 
 ---
+
 ---
 
 ## 🏗 Mini Project: Travel Page
@@ -703,70 +753,347 @@ Create a simple travel page with images of places and an embedded map using an i
 ---
 
 ### **HTML Code Example**
+
 <!-- TODO: create a real one, put here an image of the website instead of code -->
 
 ```html
 <!DOCTYPE html>
 <html>
-<head>
-  <title>My Travel Page</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      background-color: #f0f8ff;
-      margin: 0;
-      padding: 20px;
-    }
-    h1, h2 {
-      color: #2e8b57;
-    }
-    img {
-      width: 300px;
-      height: auto;
-      margin: 10px;
-      border: 3px solid #2e8b57;
-      border-radius: 10px;
-    }
-    iframe {
-      margin: 20px 0;
-      border: 3px solid #2e8b57;
-      border-radius: 10px;
-    }
-    .video, .map {
-      display: block;
-      margin: 0 auto;
-    }
-  </style>
-</head>
-<body>
+  <head>
+    <title>My Travel Page</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #f0f8ff;
+        margin: 0;
+        padding: 20px;
+      }
+      h1,
+      h2 {
+        color: #2e8b57;
+      }
+      img {
+        width: 300px;
+        height: auto;
+        margin: 10px;
+        border: 3px solid #2e8b57;
+        border-radius: 10px;
+      }
+      iframe {
+        margin: 20px 0;
+        border: 3px solid #2e8b57;
+        border-radius: 10px;
+      }
+      .video,
+      .map {
+        display: block;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>My Favorite Travel Places</h1>
 
-  <h1>My Favorite Travel Places</h1>
+    <h2>Mountains</h2>
+    <img src="mountains.jpg" alt="Mountains" />
 
-  <h2>Mountains</h2>
-  <img src="mountains.jpg" alt="Mountains">
+    <h2>Beach</h2>
+    <img src="beach.jpg" alt="Beach" />
 
-  <h2>Beach</h2>
-  <img src="beach.jpg" alt="Beach">
+    <h2>Forest</h2>
+    <img src="forest.jpg" alt="Forest" />
 
-  <h2>Forest</h2>
-  <img src="forest.jpg" alt="Forest">
+    <h2>Waterfall</h2>
+    <img src="waterfall.jpg" alt="Waterfall" />
 
-  <h2>Waterfall</h2>
-  <img src="waterfall.jpg" alt="Waterfall">
+    <h2>Travel Video</h2>
+    <iframe
+      class="video"
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+      title="YouTube video"
+      allowfullscreen
+    ></iframe>
 
-  <h2>Travel Video</h2>
-  <iframe class="video" width="560" height="315"
-    src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-    title="YouTube video" allowfullscreen></iframe>
-
-  <h2>Map to Kathmandu</h2>
-  <iframe class="map" 
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.5002!2d85.32396!3d27.7172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb190d5bbf7b6f%3A0x6f5ef3f77c7a89a6!2sKathmandu%2C%20Nepal!5e0!3m2!1sen!2sus!4v1670000000000!5m2!1sen!2sus"
-    width="600" height="450" allowfullscreen="" loading="lazy"></iframe>
-
-</body>
+    <h2>Map to Kathmandu</h2>
+    <iframe
+      class="map"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.5002!2d85.32396!3d27.7172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb190d5bbf7b6f%3A0x6f5ef3f77c7a89a6!2sKathmandu%2C%20Nepal!5e0!3m2!1sen!2sus!4v1670000000000!5m2!1sen!2sus"
+      width="600"
+      height="450"
+      allowfullscreen=""
+      loading="lazy"
+    ></iframe>
+  </body>
 </html>
 ```
+
+---
+
+---
+
+# **Webpage Layout**
+
+A **webpage layout** is the **arrangement of different sections on a webpage**, such as:
+
+- **Header** – top section, usually contains the logo or title
+- **Navigation** – menu or links
+- **Main content** – the main area of the page
+- **Sidebar** – extra info, ads, or links
+- **Footer** – bottom section, copyright info
+
+### Example:
+
+![Webpage Layout](./assets/basicWebpageLayout.png)
+
+---
+
+---
+
+# **Webpage Layout**
+
+A **webpage layout** is the **arrangement of different sections on a webpage**, such as:
+
+- **Header** – top section, usually contains the logo or title
+- **Navigation** – menu or links
+- **Main content** – the main area of the page
+- **Sidebar** – extra info, ads, or links
+- **Footer** – bottom section, copyright info
+
+### Example:
+
+![Webpage Layout](./assets/basicWebpageLayout.png)
+
+---
+
+---
+
+# **Flexbox**
+
+**Flexbox** is a powerful CSS layout system designed to help you **structure and align elements efficiently** within a container. It simplifies the process of arranging items in **rows or columns** while giving you precise control over **spacing, alignment, and order**.
+
+---
+
+## ✅ **Why Use Flexbox?**
+
+- **Easy Alignment** — Center or position items horizontally and vertically with minimal code
+- **Responsive Design** — Automatically adapts layouts for different screen sizes
+- **Clean Spacing Control** — Distribute space evenly without complicated calculations
+- **Flexible Ordering** — Rearrange elements visually without changing HTML structure
+
+---
+
+## **How to Use Flexbox**
+
+1. Make a container **flexible**:
+
+```css
+.container {
+  display: flex;
+}
+```
+
+2. Add child elements:
+
+```html
+<div class="container">
+  <div class="box">Box 1</div>
+  <div class="box">Box 2</div>
+  <div class="box">Box 3</div>
+</div>
+```
+
+3. Add some CSS for boxes:
+
+```css
+.box {
+  background-color: lightblue;
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+}
+```
+
+✅ Result:
+![Box in horizontally](./assets/boxesHorizontally.png)
+
+## **Important Flexbox Properties**
+
+### **Container Properties (applied to parent)**
+
+| Property          | Description                               | Example                                                 |
+| ----------------- | ----------------------------------------- | ------------------------------------------------------- |
+| `display: flex;`  | Makes container a flex container          | `.container { display: flex; }`                         |
+| `gap`             | Space between items (vertical/horizontal) | `gap: 10px;`                                            |
+| `flex-direction`  | Direction of items (row/column)           | `flex-direction: row;` or `column;`                     |
+| `justify-content` | Horizontal alignment of items             | `justify-content: center; space-between; space-around;` |
+| `align-items`     | Vertical alignment of items               | `align-items: center; flex-start; flex-end;`            |
+| `flex-wrap`       | Allow items to wrap to next line          | `flex-wrap: wrap;`                                      |
+
+### **Item Properties (applied to child)**
+
+| Property     | Description                   | Example                 |
+| ------------ | ----------------------------- | ----------------------- |
+| `flex`       | Grow/shrink space             | `flex: 1;`              |
+| `align-self` | Overrides container alignment | `align-self: flex-end;` |
+| `order`      | Change visual order           | `order: 2;`             |
+
+---
+
+## **Example with Flexbox**
+
+### 1. Navigation (header)
+
+```html
+<style>
+  body {
+    font-family: Arial, sans-serif;
+  }
+
+  /* Header */
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #34495e;
+    color: white;
+  }
+
+  /* Logo / Brand */
+  .logo {
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  /* Search box */
+  .search-box input {
+    padding: 6px 10px;
+    border-radius: 4px;
+    border: none;
+    width: 250px;
+  }
+
+  /* Right links */
+  .auth-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+    font-weight: bold;
+  }
+
+  .auth-links a:hover {
+    text-decoration: underline;
+  }
+</style>
+
+<div class="header">
+  <div class="logo">National Skill Academy</div>
+
+  <div class="search-box">
+    <input type="text" placeholder="Search..." />
+  </div>
+
+  <div class="auth-links">
+    <a href="#">Login</a>
+    <a href="#">Signup</a>
+  </div>
+</div>
+```
+
+**Result:**
+![alt text](assets/flexNavigationHeader.png)
+
+### 2. Sidebar With Main Content
+
+```html
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  .container {
+    display: flex;
+    min-height: 100vh;
+  }
+
+  .sidebar {
+    width: 220px;
+    background: #2c3e50;
+    color: white;
+    padding: 20px;
+  }
+
+  .sidebar h2 {
+    margin-top: 0;
+  }
+
+  .sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin: 10px 0;
+  }
+
+  .sidebar a:hover {
+    text-decoration: underline;
+  }
+
+  .content {
+    flex: 1;
+    padding: 20px;
+    background: #f4f4f4;
+  }
+</style>
+
+<div class="container">
+  <div class="sidebar">
+    <h2>Menu</h2>
+    <a href="#">Dashboard</a>
+    <a href="#">Orders</a>
+    <a href="#">Settings</a>
+  </div>
+
+  <div class="content">
+    <h1>Main Content</h1>
+    <p>This is your main area.</p>
+  </div>
+</div>
+```
+
+**Result:**
+![alt text](assets/flexSidebarWithMaincontent.png)
+
+### 3. Centering an element
+
+```html
+<style>
+  .container {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    height: 100dvh;
+    background-color: coral;
+    padding: 20px;
+  }
+
+  .centered-content {
+    background-color: lightblue;
+    padding: 10px;
+  }
+</style>
+
+<div class="container">
+  <div class="centered-content">Centered Content</div>
+</div>
+```
+
+**Result:**
+![alt text](assets/flexNavigationHeader.png)
+
+---
 
 ---
