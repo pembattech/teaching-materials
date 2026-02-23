@@ -450,11 +450,11 @@ CSS = design/style
 
 ## 📌 Basic CSS Syntax
 
-````
+```css
 selector {
   property: value;
 }
-``
+```
 
 **Example**
 
@@ -463,7 +463,7 @@ p {
   color: blue;
   font-size: 18px;
 }
-````
+```
 
 ➡ This makes all `<p>` text blue and size 18px.
 
@@ -831,7 +831,6 @@ Create a simple travel page with images of places and an embedded map using an i
 ```
 
 ---
-
 ---
 
 # **Webpage Layout**
@@ -849,25 +848,6 @@ A **webpage layout** is the **arrangement of different sections on a webpage**, 
 ![Webpage Layout](./assets/basicWebpageLayout.png)
 
 ---
-
----
-
-# **Webpage Layout**
-
-A **webpage layout** is the **arrangement of different sections on a webpage**, such as:
-
-- **Header** – top section, usually contains the logo or title
-- **Navigation** – menu or links
-- **Main content** – the main area of the page
-- **Sidebar** – extra info, ads, or links
-- **Footer** – bottom section, copyright info
-
-### Example:
-
-![Webpage Layout](./assets/basicWebpageLayout.png)
-
----
-
 ---
 
 # **Flexbox**
@@ -1004,7 +984,7 @@ A **webpage layout** is the **arrangement of different sections on a webpage**, 
 ```
 
 **Result:**
-![alt text](assets/flexNavigationHeader.png)
+![Navigation Header](assets/flexNavigationHeader.png)
 
 ### 2. Sidebar With Main Content
 
@@ -1065,7 +1045,7 @@ A **webpage layout** is the **arrangement of different sections on a webpage**, 
 ```
 
 **Result:**
-![alt text](assets/flexSidebarWithMaincontent.png)
+![Sidebar with Main content](assets/flexSidebarWithMaincontent.png)
 
 ### 3. Centering an element
 
@@ -1092,7 +1072,7 @@ A **webpage layout** is the **arrangement of different sections on a webpage**, 
 ```
 
 **Result:**
-![alt text](assets/flexNavigationHeader.png)
+![Centering an Element](assets/flexCenteringElement.png)
 
 ---
 
