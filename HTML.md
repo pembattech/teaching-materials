@@ -1,3 +1,85 @@
+
+<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
+
+<!-- code_chunk_output -->
+
+- [**Introduction to HTML**](#introduction-to-html)
+  - [**HTML Elements**](#html-elements)
+  - [**Types of HTML Elements**](#types-of-html-elements)
+    - [1️⃣ Block-Level Elements](#1️⃣-block-level-elements)
+    - [2️⃣ Inline Elements](#2️⃣-inline-elements)
+  - [**HTML Attributes**](#html-attributes)
+    - [Common HTML Attributes](#common-html-attributes)
+  - [📝 **Practice Activity: HTML Attributes**](#-practice-activity-html-attributes)
+    - [🔹 Activity 1: Identify the Attribute](#-activity-1-identify-the-attribute)
+    - [🔹 Activity 2: Fix the Code](#-activity-2-fix-the-code)
+    - [🔹 Activity 3: Create Your Own](#-activity-3-create-your-own)
+- [**Text Formatting Tags in HTML**](#text-formatting-tags-in-html)
+    - [🔹 Italic `<i>`](#-italic-i)
+    - [🔹 Bold `<b>`](#-bold-b)
+    - [🔹 Underline `<u>`](#-underline-u)
+    - [🔹 Superscript `<sup>`](#-superscript-sup)
+    - [🔹 Subscript `<sub>`](#-subscript-sub)
+- [🔗 **Hyperlinks in HTML**](#-hyperlinks-in-html)
+    - [🔹 Basic Link](#-basic-link)
+    - [🔹 Open Link in a New Tab (`target` Attribute)](#-open-link-in-a-new-tab-target-attribute)
+    - [🔹 Link to Another Page on Your Site](#-link-to-another-page-on-your-site)
+    - [🔹 Link to a Section on the Same Page (Document Fragment)](#-link-to-a-section-on-the-same-page-document-fragment)
+- [🎨 **CSS**](#-css)
+  - [📌 Basic CSS Syntax](#-basic-css-syntax)
+  - [🎯 **Ways to Add CSS**](#-ways-to-add-css)
+    - [1. Inline (not recommended)](#1-inline-not-recommended)
+    - [2. Internal](#2-internal)
+    - [3. External (best practice)](#3-external-best-practice)
+  - [🎨 **Common CSS Properties**](#-common-css-properties)
+  - [🧱 **Selectors Basics**](#-selectors-basics)
+  - [📦 **Box Model (Very Important Concept)**](#-box-model-very-important-concept)
+  - [🧾 **More CSS Properties Table**](#-more-css-properties-table)
+  - [🟡 **Advanced Layout & Effects**](#-advanced-layout--effects)
+  - [🔴 **More Advanced Animation**](#-more-advanced-animation)
+- [**HTML Table**](#html-table)
+  - [🧱 **Basic HTML Table Example**](#-basic-html-table-example)
+  - [📚 **Important Table Tags**](#-important-table-tags)
+  - [✨ Simple Styled Table (Beginner CSS)](#-simple-styled-table-beginner-css)
+    - [✅ **Practice Task**](#-practice-task)
+- [🖼️ **Image Tag (`<img>`)**](#️-image-tag-img)
+    - [📌 Syntax](#-syntax)
+    - [🧾 Example](#-example)
+- [🌐 **Iframe Tag (`<iframe>`)**](#-iframe-tag-iframe)
+    - [📌 Syntax](#-syntax-1)
+    - [🧾 Example (Website)](#-example-website)
+    - [🧾 Example (YouTube Video)](#-example-youtube-video)
+    - [🔑 Common iframe Attributes](#-common-iframe-attributes)
+  - [🏗 Mini Project: Travel Page](#-mini-project-travel-page)
+- [**Webpage Layout**](#webpage-layout)
+    - [Example:](#example)
+- [**Flexbox**](#flexbox)
+  - [✅ **Why Use Flexbox?**](#-why-use-flexbox)
+  - [**How to Use Flexbox**](#how-to-use-flexbox)
+  - [**Important Flexbox Properties**](#important-flexbox-properties)
+    - [**Container Properties (applied to parent)**](#container-properties-applied-to-parent)
+    - [**Item Properties (applied to child)**](#item-properties-applied-to-child)
+  - [**Example with Flexbox**](#example-with-flexbox)
+    - [1. Navigation (header)](#1-navigation-header)
+    - [2. Sidebar With Main Content](#2-sidebar-with-main-content)
+    - [3. Centering an element](#3-centering-an-element)
+- [**Grid**](#grid)
+  - [**Basic Grid Example**](#basic-grid-example)
+  - [**Important Grid Properties**](#important-grid-properties)
+    - [**Container Properties (applied to parent)**](#container-properties-applied-to-parent-1)
+    - [**Item Properties (applied to child)**](#item-properties-applied-to-child-1)
+  - [**Example: Responsive Grid with 3 Columns**](#example-responsive-grid-with-3-columns)
+  - [**HTML + CSS: Travel Bento Grid**](#html--css-travel-bento-grid)
+- [**Media Query**](#media-query)
+  - [**Basic Syntax**](#basic-syntax)
+  - [**Simple Example: Change background color on small screens**](#simple-example-change-background-color-on-small-screens)
+  - [**Media Query for Layout (Flex Example)**](#media-query-for-layout-flex-example)
+- [**7. Example: Responsive Bento Grid with Media Query**](#7-example-responsive-bento-grid-with-media-query)
+
+<!-- /code_chunk_output -->
+
+
+
 <!-- TODO: create Table of Content -->
 
 # **Introduction to HTML**
@@ -627,7 +709,7 @@ An HTML table is used to display data in rows and columns.
 
 ---
 
-## 📊 Output
+**📊 Output**
 
 | Name | Age | City      |
 | ---- | --- | --------- |
@@ -746,13 +828,10 @@ Embeds another webpage, video, or map inside your page.
 
 ## 🏗 Mini Project: Travel Page
 
-### **Goal:**
-
 Create a simple travel page with images of places and an embedded map using an iframe.
 
----
 
-### **HTML Code Example**
+**HTML Code Example**
 
 <!-- TODO: create a real one, put here an image of the website instead of code -->
 
@@ -1075,5 +1154,381 @@ A **webpage layout** is the **arrangement of different sections on a webpage**, 
 ![Centering an Element](assets/flexCenteringElement.png)
 
 ---
+---
 
+
+
+# **Grid**
+
+**CSS Grid** is a layout system that lets you **create rows and columns** easily. It is **great for building two-dimensional layouts**, unlike flexbox which is mostly one-dimensional (row or column).
+
+---
+
+## **Basic Grid Example**
+
+```html
+<div class="grid-container">
+ <div class="item">1</div>
+ <div class="item">2</div>
+ <div class="item">3</div>
+ <div class="item">4</div>
+ <div class="item">5</div>
+ <div class="item">6</div>
+</div>
+```
+
+```css
+.grid-container {
+ display: grid;                /* Make it a grid container */
+ grid-template-columns: 1fr 1fr 1fr
+ grid-template-rows: 100px;    /* Each row 100px height */
+ gap: 10px;                    /* Space between grid items */
+}
+
+.item {
+ background-color: lightgreen;
+ text-align: center;
+ line-height: 100px; /* Center text vertically */
+ border: 1px solid #333;
+}
+```
+
+✅ **Result:**
+A grid with **3 columns and 2 rows**. Items automatically flow into the grid cells.
+
+![gridBasicExample](assets/gridBasicExample.png)
+
+---
+
+## **Important Grid Properties**
+
+### **Container Properties (applied to parent)**
+
+
+| Property                | Description                      |
+| ----------------------- | -------------------------------- |
+| `display: grid`         | Make a grid container            |
+| `grid-template-columns` | Defines column sizes             |
+| `grid-template-rows`    | Defines row sizes                |
+| `gap`                   | Space between rows & columns     |
+
+
+### **Item Properties (applied to child)**
+
+| Property       | Description                      |
+| -------------- | -------------------------------- |
+| `grid-column`  | Span or position of columns      |
+| `grid-row`     | Span or position of rows         |
+| `justify-self` | Horizontal alignment inside cell |
+| `align-self`   | Vertical alignment inside cell   |
+
+---
+
+## **Example: Responsive Grid with 3 Columns**
+
+```css
+.grid-container {
+ display: grid;
+ grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+ gap: 15px;
+}
+
+.item {
+ background-color: lightcoral;
+ padding: 30px;
+ text-align: center;
+}
+```
+
+* `1fr` = fraction of available space
+* `repeat(3, 1fr)` = 3 columns, each taking equal space
+* `gap: 15px` = 15px spacing between items
+
+---
+
+---
+
+## **HTML + CSS: Travel Bento Grid**
+
+```html
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(to right, #e0f7fa, #f1f8ff);
+  padding: 40px;
+}
+
+/* Grid Layout */
+.bento-container {
+  display: grid;
+  height: 100vh;
+  gap: 20px;
+
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+
+  grid-template-areas:
+    "hero hero paris tips"
+    "hero hero tokyo tips"
+    "stats stats alps alps";
+}
+
+.card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: white;
+}
+
+.card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.overlay::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 1;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: left;
+}
+
+.content h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.content p {
+  font-size: 14px;
+  opacity: 0.95;
+}
+
+button {
+  margin-top: 12px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  background: #ff7b54;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Assign grid areas */
+.hero   { grid-area: hero; }
+.paris  { grid-area: paris; }
+.tokyo  { grid-area: tokyo; }
+.tips   { grid-area: tips; background: white; color: #333; }
+.stats  { grid-area: stats; background: linear-gradient(135deg,#4facfe,#00f2fe); color: white; }
+.alps   { grid-area: alps; }
+
+/* Tips text styling */
+.tips h2 {
+  margin-bottom: 15px;
+}
+
+.tips p {
+  line-height: 1.7;
+}
+
+</style>
+
+<div class="bento-container">
+
+  <!-- Hero -->
+  <div class="card hero overlay">
+    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Bali">
+    <div class="content">
+      <h2>Explore Bali 🌴</h2>
+      <p>Discover paradise beaches, temples & tropical escapes.</p>
+      <button>Book Now</button>
+    </div>
+  </div>
+
+  <!-- Paris -->
+  <div class="card paris overlay">
+    <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34" alt="Paris">
+    <div class="content">
+      <h2>Paris 🇫🇷</h2>
+      <p>The city of lights & romance.</p>
+    </div>
+  </div>
+
+  <!-- Tokyo -->
+  <div class="card tokyo overlay">
+    <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e" alt="Tokyo">
+    <div class="content">
+      <h2>Tokyo 🇯🇵</h2>
+      <p>Tradition meets futuristic energy.</p>
+    </div>
+  </div>
+
+  <!-- Travel Tips -->
+  <div class="card tips">
+    <div>
+      <h2>✈️ Travel Tips</h2>
+      <p>
+        ✔ Pack light<br>
+        ✔ Keep documents ready<br>
+        ✔ Book flights early<br>
+        ✔ Always get travel insurance
+      </p>
+    </div>
+  </div>
+
+  <!-- Stats -->
+  <div class="card stats">
+    <div>
+      <h2>🌍 120+ Destinations</h2>
+      <p>Trusted by 50,000+ travelers worldwide.</p>
+    </div>
+  </div>
+
+  <!-- Alps -->
+  <div class="card alps overlay">
+    <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b" alt="Swiss Alps">
+    <div class="content">
+      <h2>Swiss Alps 🏔️</h2>
+      <p>Breathtaking views & mountain adventures.</p>
+    </div>
+  </div>
+
+</div>
+
+```
+
+---
+---
+
+# **Media Query**
+
+A **media query** is a **CSS technique** that allows you to **apply styles based on the device’s screen size or type**.
+
+✅ Example use cases:
+
+* Make text bigger on small screens
+* Change layout on mobile
+* Hide certain elements on smaller devices
+
+---
+
+## **Basic Syntax**
+
+```css
+@media (condition) {
+ /* CSS rules go here */
+}
+```
+
+* `@media` → starts the media query
+* `(condition)` → e.g., `max-width: 600px`
+* CSS rules inside `{}` apply only if condition is true
+
+---
+
+## **Simple Example: Change background color on small screens**
+
+```css
+body {
+ background-color: lightblue;
+}
+
+@media (max-width: 600px) {
+ body {
+   background-color: lightgreen;
+ }
+}
+```
+
+✅ Explanation:
+
+* Default background → light blue
+* On screens **600px or smaller**, background changes → light green
+
+---
+
+## **Media Query for Layout (Flex Example)**
+
+```css
+.container {
+ display: flex;
+ gap: 20px;
+}
+
+@media (max-width: 700px) {
+ .container {
+   flex-direction: column; /* stack items vertically on small screens */
+ }
+}
+```
+
+```html
+<div class="container">
+  <div class="box">
+    &nbsp;
+    </div>
+
+  <div class="box">
+    &nbsp;
+    </div>
+
+  <div class="box">
+    &nbsp;
+    </div>
+
+</div>
+```
+
+
+# **7. Example: Responsive Bento Grid with Media Query**
+
+```css
+.bento-grid {
+ display: grid;
+ grid-template-columns: repeat(4, 1fr);
+ gap: 15px;
+}
+
+/* On small screens, show 2 columns instead of 4 */
+@media (max-width: 800px) {
+ .bento-grid {
+   grid-template-columns: repeat(2, 1fr);
+ }
+}
+
+/* On very small screens, show 1 column */
+@media (max-width: 500px) {
+ .bento-grid {
+   grid-template-columns: 1fr;
+ }
+}
+```
+
+✅ Result:
+
+* Desktop → 4 columns
+* Tablet → 2 columns
+* Mobile → 1 column (stacked)
+
+---
 ---
