@@ -353,7 +353,7 @@ footer {
 @media (max-width: 900px) {
 
     body {
-        overflow: none;
+        overflow: unset;
     }
 
     .sidebar {
@@ -380,7 +380,7 @@ footer {
 
 @media (max-width: 600px) {
     body {
-        overflow: none;
+        overflow: unset;
     }
 
     nav {
@@ -416,13 +416,16 @@ footer {
         height: 320px;
     }
 
-
     .code-card {
         padding: 16px;
     }
 
     pre {
         font-size: 0.8rem;
+    }
+
+    .container {
+        height: 100dvh;
     }
 
     .main-container {
@@ -446,7 +449,7 @@ footer {
 
 @media (max-width: 400px) {
     body {
-        overflow: none;
+        overflow: unset;
     }
 
     h1 {
