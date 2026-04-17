@@ -411,6 +411,12 @@ footer {
         font-size: 1.3rem;
     }
 
+    iframe {
+        width: 400px;
+        height: 320px;
+    }
+
+
     .code-card {
         padding: 16px;
     }
@@ -420,7 +426,7 @@ footer {
     }
 
     .main-container {
-        padding: 0 16px;
+        padding: 0 14px;
     }
 
     .meme {
@@ -445,6 +451,11 @@ footer {
 
     h1 {
         font-size: 1.7rem;
+    }
+
+    iframe {
+        width: 330px;
+        height: 250px;
     }
 
     .logo {
