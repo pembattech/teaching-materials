@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PembaTTech | Learn Web Dev</title>
+
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+
+<body>
+    <nav>
+        <div style="display: flex; gap: 10px; align-items: center;">
+
+            <p onclick="toggleSidebar()" style="cursor:pointer;">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#333">
+                    <path d="M120-680v-80h720v80H120Zm0 480v-80h720v80H120Zm0-240v-80h720v80H120Z" />
+                </svg>
+            </p>
+            <p class="logo">PembaTTech</p>
+        </div>
+        <div class="nav-links">
+            <a href="./index.html" class="nav-active"><strong>HTML</strong></a>
+            <a href="./CSS.html">CSS</a>
+            <a href="./js.html">JavaScript</a>
+            <a href="./db.html">Database</a>
+            <a href="./php.html">PHP</a>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <div class="sidebar" id="sidebar">
+            <a href="#intro">Intro</a>
+            <a href="#tags">Tags</a>
+            <a href="#structure">Basic Structure</a>
+            <a href="#elements">Elements</a>
+            <a href="#attributes">Attributes</a>
+            <a href="#formatting">Formatting</a>
+            <a href="#hyperlinks">Hyperlinks</a>
+            <a href="#tables">Tables</a>
+            <a href="#image">Image</a>
+            <a href="#iframe">Iframe</a>
+            <a href="#layout">Layout</a>
+            <a href="#flexbox">Flexbox</a>
+            <a href="#grid">Grid</a>
+            <a href="#mediaquery">Media Query</a>
+        </div>
+
+        <div class="main-container">
+
+            <header>
+                <h1>Build for the web.</h1>
+                <img src="./assets/memes/338-1733217432633.jpg" alt="" class="meme zoomable">
+            </header>
+
+            <!-- Modal -->
+            <div class="modal" id="modal">
+                <img id="modalImg">
+            </div>
+
+            <main>
+                <!-- Introduction Section -->
+                <section id="intro">
+                    <h2>00. Introduction to HTML</h2>
+                    <p><strong>HTML (HyperText Markup Language)</strong> is the standard language used to create web
+                        pages.
+                        It defines the structure and layout of content on a webpage.</p>
+
+                    <ul>
+                        <li>HTML files are saved with the <code>.html</code> file extension.</li>
+                    </ul>
+                    <p>
+                        A <strong>programming language</strong> can <strong>perform mathematical operations and
+                            decision-making</strong>, while a <strong>markup
+                            language</strong> is only used to <strong>structure and display predefined content</strong>.
+                    </p>
+                </section>
+
+                <!-- Tags Section -->
+                <section id="tags">
+                    <h2>01. HTML Tags</h2>
+                    <p>Tags are used to define HTML elements. They tell the browser how content should appear.</p>
+
+                    <h3>Key Characteristics</h3>
+                    <ul>
+                        <li>Tags are written inside angle brackets <code>&lt; &gt;</code></li>
+                        <li>Tags are not case-sensitive (but lowercase is preferred)</li>
+                        <li>Most tags come in pairs: opening and closing</li>
+                    </ul>
+
+                    <h3>Types of Tags</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Type</th>
+                                <th>Description</th>
+                                <th>Example</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Paired Tags</td>
+                                <td>Have both opening and closing tags with content between them</td>
+                                <td><code>&lt;p&gt;Hello&lt;/p&gt;</code></td>
+                            </tr>
+                            <tr>
+                                <td>Self-closing Tags</td>
+                                <td>Do not have a closing tag; used for single actions</td>
+                                <td><code>&lt;br&gt;</code> or <code>&lt;img&gt;</code></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="example-box">
+                        <strong>Example:</strong>
+                        <code>&lt;p&gt;This is a paragraph&lt;/p&gt;</code>
+                    </div>
+
+                    <h3>HTML Comment</h3>
+                    <ul>
+                        <li>Used to add notes in code</li>
+                        <li>Not displayed on the browser</li>
+                        <li>Helps developer used to understand code</li>
+                    </ul>
+                    <div class="example-box">
+                        <strong>Example:</strong>
+                        <code>&lt;!-- This is a paragraph --&gt;</code>
+                    </div>
+
+                </section>
+
+                <!-- Basic Structure Section -->
+                <section id="structure">
+                    <h2>02. The Skeleton (HTML Structure)</h2>
+                    <p>Every HTML document has a basic structure. Think of it as the blueprint for your webpage.</p>
+
+                    <div class="code-card">
+                        <pre><span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html&gt;</span>
+  <span class="tag">&lt;head&gt;</span>
+    <span class="tag">&lt;title&gt;</span>Page Title<span class="tag">&lt;/title&gt;</span>
+  <span class="tag">&lt;/head&gt;</span>
+
+  <span class="tag">&lt;body&gt;</span>
+    <span class="tag">&lt;p&gt;</span>My first paragraph.<span class="tag">&lt;/p&gt;</span>
+  <span class="tag">&lt;/body&gt;</span>
+
+<span class="tag">&lt;/html&gt;</span></pre>
+                    </div>
+
+                    <h3>Explanation of Key Tags</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Tag</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>&lt;!DOCTYPE html&gt;</code></td>
+                                <td>Declares the document type and HTML version</td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;html&gt;</code></td>
+                                <td>Root element that contains the entire HTML document</td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;head&gt;</code></td>
+                                <td>Contains metadata like title, styles, and links</td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;title&gt;</code></td>
+                                <td>Sets the title shown in the browser tab</td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;body&gt;</code></td>
+                                <td>Contains the visible content of the webpage</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <!-- Elements Section -->
+                <section id="elements">
+                    <h2>03. HTML Elements</h2>
+                    <p>HTML elements are the building blocks of a webpage. They define the structure and content of
+                        a page.
+                        An element usually consists of:</p>
+
+                    <ul>
+                        <li><strong>Opening tag</strong> – marks the start</li>
+                        <li><strong>Content</strong> – the actual text or material</li>
+                        <li><strong>Closing tag</strong> – marks the end</li>
+                    </ul>
+
+                    <div class="example-box">
+                        <strong>Example Element:</strong>
+                        <pre><span class="tag">&lt;p&gt;</span>This is a paragraph<span class="tag">&lt;/p&gt;</span></pre>
+                    </div>
+
+                    <h3>Types of HTML Elements</h3>
+
+                    <strong>1. Block-Level Elements</strong>
+                    <p>Block-level elements take up the full width of the page and always start on a new line.</p>
+
+                    <div class="code-card">
+                        <pre><span class="tag">&lt;h1&gt;</span>Heading<span class="tag">&lt;/h1&gt;</span>
+<span class="tag">&lt;p&gt;</span>This is a paragraph.<span class="tag">&lt;/p&gt;</span>
+<span class="tag">&lt;div&gt;</span>Container<span class="tag">&lt;/div&gt;</span></pre>
+                    </div>
+
+                    <p><strong>Common block elements:</strong> <code>&lt;p&gt;</code>,
+                        <code>&lt;h1&gt;</code>–<code>&lt;h6&gt;</code>, <code>&lt;ul&gt;</code>,
+                        <code>&lt;ol&gt;</code>,
+                        <code>&lt;div&gt;</code>
+                    </p>
+
+                    <strong>2. Inline Elements</strong>
+                    <p>Inline elements do not start on a new line and only take up as much width as needed. They're
+                        usually
+                        used inside block elements.</p>
+
+                    <div class="code-card">
+                        <pre><span class="tag">&lt;a href="#"&gt;</span>Link<span class="tag">&lt;/a&gt;</span>
+<span class="tag">&lt;span&gt;</span>Text<span class="tag">&lt;/span&gt;</span>
+<span class="tag">&lt;strong&gt;</span>Bold Text<span class="tag">&lt;/strong&gt;</span></pre>
+                    </div>
+
+                    <p><strong>Common inline elements:</strong> <code>&lt;a&gt;</code>, <code>&lt;span&gt;</code>,
+                        <code>&lt;b&gt;</code>, <code>&lt;u&gt;</code>, <code>&lt;img&gt;</code>
+                    </p>
+                </section>
+
+                <!-- Attributes Section -->
+                <section id="attributes">
+                    <h2>04. HTML Attributes</h2>
+                    <p>Attributes provide extra information about an HTML element. They are written inside the
+                        opening tag
+                        in <code>name="value"</code> format.</p>
+
+                    <div class="example-box">
+                        <strong>Example:</strong>
+                        <code>&lt;a href="https://www.google.com"&gt;Google&lt;/a&gt;</code>
+                    </div>
+
+                    <h3>Common HTML Attributes</h3>
+                    <ul>
+                        <li><code>class</code> – Used to apply CSS styles to elements</li>
+                        <li><code>id</code> – Used to uniquely identify an element</li>
+                        <li><code>style</code> – Used to add inline CSS styles</li>
+                    </ul>
+
+                    <div class="code-card">
+                        <pre><span class="tag">&lt;p</span> <span class="attr">id</span>=<span class="tag">"intro"</span> <span class="attr">class</span>=<span class="tag">"text"</span> <span class="attr">style</span>=<span class="tag">"color:blue;"</span><span class="tag">&gt;</span>Welcome!<span class="tag">&lt;/p&gt;</span></pre>
+                    </div>
+                </section>
+
+                <!-- Text Formatting Section -->
+                <section id="formatting">
+                    <h2>05. Text Formatting Tags</h2>
+                    <p>HTML provides several tags to format text with special emphasis and styling.</p>
+
+                    <h3>Bold Text <code>&lt;b&gt;</code> and <code>&lt;strong&gt;</code></h3>
+                    <p>Both make text bold, but <code>&lt;strong&gt;</code> indicates semantic importance.</p>
+                    <div class="code-card">
+                        <pre><span class="tag">&lt;p&gt;</span>This is <span class="tag">&lt;b&gt;</span>bold<span class="tag">&lt;/b&gt;</span> text.<span class="tag">&lt;/p&gt;</span>
+<span class="tag">&lt;p&gt;</span>This is <span class="tag">&lt;strong&gt;</span>important<span class="tag">&lt;/strong&gt;</span> text.<span class="tag">&lt;/p&gt;</span></pre>
+                    </div>
+
+                    <h3>Italic Text <code>&lt;i&gt;</code> and <code>&lt;em&gt;</code></h3>
+                    <p>Both make text slanted, but <code>&lt;em&gt;</code> indicates semantic emphasis.</p>
+                    <div class="code-card">
+                        <pre><span class="tag">&lt;p&gt;</span>This is <span class="tag">&lt;i&gt;</span>italic<span class="tag">&lt;/i&gt;</span> text.<span class="tag">&lt;/p&gt;</span>
+<span class="tag">&lt;p&gt;</span>This is <span class="tag">&lt;em&gt;</span>emphasized<span class="tag">&lt;/em&gt;</span> text.<span class="tag">&lt;/p&gt;</span></pre>
+                    </div>
+
+                    <h3>Underline <code>&lt;u&gt;</code></h3>
+                    <p>Underlines the text.</p>
+                    <div class="code-card">
+                        <pre><span class="tag">&lt;p&gt;</span>This is <span class="tag">&lt;u&gt;</span>underlined<span class="tag">&lt;/u&gt;</span> text.<span class="tag">&lt;/p&gt;</span></pre>
+                    </div>
+
+                    <h3>Superscript <code>&lt;sup&gt;</code></h3>
+                    <p>Positions text slightly above the baseline. Great for exponents and citations.</p>
+                    <div class="code-card">
+                        <pre><span class="tag">&lt;p&gt;</span>2<span class="tag">&lt;sup&gt;</span>3<span class="tag">&lt;/sup&gt;</span> = 8<span class="tag">&lt;/p&gt;</span></pre>
+                    </div>
+                    <div class="example-box">
+                        <strong>Output:</strong> 2<sup>3</sup> = 8
+                    </div>
+
+                    <h3>Subscript <code>&lt;sub&gt;</code></h3>
+                    <p>Positions text slightly below the baseline. Useful for chemical formulas.</p>
+                    <div class="code-card">
+                        <pre><span class="tag">&lt;p&gt;</span>H<span class="tag">&lt;sub&gt;</span>2<span class="tag">&lt;/sub&gt;</span>O is water<span class="tag">&lt;/p&gt;</span></pre>
+                    </div>
+                    <div class="example-box">
+                        <strong>Output:</strong> H<sub>2</sub>O is water
+                    </div>
+
+                </section>
+
+                <!-- Hyperlink Section -->
+                <section id="hyperlinks">
+                    <h2>06. Hyperlinks</h2>
+                    <p>Hyperlinks allow you to navigate between pages and resources.</p>
+
+                    <h3>Creating Links <code>&lt;a&gt;</code></h3>
+                    <p>The <code>&lt;a&gt;</code> tag creates a hyperlink.</p>
+                    <div class="code-card">
+                        <pre><span class="tag">&lt;a href="https://www.example.com"&gt;</span>Visit Example<span class="tag">&lt;/a&gt;</span></pre>
+                    </div>
+
+                    <h3>Linking to Internal Pages</h3>
+                    <p>You can link to other sections within the same page or different pages.</p>
+                    <div class="code-card">
+                        <pre><span class="tag">&lt;a href="#intro"&gt;</span>Go to Introduction<span class="tag">&lt;/a&gt;</span></pre>
+                    </div>
+
+                    <h3>Using the target attribute to open links in a new tab:</h3>
+                    <div class="code-card">
+                        <pre><span class="tag">&lt;a href="https://www.example.com" target="_blank"&gt;</span>Visit Example in New Tab<span class="tag">&lt;/a&gt;</span></pre>
+                    </div>
+
+                    <h3>Other target options:</h3>
+                    <ul>
+                        <li><code>_self</code> (default): Opens the link in the same frame.</li>
+                        <li><code>_blank</code>: Opens the link in a new window or tab.</li>
+                    </ul>
+
+                    <h3>Link to a section on the same page (Document Fragments)</h3>
+                    <p>You can link to a specific section within the same page using an anchor tag.</p>
+                    <div class="code-card">
+                        <pre><span class="tag">&lt;a href="#contact_id"&gt;</span>Go to Section<span class="tag">&lt;/a&gt;</span></pre>
+                        <br>
+                        <pre><span class="comment">&lt;!-- Somewhere on the same page --&gt;</span></pre>
+                        <pre><span class="tag">&lt;h2 id="contact_id"&gt;</span>Contact Us<span class="tag">&lt;/h2&gt;</span></pre>
+                    </div>
+
+                </section>
+
+                <!-- Table Section -->
+                <section id="tables">
+                    <h2>07. Tables</h2>
+                    <p>Tables are used to display data in a structured format ie in rows and columns.</p>
+
+                    <h3>Creating Tables <code>&lt;table&gt;</code></h3>
+                    <p>The <code>&lt;table&gt;</code> tag creates a table.</p>
+                    <div class="code-card">
+                        <pre><span class="tag">&lt;table&gt;</span>
+    <span class="tag">&lt;tr&gt;</span>
+        <span class="tag">&lt;th&gt;</span>Name<span class="tag">&lt;/th&gt;</span>
+        <span class="tag">&lt;th&gt;</span>Age<span class="tag">&lt;/th&gt;</span>
+    <span class="tag">&lt;/tr&gt;</span>
+    <span class="tag">&lt;tr&gt;</span>
+        <span class="tag">&lt;td&gt;</span>John<span class="tag">&lt;/td&gt;</span>
+        <span class="tag">&lt;td&gt;</span>25<span class="tag">&lt;/td&gt;</span>
+    <span class="tag">&lt;/tr&gt;</span>
+<span class="tag">&lt;/table&gt;</span></pre>
+                    </div>
+
+                    <div class="example-box">
+                        <strong>Output:</strong>
+
+                        <table class="demo-table">
+                            <tr>
+                                <th>Name</th>
+                                <th>Age</th>
+                            </tr>
+                            <tr>
+                                <td>John</td>
+                                <td>25</td>
+                            </tr>
+                        </table>
+
+                    </div>
+
+                    <h3>Important Table Tags</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Tag</th>
+                                <th>Use</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>&lt;table&gt;</code></td>
+                                <td>Creates a table</td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;tr&gt;</code></td>
+                                <td>Defines a row in the table</td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;th&gt;</code></td>
+                                <td>Defines a header cell in the table</td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;td&gt;</code></td>
+                                <td>Defines a standard cell in the table</td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;caption&gt;</code></td>
+                                <td>Provides a title or description for the table</td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;thead&gt;</code></td>
+                                <td>Groups the header section</td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;tbody&gt;</code></td>
+                                <td>Groups the main body data</td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;colspan&gt;</code></td>
+                                <td>Merges columns</td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;rowspan&gt;</code></td>
+                                <td>Merges rows</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+                    <div>
+                        <h3>Practice Task</h3>
+
+                        <p>Create a table that includes the following columns:</p>
+
+                        <ul>
+                            <li>Subject</li>
+                            <li>Marks</li>
+                            <li>Grade</li>
+                        </ul>
+
+                        <p><b><u>Student Result</u></b></p>
+
+                        <table class="result-table">
+                            <tr>
+                                <th>Subject</th>
+                                <th>Marks</th>
+                                <th>Grade</th>
+                            </tr>
+                            <tr>
+                                <td>Math</td>
+                                <td>85</td>
+                                <td>A</td>
+                            </tr>
+                            <tr>
+                                <td>Science</td>
+                                <td>78</td>
+                                <td>B</td>
+                            </tr>
+                            <tr>
+                                <td>English</td>
+                                <td>90</td>
+                                <td>A+</td>
+                            </tr>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- Image Tag -->
+                <section id="image">
+                    <h2>08. Image Tag</h2>
+                    <p>The <code>&lt;img&gt;</code> tag is used to embed an image in an HTML page.</p>
+                    <div class="code-card">
+                        <pre><span class="tag">&lt;img src="image.jpg" alt="Description of image"&gt;</span></pre>
+                    </div>
+                </section>
+
+                <!-- Iframe Tag Section -->
+                <section id="iframe">
+                    <h2>09. Iframe Tag</h2>
+                    <p>The <code>&lt;iframe&gt;</code> tag is used to embed another HTML page within the current
+                        page.</p>
+
+                    <div class="example-box">
+                        <strong>Example of Google Maps Iframe:</strong>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14133.797993773442!2d85.38501205!3d27.6724989!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1b0017219ddb%3A0xe3a9edebc5a7b5bc!2sMadhyapur%20hospital!5e0!3m2!1sne!2snp!4v1776318497141!5m2!1sne!2snp"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+
+                    <div class="example-box">
+                        <strong>Example of Youtube Iframe:</strong>
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/AaDltcWgEhY?si=K3nvqdyCKLgG_px5"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+
+
+                    <h3>Common iframe Attributes</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Attribute</th>
+                                <th>Meaning</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>&lt;src&gt;</code></td>
+                                <td>Page/video link</td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;width&gt;</code></td>
+                                <td>Frame width</td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;height&gt;</code></td>
+                                <td>Frame height</td>
+                            </tr>
+                            <tr>
+                                <td><code>&lt;allowfullscreen&gt;</code></td>
+                                <td>Allows full screen video</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+
+                </section>
+
+                <!-- Webpage Layout Section -->
+                <section id="layout">
+                    <h2>10. Webpage Layout</h2>
+                    <p>A webpage layout is the arrangement of different sections on a webpage, such as:</p>
+                    <ul>
+                        <li><strong>Header</strong> - The top section of the webpage that typically contains the
+                            logo,
+                            title, and main navigation.</li>
+                        <li><strong>Navigation</strong> - The menu or links that allow users to navigate through the
+                            website.</li>
+                        <li><strong>Main Content</strong> - The primary content area of the webpage.</li>
+                        <li><strong>Sidebar</strong> - A column usually located on the side of the main content,
+                            often used
+                            for additional links, ads, or information.</li>
+                        <li><strong>Footer</strong> - The bottom section of the webpage that typically contains
+                            copyright
+                            information, contact details, and additional links.</li>
+                    </ul>
+
+                    <div class="example-box">
+                        <strong>Example of Webpage Layout:</strong>
+                        <img style="width: 600px; object-fit: contain;" src="./assets/basicWebpageLayout.png" alt="">
+                    </div>
+                </section>
+
+                <!-- Flexbox Section -->
+                <section id="flexbox">
+                    <h2>11. Flexbox</h2>
+                    <p>Flexbox is a CSS layout system used to arrange and align elements easily inside a container.
+                        It
+                        allows items to be organized in rows or columns with flexible spacing and alignment.</p>
+
+                    <div class="example-box">
+                        <strong>Example of Flexbox Layout:</strong>
+                        <img style="width: 600px; object-fit: contain;" src="./assets/flexboxLayout.png" alt="">
+                    </div>
+
+                    <h3>
+                        To use Flexbox, first make a container a flex container, then control how its child elements
+                        behave.
+                    </h3>
+
+                    <h3>1️⃣ Create a Flex Container</h3>
+
+                    <p>Set <strong>display: flex</strong> on the parent element.</p>
+
+                    <div class="code-card">
+                        <pre><span class="tag">&lt;div class="container"&gt;</span>
+<span class="tag">&lt;p class="box"&gt;</span>Box 1<span class="tag">&lt;/p&gt;</span>
+<span class="tag">&lt;p class="box"&gt;</span>Box 2<span class="tag">&lt;/p&gt;</span>
+<span class="tag">&lt;p class="box"&gt;</span>Box 3<span class="tag">&lt;/p&gt;</span>
+<span class="tag">&lt;/div&gt;</span>
+                    </pre>
+                    </div>
+
+                    <div class="code-card">
+                        <pre>.container {
+    display: flex;
+}
+                    </pre>
+                    </div>
+
+                    <div class="code-card">
+                        <pre>
+.box {
+    background-color: lightblue;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+}
+                    </pre>
+                    </div>
+
+                    <div class="example-box">
+                        <strong>Example of Flex:</strong>
+                        <img style="width: 600px; object-fit: contain;" src="./assets/boxesHorizontally.png" alt="">
+                    </div>
+
+                    <h3>Important Flexbox Properties</h3>
+                    <h4>Container Properties (applied to parent)</h2>
+
+                        <table border="1" cellpadding="10" cellspacing="0">
+                            <tr>
+                                <th>Property</th>
+                                <th>Description</th>
+                                <th>Example</th>
+                            </tr>
+
+                            <tr>
+                                <td><code>display: flex;</code></td>
+                                <td>Makes container a flex container</td>
+                                <td><code>.container { display: flex; }</code></td>
+                            </tr>
+
+                            <tr>
+                                <td><code>gap</code></td>
+                                <td>Space between items (vertical/horizontal)</td>
+                                <td><code>gap: 10px;</code></td>
+                            </tr>
+
+                            <tr>
+                                <td><code>flex-direction</code></td>
+                                <td>Direction of items (row/column)</td>
+                                <td><code>flex-direction: row;</code> or <code>column;</code></td>
+                            </tr>
+
+                            <tr>
+                                <td><code>justify-content</code></td>
+                                <td>Horizontal alignment of items</td>
+                                <td>
+                                    <code>justify-content: center;</code><br>
+                                    <code>space-between;</code>
+                                    <code>space-around;</code>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><code>align-items</code></td>
+                                <td>Vertical alignment of items</td>
+                                <td>
+                                    <code>align-items: center;</code>
+                                    <code>flex-start;</code>
+                                    <code>flex-end;</code>
+                                </td>
+                            </tr>
+
+                        </table>
+
+                        <h2>Item Properties (applied to child)</h2>
+
+                        <table border="1" cellpadding="10" cellspacing="0">
+                            <tr>
+                                <th>Property</th>
+                                <th>Description</th>
+                                <th>Example</th>
+                            </tr>
+
+                            <tr>
+                                <td><code>flex</code></td>
+                                <td>Grow/shrink space</td>
+                                <td><code>flex: 1;</code></td>
+                            </tr>
+
+                            <tr>
+                                <td><code>align-self</code></td>
+                                <td>Overrides container alignment</td>
+                                <td><code>align-self: flex-end;</code></td>
+                            </tr>
+
+                            <tr>
+                                <td><code>order</code></td>
+                                <td>Change visual order</td>
+                                <td><code>order: 2;</code></td>
+                            </tr>
+
+                        </table>
+
+
+                        <h3>Examples with Flexbox</h3>
+                        <h4>1. Navigation (Header)</h4>
+
+                        <div class="code-card">
+                            <pre>
+<span class="tag">&lt;style&gt;</span>
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #34495e;
+  color: white;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.search-box input {
+  padding: 6px 10px;
+  border-radius: 4px;
+  border: none;
+  width: 250px;
+}
+
+.auth-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 15px;
+  font-weight: bold;
+}
+
+.auth-links a:hover {
+  text-decoration: underline;
+}
+<span class="tag">&lt;/style&gt;</span>
+
+<span class="tag">&lt;div class="header"&gt;</span>
+  <span class="tag">&lt;div class="logo"&gt;</span>National Skill Academy<span class="tag">&lt;/div&gt;</span>
+
+  <span class="tag">&lt;div class="search-box"&gt;</span>
+    <span class="tag">&lt;input type="text" placeholder="Search..." /&gt;</span>
+  <span class="tag">&lt;/div&gt;</span>
+
+  <span class="tag">&lt;div class="auth-links"&gt;</span>
+    <span class="tag">&lt;a href="#"&gt;</span>Login<span class="tag">&lt;/a&gt;</span>
+    <span class="tag">&lt;a href="#"&gt;</span>Signup<span class="tag">&lt;/a&gt;</span>
+  <span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/div&gt;</span>
+  </pre>
+                        </div>
+
+                        <div class="example-box">
+                            <strong>Output:</strong>
+                            <img style="width: 600px; object-fit: contain;" src="./assets/flexNavigationHeader.png"
+                                alt="">
+                        </div>
+
+                        <h4>2. Sidebar with Main Content</h4>
+
+                        <div class="code-card">
+                            <pre>
+<span class="tag">&lt;style&gt;</span>
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 220px;
+  background: #2c3e50;
+  color: white;
+  padding: 20px;
+}
+
+.sidebar a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin: 10px 0;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  background: #f4f4f4;
+}
+<span class="tag">&lt;/style&gt;</span>
+
+<span class="tag">&lt;div class="container"&gt;</span>
+  <span class="tag">&lt;div class="sidebar"&gt;</span>
+    <span class="tag">&lt;h2&gt;</span>Menu<span class="tag">&lt;/h2&gt;</span>
+    <span class="tag">&lt;a href="#"&gt;</span>Dashboard<span class="tag">&lt;/a&gt;</span>
+    <span class="tag">&lt;a href="#"&gt;</span>Orders<span class="tag">&lt;/a&gt;</span>
+    <span class="tag">&lt;a href="#"&gt;</span>Settings<span class="tag">&lt;/a&gt;</span>
+  <span class="tag">&lt;/div&gt;</span>
+
+  <span class="tag">&lt;div class="content"&gt;</span>
+    <span class="tag">&lt;h1&gt;</span>Main Content<span class="tag">&lt;/h1&gt;</span>
+    <span class="tag">&lt;p&gt;</span>This is your main area.<span class="tag">&lt;/p&gt;</span>
+  <span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/div&gt;</span>
+  </pre>
+                        </div>
+
+                        <div class="example-box">
+                            <strong>Output:</strong>
+                            <img style="width: 600px; object-fit: contain;"
+                                src="./assets/flexSidebarWithMaincontent.png" alt="">
+                        </div>
+
+                        <h4>3. Centering an Element</h4>
+
+                        <div class="code-card">
+                            <pre>
+<span class="tag">&lt;style&gt;</span>
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: coral;
+}
+
+.centered-content {
+  background-color: lightblue;
+  padding: 10px;
+}
+<span class="tag">&lt;/style&gt;</span>
+
+<span class="tag">&lt;div class="container"&gt;</span>
+  <span class="tag">&lt;div class="centered-content"&gt;</span>
+    Centered Content
+  <span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/div&gt;</span>
+  </pre>
+                        </div>
+
+                        <div class="example-box">
+                            <strong>Output:</strong>
+                            <img style="width: 600px; object-fit: contain;" src="./assets/flexCenteringElement.png"
+                                alt="">
+                        </div>
+                </section>
+
+                <!-- Grid Section -->
+                <section id="grid">
+                    <h2>12. Grid</h2>
+                    <p>Grid is a CSS layout system used to create complex, two-dimensional layouts. It allows for
+                        precise
+                        control over rows and columns.</p>
+
+                    <h3>
+                        To use Grid, first make a container a grid container, then control how its child elements
+                        behave.
+                    </h3>
+
+                    <div class="code-card">
+                        <pre>
+<span class="tag">&lt;style&gt;</span>
+.grid-container <span class="bracket">{</span>
+  <span class="prop">display</span>: <span class="value">grid</span>;
+  <span class="prop">grid-template-columns</span>: <span class="value">1fr 1fr 1fr</span>;
+  <span class="prop">grid-template-rows</span>: <span class="value">100px</span>;
+  <span class="prop">gap</span>: <span class="value">10px</span>;
+<span class="bracket">}</span>
+
+.item <span class="bracket">{</span>
+  <span class="prop">background-color</span>: <span class="value">lightgreen</span>;
+  <span class="prop">text-align</span>: <span class="value">center</span>;
+  <span class="prop">line-height</span>: <span class="value">100px</span>;
+  <span class="prop">border</span>: <span class="value">1px solid #333</span>;
+<span class="bracket">}</span>
+<span class="tag">&lt;/style&gt;</span>
+
+
+<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="tag">"grid-container"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="tag">"item"</span><span class="tag">&gt;</span>1<span class="tag">&lt;/div&gt;</span>
+  <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="tag">"item"</span><span class="tag">&gt;</span>2<span class="tag">&lt;/div&gt;</span>
+  <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="tag">"item"</span><span class="tag">&gt;</span>3<span class="tag">&lt;/div&gt;</span>
+  <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="tag">"item"</span><span class="tag">&gt;</span>4<span class="tag">&lt;/div&gt;</span>
+  <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="tag">"item"</span><span class="tag">&gt;</span>5<span class="tag">&lt;/div&gt;</span>
+  <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="tag">"item"</span><span class="tag">&gt;</span>6<span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/div&gt;</span>
+
+  </pre>
+                    </div>
+
+                    <div class="example-box">
+                        <strong>Example of Grid:</strong>
+                        <img style="width: 600px; object-fit: contain;" src="./assets/gridBasicExample.png" alt="">
+                    </div>
+
+                    <h3>Important Grid Properties</h3>
+                    <h4>Container Properties (applied to parent)</h4>
+
+                    <table border="1" cellpadding="10" cellspacing="0">
+                        <tr>
+                            <th>Property</th>
+                            <th>Description</th>
+                        </tr>
+
+                        <tr>
+                            <td><code>display: grid;</code></td>
+                            <td>Makes container a grid container</td>
+                        </tr>
+
+                        <tr>
+                            <td><code>grid-template-columns</code></td>
+                            <td>Defines column sizes</td>
+                        </tr>
+
+                        <tr>
+                            <td><code>grid-template-rows</code></td>
+                            <td>Defines row sizes</td>
+                        </tr>
+
+                        <tr>
+                            <td><code>gap</code></td>
+                            <td>Spaces between rows & columns</td>
+                        </tr>
+
+                    </table>
+
+                    <h3>Item Properties (applied to child)</h3>
+
+                    <table border="1" cellpadding="10" cellspacing="0">
+                        <tr>
+                            <th>Property</th>
+                            <th>Description</th>
+                        </tr>
+
+                        <tr>
+                            <td><code>grid-column</code></td>
+                            <td>Span or position of columns</td>
+                        </tr>
+
+                        <tr>
+                            <td><code>grid-row</code></td>
+                            <td>Span or position of rows</td>
+                        </tr>
+
+                        <tr>
+                            <td><code>justify-self</code></td>
+                            <td>Horizontal alignment inside cell</td>
+                        </tr>
+
+                        <tr>
+                            <td><code>align-self</code></td>
+                            <td>Vertical alignment inside cell</td>
+                        </tr>
+
+                    </table>
+
+                    <h3>Example: Bento Grid</h3>
+                    <div class="code-card">
+                        <pre>
+<span class="tag">&lt;style&gt;</span>
+.grid-container <span class="bracket">{</span>
+  <span class="prop">display</span>: <span class="value">grid</span>;
+  <span class="prop">grid-template-columns</span>: <span class="value">1fr 1fr 1fr</span>;
+  <span class="prop">grid-template-rows</span>: <span class="value">100px 100px 100px</span>;
+  <span class="prop">grid-gap</span>: <span class="value">10px</span>;
+  <span class="prop">grid-template-areas</span>: <span class="value">
+                "header header header"
+                "sidebar main main"
+                "sidebar main main"
+                "footer footer footer"</span>;
+<span class="bracket">}</span>
+
+.header <span class="bracket">{</span>
+  <span class="prop">grid-area</span>: <span class="value">header</span>;
+  <span class="prop">background-color</span>: <span class="value">lightblue</span>;
+  <span class="prop">text-align</span>: <span class="value">center</span>;
+  <span class="prop">line-height</span>: <span class="value">100px</span>;
+<span class="bracket">}</span>
+
+.sidebar <span class="bracket">{</span>
+  <span class="prop">grid-area</span>: <span class="value">sidebar</span>;
+  <span class="prop">background-color</span>: <span class="value">lightgreen</span>;
+  <span class="prop">text-align</span>: <span class="value">center</span>;
+  <span class="prop">line-height</span>: <span class="value">100px</span>;
+<span class="bracket">}</span>
+
+.main <span class="bracket">{</span>
+  <span class="prop">grid-area</span>: <span class="value">main</span>;
+  <span class="prop">background-color</span>: <span class="value">lightcoral</span>;
+  <span class="prop">text-align</span>: <span class="value">center</span>;
+  <span class="prop">line-height</span>: <span class="value">100px</span>;
+<span class="bracket">}</span>
+
+.footer <span class="bracket">{</span>
+  <span class="prop">grid-area</span>: <span class="value">footer</span>;
+  <span class="prop">background-color</span>: <span class="value">tomato</span>;
+  <span class="prop">line-height</span>: <span class="value">100px</span>;
+  <span class="prop">text-align</span>: <span class="value">center</span>;
+<span class="bracket">}</span>
+
+<span class="tag">&lt;/style&gt;</span>
+
+<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="tag">"grid-container"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="tag">"header"</span><span class="tag">&gt;</span>Header<span class="tag">&lt;/div&gt;</span>
+  <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="tag">"sidebar"</span><span class="tag">&gt;</span>Sidebar<span class="tag">&lt;/div&gt;</span>
+  <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="tag">"main"</span><span class="tag">&gt;</span>Main Content<span class="tag">&lt;/div&gt;</span>
+  <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="tag">"footer"</span><span class="tag">&gt;</span>This is footer<span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/div&gt;</span>
+  </pre>
+                    </div>
+
+                    <div>
+                        <h3>Practice Task</h3>
+
+                        <p>Create a bento design as shown in the picture below:</p>
+
+                        <img style="width: 600px; object-fit: contain;" src="./assets/gridBento.png" alt="">
+                    </div>
+
+                </section>
+
+                <!-- Media Query Section -->
+                <section id="mediaquery">
+                    <h2>13. Media Query</h2>
+                    <p>A media query is a CSS technique that allows you to apply styles based on the device’s screen
+                        size or type.</p>
+
+                    <h3>Use Case:</h3>
+                    <ul>
+                        <li>Make text bigger on small screens</li>
+                        <li>Change layout on mobile</li>
+                        <li>Hide certain elements on smaller devices</li>
+                    </ul>
+                    <h3>Basic Syntax</h3>
+
+                    <div class="code-card">
+                        <pre>
+<span class="tag">&lt;style&gt;</span>
+@media (condition) <span class="bracket">{</span>
+  <span class="comment">/* CSS styles applied when condition is true */</span>
+<span class="bracket">}</span>
+<span class="tag">&lt;/style&gt;</span>
+</pre>
+                    </div>
+
+                    <h3>Common Media Query Conditions</h3>
+
+                    <table border="1" cellpadding="10" cellspacing="0">
+                        <tr>
+                            <th>Condition</th>
+                            <th>Description</th>
+                            <th>Example</th>
+                        </tr>
+
+                        <tr>
+                            <td><strong>max-width</strong></td>
+                            <td>Applies styles when screen width is <strong>less than or equal</strong> to a value</td>
+                            <td>
+                                <code>@media (max-width: 768px) { body { background: lightblue; } }</code>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><strong>min-width</strong></td>
+                            <td>Applies styles when screen width is <strong>greater than or equal</strong> to a value
+                            </td>
+                            <td>
+                                <code>@media (min-width: 1024px) { body { background: lightgreen; } }</code>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><strong>orientation</strong></td>
+                            <td>Checks if the screen is <strong>portrait or landscape</strong></td>
+                            <td>
+                                <code>@media (orientation: portrait) { body { background: lightpink; } }</code>
+                            </td>
+                        </tr>
+
+                    </table>
+
+                    <h3>Common Device Breakpoints</h3>
+
+                    <table border="1" cellpadding="10" cellspacing="0">
+                        <tr>
+                            <th>Condition</th>
+                            <th>Description</th>
+                            <th>Example</th>
+                        </tr>
+
+                        <tr>
+                            <td><strong>max-width</strong></td>
+                            <td>Applies styles when screen width is <strong>less than or equal</strong> to a value</td>
+                            <td>
+                                <code>@media (max-width: 768px) { body { background: lightblue; } }</code>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><strong>min-width</strong></td>
+                            <td>Applies styles when screen width is <strong>greater than or equal</strong> to a value
+                            </td>
+                            <td>
+                                <code>@media (min-width: 1024px) { body { background: lightgreen; } }</code>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><strong>orientation</strong></td>
+                            <td>Checks if the screen is <strong>portrait or landscape</strong></td>
+                            <td>
+                                <code>@media (orientation: portrait) { body { background: lightpink; } }</code>
+                            </td>
+                        </tr>
+
+
+                    </table>
+
+                    <a class="go-link" href="./example-media-query.html">Media Query Example</a>
+
+                </section>
+
+
+                <section>
+                    <button class="btn-try" onclick="showAlert()">Test Your Knowledge</button>
+                </section>
+
+            </main>
+
+            <footer>
+                &copy; 2024-<span id="year"></span> Learn with PembaTTech
+            </footer>
+
+        </div>
+
+    </div>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>

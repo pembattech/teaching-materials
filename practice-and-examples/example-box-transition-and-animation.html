@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+
+/* BOX STYLE */
+.box {
+    width: 100px;
+    height: 100px;
+    background: red;
+    position: relative;
+
+    /* transition */
+    transition: 0.3s;
+}
+
+/* HOVER EFFECT USING TRANSITION */
+.box:hover {
+    background: blue;
+    transform: scale(1.2);
+}
+
+/* KEYFRAMES ANIMATION */
+@keyframes moveBox {
+    from {
+        left: 0;
+    }
+    to {
+        left: 300px;
+    }
+}
+
+/* ANIMATION PROPERTY */
+.animate {
+    animation: moveBox 2s infinite alternate;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="box animate"></div>
+
+</body>
+</html>

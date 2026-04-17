@@ -1,0 +1,164 @@
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(to right, #e0f7fa, #f1f8ff);
+  padding: 40px;
+}
+
+
+/* Grid Layout */
+.bento-container {
+  display: grid;
+  height: 100vh;
+  gap: 20px;
+
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+
+  grid-template-areas:
+    "hero hero paris tips"
+    "hero hero tokyo tips"
+    "stats stats alps alps";
+}
+
+.card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: white;
+}
+
+.card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.overlay::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 1;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: left;
+}
+
+.content h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.content p {
+  font-size: 14px;
+  opacity: 0.95;
+}
+
+button {
+  margin-top: 12px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  background: #ff7b54;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Assign grid areas */
+.hero   { grid-area: hero; }
+.paris  { grid-area: paris; }
+.tokyo  { grid-area: tokyo; }
+.tips   { grid-area: tips; background: white; color: #333; }
+.stats  { grid-area: stats; background: linear-gradient(135deg,#4facfe,#00f2fe); color: white; }
+.alps   { grid-area: alps; }
+
+/* Tips text styling */
+.tips h2 {
+  margin-bottom: 15px;
+}
+
+.tips p {
+  line-height: 1.7;
+}
+
+</style>
+
+<div class="bento-container">
+
+  <!-- Hero -->
+  <div class="card hero overlay">
+    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Bali">
+    <div class="content">
+      <h2>Explore Bali 🌴</h2>
+      <p>Discover paradise beaches, temples & tropical escapes.</p>
+      <button>Book Now</button>
+    </div>
+  </div>
+
+  <!-- Paris -->
+  <div class="card paris overlay">
+    <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34" alt="Paris">
+    <div class="content">
+      <h2>Paris 🇫🇷</h2>
+      <p>The city of lights & romance.</p>
+    </div>
+  </div>
+
+  <!-- Tokyo -->
+  <div class="card tokyo overlay">
+    <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e" alt="Tokyo">
+    <div class="content">
+      <h2>Tokyo 🇯🇵</h2>
+      <p>Tradition meets futuristic energy.</p>
+    </div>
+  </div>
+
+  <!-- Travel Tips -->
+  <div class="card tips">
+    <div>
+      <h2>✈️ Travel Tips</h2>
+      <p>
+        ✔ Pack light<br>
+        ✔ Keep documents ready<br>
+        ✔ Book flights early<br>
+        ✔ Always get travel insurance
+      </p>
+    </div>
+  </div>
+
+  <!-- Stats -->
+  <div class="card stats">
+    <div>
+      <h2>🌍 120+ Destinations</h2>
+      <p>Trusted by 50,000+ travelers worldwide.</p>
+    </div>
+  </div>
+
+  <!-- Alps -->
+  <div class="card alps overlay">
+    <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b" alt="Swiss Alps">
+    <div class="content">
+      <h2>Swiss Alps 🏔️</h2>
+      <p>Breathtaking views & mountain adventures.</p>
+    </div>
+  </div>
+
+</div>

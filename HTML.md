@@ -1,136 +1,69 @@
-
-<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
-
-<!-- code_chunk_output -->
-
-- [**Introduction to HTML**](#introduction-to-html)
-  - [**HTML Elements**](#html-elements)
-  - [**Types of HTML Elements**](#types-of-html-elements)
-    - [1️⃣ Block-Level Elements](#1️⃣-block-level-elements)
-    - [2️⃣ Inline Elements](#2️⃣-inline-elements)
-  - [**HTML Attributes**](#html-attributes)
-    - [Common HTML Attributes](#common-html-attributes)
-  - [📝 **Practice Activity: HTML Attributes**](#-practice-activity-html-attributes)
-    - [🔹 Activity 1: Identify the Attribute](#-activity-1-identify-the-attribute)
-    - [🔹 Activity 2: Fix the Code](#-activity-2-fix-the-code)
-    - [🔹 Activity 3: Create Your Own](#-activity-3-create-your-own)
-- [**Text Formatting Tags in HTML**](#text-formatting-tags-in-html)
-    - [🔹 Italic `<i>`](#-italic-i)
-    - [🔹 Bold `<b>`](#-bold-b)
-    - [🔹 Underline `<u>`](#-underline-u)
-    - [🔹 Superscript `<sup>`](#-superscript-sup)
-    - [🔹 Subscript `<sub>`](#-subscript-sub)
-- [🔗 **Hyperlinks in HTML**](#-hyperlinks-in-html)
-    - [🔹 Basic Link](#-basic-link)
-    - [🔹 Open Link in a New Tab (`target` Attribute)](#-open-link-in-a-new-tab-target-attribute)
-    - [🔹 Link to Another Page on Your Site](#-link-to-another-page-on-your-site)
-    - [🔹 Link to a Section on the Same Page (Document Fragment)](#-link-to-a-section-on-the-same-page-document-fragment)
-- [🎨 **CSS**](#-css)
-  - [📌 Basic CSS Syntax](#-basic-css-syntax)
-  - [🎯 **Ways to Add CSS**](#-ways-to-add-css)
-    - [1. Inline (not recommended)](#1-inline-not-recommended)
-    - [2. Internal](#2-internal)
-    - [3. External (best practice)](#3-external-best-practice)
-  - [🎨 **Common CSS Properties**](#-common-css-properties)
-  - [🧱 **Selectors Basics**](#-selectors-basics)
-  - [📦 **Box Model (Very Important Concept)**](#-box-model-very-important-concept)
-  - [🧾 **More CSS Properties Table**](#-more-css-properties-table)
-  - [🟡 **Advanced Layout & Effects**](#-advanced-layout--effects)
-  - [🔴 **More Advanced Animation**](#-more-advanced-animation)
-- [**HTML Table**](#html-table)
-  - [🧱 **Basic HTML Table Example**](#-basic-html-table-example)
-  - [📚 **Important Table Tags**](#-important-table-tags)
-  - [✨ Simple Styled Table (Beginner CSS)](#-simple-styled-table-beginner-css)
-    - [✅ **Practice Task**](#-practice-task)
-- [🖼️ **Image Tag (`<img>`)**](#️-image-tag-img)
-    - [📌 Syntax](#-syntax)
-    - [🧾 Example](#-example)
-- [🌐 **Iframe Tag (`<iframe>`)**](#-iframe-tag-iframe)
-    - [📌 Syntax](#-syntax-1)
-    - [🧾 Example (Website)](#-example-website)
-    - [🧾 Example (YouTube Video)](#-example-youtube-video)
-    - [🔑 Common iframe Attributes](#-common-iframe-attributes)
-  - [🏗 Mini Project: Travel Page](#-mini-project-travel-page)
-- [**Webpage Layout**](#webpage-layout)
-    - [Example:](#example)
-- [**Flexbox**](#flexbox)
-  - [✅ **Why Use Flexbox?**](#-why-use-flexbox)
-  - [**How to Use Flexbox**](#how-to-use-flexbox)
-  - [**Important Flexbox Properties**](#important-flexbox-properties)
-    - [**Container Properties (applied to parent)**](#container-properties-applied-to-parent)
-    - [**Item Properties (applied to child)**](#item-properties-applied-to-child)
-  - [**Example with Flexbox**](#example-with-flexbox)
-    - [1. Navigation (header)](#1-navigation-header)
-    - [2. Sidebar With Main Content](#2-sidebar-with-main-content)
-    - [3. Centering an element](#3-centering-an-element)
-- [**Grid**](#grid)
-  - [**Basic Grid Example**](#basic-grid-example)
-  - [**Important Grid Properties**](#important-grid-properties)
-    - [**Container Properties (applied to parent)**](#container-properties-applied-to-parent-1)
-    - [**Item Properties (applied to child)**](#item-properties-applied-to-child-1)
-  - [**Example: Responsive Grid with 3 Columns**](#example-responsive-grid-with-3-columns)
-  - [**HTML + CSS: Travel Bento Grid**](#html--css-travel-bento-grid)
-- [**Media Query**](#media-query)
-  - [**Basic Syntax**](#basic-syntax)
-  - [**Simple Example: Change background color on small screens**](#simple-example-change-background-color-on-small-screens)
-  - [**Media Query for Layout (Flex Example)**](#media-query-for-layout-flex-example)
-- [**7. Example: Responsive Bento Grid with Media Query**](#7-example-responsive-bento-grid-with-media-query)
-
-<!-- /code_chunk_output -->
-
-
-
-<!-- TODO: create Table of Content -->
-
 # **Introduction to HTML**
 
-- **HTML (HyperText Markup Language)** is the standard language used to create web pages.
-- It defines the **structure and content** of a webpage.
-- HTML uses **elements (called tags)** to organize content such as headings, paragraphs, links, and images.
-- Tags are written inside **angle brackets** `< >`.
-- Most elements have:
-  - an **opening tag** (e.g., `<p>`)
-  - a **closing tag** (e.g., `</p>`)
-
+* **HTML (HyperText Markup Language)** is the standard language used to create web pages.
+* It defines the **structure and layout** of content on a webpage.
 - HTML files are saved with the **.html** file extension.
+
+## **HTML Tags**
+* **Tags** are used to define HTML elements.
+* They tell the browser **how content should appear**.
+* Tags are **not case-sensitive**.
+* Written inside **angle brackets `< >`**.
+* Example:
+  ```html
+  <p>This is a paragraph</p>
+  ```
+
+### **Types of Tags**
+
+| Type of Tag       | Description                                                       | Example            |
+| ----------------- | ----------------------------------------------------------------- | ------------------ |
+| **Paired Tags**   | Have both **opening and closing tags** with content between them. | `<p>Hello</p>` |
+| **Non paired Tags** | Do **not have a closing tag**; used for single actions.           | `<br>`             |
+
+
+## **Basic Structure of HTML**
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+</head>
+
+<body>
+    <p>My first paragraph.</p>
+</body>
+
+</html>
+```
+
+#### Explanation
+
+| Tag               | Description                                          |
+| ----------------- | ---------------------------------------------------- |
+| `<!DOCTYPE html>` | Declares the document type and HTML version.         |
+| `<html>`          | Root element that contains the entire HTML document. |
+| `<head>`          | Contains metadata like title, styles, and links.     |
+| `<title>`         | Sets the title shown in the browser tab.             |
+| `<body>`          | Contains the visible content of the webpage.         |
 
 ---
 
 ## **HTML Elements**
 
-- An **HTML element** consists of an **opening tag**, **content**, and a **closing tag**.
-  - Example:
+* **HTML elements** are the building blocks of a webpage.
+* They define the **structure and content** of a page.
+* An element usually consists of:
 
-    ```html
-    <title>Hello World</title>
-    ```
+  * **Opening tag**
+  * **Content/Character data**
+  * **Closing tag**
 
-- Elements can contain text or other elements.
-  - Example:
-
-    ```html
-    <body>
-      <p>Welcome to the world</p>
-    </body>
-    ```
-
-- Elements can include **attributes** that provide additional information.
-  - Example:
-
-    ```html
-    <a href="https://www.google.com">Google</a>
-    ```
-
-- Some elements are **empty (self-closing)**, meaning they do not have content or a closing tag.
-  - Example:
-
-    ```html
-    <br />
-    ```
-
-- HTML tags are **not case-sensitive**, but lowercase is recommended for best practice.
-
----
+* Example:
+  ```html
+  <p>This is a paragraph</p>
+  ```
 
 ## **Types of HTML Elements**
 
@@ -141,36 +74,30 @@ HTML elements are mainly divided into two types:
 - Take up the **full width** of the page
 - Always start on a **new line**
 - Can contain other block and inline elements
-
-Examples:
-
-```html
-<h1>Heading</h1>
-<p>This is a paragraph.</p>
-<div>Container</div>
-```
-
-Common block elements:
-`<div>`, `<p>`, `<h1>`–`<h6>`, `<ul>`, `<ol>`, `<section>`
-
----
+- Examples:
+  ```html
+  <h1>Heading</h1>
+  <p>This is a paragraph.</p>
+  <div>Container</div>
+  ```
+- Common block elements:
+  `<p>`, `<h1>`–`<h6>`, `<ul>`, `<ol>`, `<div>`
 
 ### 2️⃣ Inline Elements
 
 - Do **not start on a new line**
 - Only take up as much width as needed
 - Usually used inside block elements
+- Examples:
 
-Examples:
+  ```html
+  <a href="#">Link</a>
+  <span>Text</span>
+  <strong>Bold Text</strong>
+  ```
 
-```html
-<a href="#">Link</a>
-<span>Text</span>
-<strong>Bold Text</strong>
-```
-
-Common inline elements:
-`<a>`, `<span>`, `<strong>`, `<em>`, `<img>`
+- Common inline elements:
+  `<a>`, `<span>`, `<b>`, `<u>`, `<img>`
 
 ---
 
@@ -186,13 +113,6 @@ Example:
 <a href="https://www.google.com">Google</a>
 ```
 
-In this example:
-
-- `href` is the attribute name
-- `"https://www.google.com"` is the value
-
----
-
 ### Common HTML Attributes
 
 - **class** – Used to apply CSS styles to elements
@@ -203,57 +123,6 @@ Example:
 
 ```html
 <p id="intro" class="text" style="color:blue;">Welcome!</p>
-```
-
----
-
-## 📝 **Practice Activity: HTML Attributes**
-
-### 🔹 Activity 1: Identify the Attribute
-
-Look at the code:
-
-```html
-<img src="photo.jpg" alt="My Photo" />
-```
-
-👉 Questions:
-
-1. What is the attribute name?
-2. What is the value of the attribute?
-3. Is this element block or inline?
-
----
-
-### 🔹 Activity 2: Fix the Code
-
-Correct the mistake:
-
-```html
-<p id="intro">Welcome to my website</p>
-```
-
-👉 Hint: Attribute values must be inside **quotes**.
-
-Correct Answer:
-
-```html
-<p id="intro">Welcome to my website</p>
-```
-
----
-
-### 🔹 Activity 3: Create Your Own
-
-Write an `<a>` tag that:
-
-- Links to Google
-- Uses a class called `"link"`
-
-Example Answer:
-
-```html
-<a href="https://www.google.com" class="link">Visit Google</a>
 ```
 
 ---
@@ -309,8 +178,6 @@ Positions text slightly below the baseline.
 ```
 
 **Output:** H₂O is water
-
----
 
 ---
 
@@ -1261,6 +1128,7 @@ body {
   background: linear-gradient(to right, #e0f7fa, #f1f8ff);
   padding: 40px;
 }
+
 
 /* Grid Layout */
 .bento-container {
