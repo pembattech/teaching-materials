@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PembaTTech | Learn Web Dev - HTML</title>
-    
+
     <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 
@@ -37,6 +37,7 @@
             <a href="#structure">Basic Structure</a>
             <a href="#elements">Elements</a>
             <a href="#attributes">Attributes</a>
+            <a href="#textfundamental">Text Fundamentals</a>
             <a href="#formatting">Formatting</a>
             <a href="#hyperlinks">Hyperlinks</a>
             <a href="#tables">Tables</a>
@@ -102,7 +103,7 @@
                         <tbody>
                             <tr>
                                 <td>Paired Tags</td>
-                                <td>Have both opening and closing tags with content between them</td>
+                                <td>Have both opening and closing tags</td>
                                 <td><code>&lt;p&gt;Hello&lt;/p&gt;</code></td>
                             </tr>
                             <tr>
@@ -112,11 +113,6 @@
                             </tr>
                         </tbody>
                     </table>
-
-                    <div class="example-box">
-                        <strong>Example:</strong>
-                        <code>&lt;p&gt;This is a paragraph&lt;/p&gt;</code>
-                    </div>
 
                     <h3>HTML Comment</h3>
                     <ul>
@@ -197,7 +193,7 @@
                     </ul>
 
                     <div class="example-box">
-                        <strong>Example Element:</strong>
+                        <strong>Example:</strong>
                         <pre><span class="tag">&lt;p&gt;</span>This is a paragraph<span class="tag">&lt;/p&gt;</span></pre>
                     </div>
 
@@ -205,12 +201,6 @@
 
                     <strong>1. Block-Level Elements</strong>
                     <p>Block-level elements take up the full width of the page and always start on a new line.</p>
-
-                    <div class="code-card">
-                        <pre><span class="tag">&lt;h1&gt;</span>Heading<span class="tag">&lt;/h1&gt;</span>
-<span class="tag">&lt;p&gt;</span>This is a paragraph.<span class="tag">&lt;/p&gt;</span>
-<span class="tag">&lt;div&gt;</span>Container<span class="tag">&lt;/div&gt;</span></pre>
-                    </div>
 
                     <p><strong>Common block elements:</strong> <code>&lt;p&gt;</code>,
                         <code>&lt;h1&gt;</code>–<code>&lt;h6&gt;</code>, <code>&lt;ul&gt;</code>,
@@ -222,12 +212,6 @@
                     <p>Inline elements do not start on a new line and only take up as much width as needed. They're
                         usually
                         used inside block elements.</p>
-
-                    <div class="code-card">
-                        <pre><span class="tag">&lt;a href="#"&gt;</span>Link<span class="tag">&lt;/a&gt;</span>
-<span class="tag">&lt;span&gt;</span>Text<span class="tag">&lt;/span&gt;</span>
-<span class="tag">&lt;strong&gt;</span>Bold Text<span class="tag">&lt;/strong&gt;</span></pre>
-                    </div>
 
                     <p><strong>Common inline elements:</strong> <code>&lt;a&gt;</code>, <code>&lt;span&gt;</code>,
                         <code>&lt;b&gt;</code>, <code>&lt;u&gt;</code>, <code>&lt;img&gt;</code>
@@ -258,9 +242,119 @@
                     </div>
                 </section>
 
+                <!-- Text Fundamental Section -->
+                <section id="textfundamental">
+                    <h2>05. Text Fundamental Tags</h2>
+                    <p>Text fundamentals in HTML refer to the basic elements used to display and structure text on a
+                        webpage.</p>
+
+                    <h3>Common Text Fundamental Tags</h3>
+
+                    <table border="1" cellpadding="10" cellspacing="0">
+                        <tr>
+                            <th>Tag</th>
+                            <th>Description</th>
+                            <th>Example</th>
+                        </tr>
+
+                        <tr>
+                            <td><code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code></td>
+                            <td>Defines headings (largest to smallest)</td>
+                            <td><code>&lt;h1&gt;Main Title&lt;/h1&gt;</code></td>
+                        </tr>
+
+                        <tr>
+                            <td><code>&lt;p&gt;</code></td>
+                            <td>Defines a paragraph</td>
+                            <td><code>&lt;p&gt;This is a paragraph.&lt;/p&gt;</code></td>
+                        </tr>
+
+                    </table>
+
+                    <h3>List in HTML</h3>
+                    <h4>1. Ordered List </h4>
+                    <p>An <strong>Ordered List</strong> displays items in a numbered sequence.</p>
+
+                    <div class="code-card">
+                        <pre>
+<span class="tag">&lt;ol&gt;</span>
+  <span class="tag">&lt;li&gt;</span>HTML<span class="tag">&lt;/li&gt;</span>
+  <span class="tag">&lt;li&gt;</span>CSS<span class="tag">&lt;/li&gt;</span>
+  <span class="tag">&lt;li&gt;</span>JavaScript<span class="tag">&lt;/li&gt;</span>
+<span class="tag">&lt;/ol&gt;</span>
+</pre>
+                    </div>
+
+                    <div class="example-box">
+                        <strong>Output:</strong>
+                        <ol>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                        </ol>
+                    </div>
+
+                    <h4>2. Unordered List </h4>
+                    <p>An <strong>Unordered List</strong> displays items in a bulleted sequence.</p>
+
+                    <div class="code-card">
+                        <pre>
+<span class="tag">&lt;ul&gt;</span>
+  <span class="tag">&lt;li&gt;</span>Home<span class="tag">&lt;/li&gt;</span>
+  <span class="tag">&lt;li&gt;</span>About<span class="tag">&lt;/li&gt;</span>
+  <span class="tag">&lt;li&gt;</span>Contact<span class="tag">&lt;/li&gt;</span>
+<span class="tag">&lt;/ul&gt;</span>
+</pre>
+                    </div>
+
+                    <div class="example-box">
+                        <strong>Output:</strong>
+                        <ul>
+                            <li>Home</li>
+                            <li>About</li>
+                            <li>Contact</li>
+                        </ul>
+                    </div>
+
+                    <p>Types:</p>
+                    <ul>
+                        <li><code>disc</code> (default) - solid circle</li>
+                        <li><code>circle</code> - circle</li>
+                        <li><code>square</code> - solid square</li>
+                    </ul>
+
+                    <h4>3. Description List </h4>
+                    <p>An <strong>Description List</strong> displays items in a description format.</p>
+
+                    <div class="code-card">
+                        <pre>
+<span class="tag">&lt;dl&gt;</span>
+
+  <span class="tag">&lt;dt&gt;</span>HTML<span class="tag">&lt;/dt&gt;</span>
+  <span class="tag">&lt;dd&gt;</span>HyperText Markup Language<span class="tag">&lt;/dd&gt;</span>
+
+  <span class="tag">&lt;dt&gt;</span>CSS<span class="tag">&lt;/dt&gt;</span>
+  <span class="tag">&lt;dd&gt;</span>Used for styling web pages<span class="tag">&lt;/dd&gt;</span>
+
+<span class="tag">&lt;/dl&gt;</span>
+</pre>
+                    </div>
+
+                    <div class="example-box">
+                        <strong>Output:</strong>
+                        <dl>
+                            <dt>HTML</dt>
+                            <dd>HyperText Markup Language</dd>
+
+                            <dt>CSS</dt>
+                            <dd>Used to style web pages</dd>
+                        </dl>
+                    </div>
+                </section>
+
                 <!-- Text Formatting Section -->
                 <section id="formatting">
-                    <h2>05. Text Formatting Tags</h2>
+                    <h2>06. Text Formatting Tags</h2>
                     <p>HTML provides several tags to format text with special emphasis and styling.</p>
 
                     <h3>Bold Text <code>&lt;b&gt;</code> and <code>&lt;strong&gt;</code></h3>
@@ -305,7 +399,7 @@
 
                 <!-- Hyperlink Section -->
                 <section id="hyperlinks">
-                    <h2>06. Hyperlinks</h2>
+                    <h2>07. Hyperlinks</h2>
                     <p>Hyperlinks allow you to navigate between pages and resources.</p>
 
                     <h3>Creating Links <code>&lt;a&gt;</code></h3>
@@ -344,7 +438,7 @@
 
                 <!-- Table Section -->
                 <section id="tables">
-                    <h2>07. Tables</h2>
+                    <h2>08. Tables</h2>
                     <p>Tables are used to display data in a structured format ie in rows and columns.</p>
 
                     <h3>Creating Tables <code>&lt;table&gt;</code></h3>
@@ -467,7 +561,7 @@
 
                 <!-- Image Tag -->
                 <section id="image">
-                    <h2>08. Image Tag</h2>
+                    <h2>09. Image Tag</h2>
                     <p>The <code>&lt;img&gt;</code> tag is used to embed an image in an HTML page.</p>
                     <div class="code-card">
                         <pre><span class="tag">&lt;img src="image.jpg" alt="Description of image"&gt;</span></pre>
@@ -476,7 +570,7 @@
 
                 <!-- Iframe Tag Section -->
                 <section id="iframe">
-                    <h2>09. Iframe Tag</h2>
+                    <h2>10. Iframe Tag</h2>
                     <p>The <code>&lt;iframe&gt;</code> tag is used to embed another HTML page within the current
                         page.</p>
 
@@ -532,7 +626,7 @@
 
                 <!-- Webpage Layout Section -->
                 <section id="layout">
-                    <h2>10. Webpage Layout</h2>
+                    <h2>11. Webpage Layout</h2>
                     <p>A webpage layout is the arrangement of different sections on a webpage, such as:</p>
                     <ul>
                         <li><strong>Header</strong> - The top section of the webpage that typically contains the
@@ -557,7 +651,7 @@
 
                 <!-- Flexbox Section -->
                 <section id="flexbox">
-                    <h2>11. Flexbox</h2>
+                    <h2>12. Flexbox</h2>
                     <p>Flexbox is a CSS layout system used to arrange and align elements easily inside a container.
                         It
                         allows items to be organized in rows or columns with flexible spacing and alignment.</p>
@@ -744,8 +838,7 @@
 
                         <div class="example-box">
                             <strong>Output:</strong>
-                            <img class="example-image" src="./assets/flexNavigationHeader.png"
-                                alt="">
+                            <img class="example-image" src="./assets/flexNavigationHeader.png" alt="">
                         </div>
 
                         <h4>2. Sidebar with Main Content</h4>
@@ -797,8 +890,7 @@
 
                         <div class="example-box">
                             <strong>Output:</strong>
-                            <img class="example-image"
-                                src="./assets/flexSidebarWithMaincontent.png" alt="">
+                            <img class="example-image" src="./assets/flexSidebarWithMaincontent.png" alt="">
                         </div>
 
                         <h4>3. Centering an Element</h4>
@@ -830,14 +922,13 @@
 
                         <div class="example-box">
                             <strong>Output:</strong>
-                            <img class="example-image" src="./assets/flexCenteringElement.png"
-                                alt="">
+                            <img class="example-image" src="./assets/flexCenteringElement.png" alt="">
                         </div>
                 </section>
 
                 <!-- Grid Section -->
                 <section id="grid">
-                    <h2>12. Grid</h2>
+                    <h2>13. Grid</h2>
                     <p>Grid is a CSS layout system used to create complex, two-dimensional layouts. It allows for
                         precise
                         control over rows and columns.</p>
@@ -1011,7 +1102,7 @@
 
                 <!-- Media Query Section -->
                 <section id="mediaquery">
-                    <h2>13. Media Query</h2>
+                    <h2>14. Media Query</h2>
                     <p>A media query is a CSS technique that allows you to apply styles based on the device’s screen
                         size or type.</p>
 
