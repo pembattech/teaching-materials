@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Clone</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+        }
+
+        /* Header/Navbar */
+        .navbar {
+            background-color: #fff;
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #0a66c2;
+        }
+
+        .search-box {
+            flex: 1;
+            margin: 0 20px;
+            max-width: 300px;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 10px 15px;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            background-color: #f0f2f5;
+        }
+
+        .navbar-right {
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar-right a {
+            text-decoration: none;
+            color: #65676b;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            gap: 20px;
+            padding: 0 10px;
+        }
+
+        /* Left Sidebar */
+        .left-sidebar {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            height: fit-content;
+        }
+
+        .left-sidebar-item {
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 8px;
+            margin-bottom: 5px;
+        }
+
+        .left-sidebar-item:hover {
+            background-color: #f0f2f5;
+        }
+
+        .left-sidebar-item a {
+            text-decoration: none;
+            color: #0a66c2;
+        }
+
+        /* Center Feed */
+        .center-feed {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .post-creator {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .creator-header {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .profile-pic {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #0a66c2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .create-post-input {
+            flex: 1;
+            background-color: #f0f2f5;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        .creator-buttons {
+            display: flex;
+            gap: 10px;
+            padding-top: 10px;
+            border-top: 1px solid #ccc;
+            margin-top: 10px;
+        }
+
+        .creator-button {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            background-color: #fff;
+            color: #65676b;
+            cursor: pointer;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+
+        .creator-button:hover {
+            background-color: #f0f2f5;
+        }
+
+        /* Posts */
+        .post {
+            background-color: #fff;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .post-header {
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #f0f2f5;
+        }
+
+        .post-header-left {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .post-author {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .post-author-name {
+            font-weight: bold;
+            color: #000;
+        }
+
+        .post-time {
+            font-size: 12px;
+            color: #65676b;
+        }
+
+        .post-options {
+            cursor: pointer;
+            color: #65676b;
+        }
+
+        .post-content {
+            padding: 15px;
+            color: #000;
+            line-height: 1.5;
+        }
+
+        .post-image {
+            width: 100%;
+            max-height: 500px;
+            object-fit: cover;
+        }
+
+        .post-stats {
+            padding: 10px 15px;
+            border-top: 1px solid #f0f2f5;
+            border-bottom: 1px solid #f0f2f5;
+            font-size: 12px;
+            color: #65676b;
+        }
+
+        .post-actions {
+            display: flex;
+            gap: 0;
+        }
+
+        .post-action {
+            flex: 1;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+            color: #65676b;
+            border: none;
+            background-color: #fff;
+            font-size: 14px;
+            border-right: 1px solid #f0f2f5;
+        }
+
+        .post-action:last-child {
+            border-right: none;
+        }
+
+        .post-action:hover {
+            background-color: #f0f2f5;
+        }
+
+        /* Right Sidebar */
+        .right-sidebar {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            height: fit-content;
+        }
+
+        .sidebar-title {
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #000;
+        }
+
+        .friend-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+        .friend-item:hover {
+            background-color: #f0f2f5;
+        }
+
+        .friend-pic {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background-color: #0a66c2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .friend-name {
+            font-size: 14px;
+            color: #000;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .container {
+                grid-template-columns: 1fr 2fr;
+            }
+            .right-sidebar {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            .left-sidebar {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="navbar-container">
+            <div class="logo">facebook</div>
+            <div class="search-box">
+                <input type="text" placeholder="🔍 Search Facebook">
+            </div>
+            <div class="navbar-right">
+                <a href="#">Home</a>
+                <a href="#">Friends</a>
+                <a href="#">Messages</a>
+                <a href="#">Profile</a>
+                <a href="#">Logout</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Left Sidebar -->
+        <div class="left-sidebar">
+            <div class="sidebar-title">Menu</div>
+            <div class="left-sidebar-item">
+                <a href="#">👤 My Profile</a>
+            </div>
+            <div class="left-sidebar-item">
+                <a href="#">👥 Friends</a>
+            </div>
+            <div class="left-sidebar-item">
+                <a href="#">📸 Photos</a>
+            </div>
+            <div class="left-sidebar-item">
+                <a href="#">💬 Messages</a>
+            </div>
+            <div class="left-sidebar-item">
+                <a href="#">🔔 Notifications</a>
+            </div>
+            <div class="left-sidebar-item">
+                <a href="#">⚙️ Settings</a>
+            </div>
+        </div>
+
+        <!-- Center Feed -->
+        <div class="center-feed">
+            <!-- Post Creator -->
+            <div class="post-creator">
+                <div class="creator-header">
+                    <div class="profile-pic">J</div>
+                    <input type="text" class="create-post-input" placeholder="What's on your mind, John?">
+                </div>
+                <div class="creator-buttons">
+                    <button class="creator-button">📸 Photo</button>
+                    <button class="creator-button">😊 Feeling</button>
+                    <button class="creator-button">📍 Check In</button>
+                </div>
+            </div>
+
+            <!-- Post 1 -->
+            <div class="post">
+                <div class="post-header">
+                    <div class="post-header-left">
+                        <div class="profile-pic">N</div>
+                        <div class="post-author">
+                            <div class="post-author-name">Nima Tamang</div>
+                            <div class="post-time">2 hours ago</div>
+                        </div>
+                    </div>
+                    <div class="post-options">⋯</div>
+                </div>
+                <div class="post-content">
+                    Just finished an amazing coding tutorial! Learning React has been so much fun. Can't wait to build my own projects! 🚀
+                </div>
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='250'%3E%3Crect fill='%234267B2' width='400' height='250'/%3E%3Ctext x='50%25' y='50%25' font-size='24' fill='white' text-anchor='middle' dy='.3em'%3ECoding Project%3C/text%3E%3C/svg%3E" class="post-image" alt="post image">
+                <div class="post-stats">
+                    👍 120 Likes • 💬 25 Comments • 🔄 5 Shares
+                </div>
+                <div class="post-actions">
+                    <button class="post-action">👍 Like</button>
+                    <button class="post-action">💬 Comment</button>
+                    <button class="post-action">🔄 Share</button>
+                </div>
+            </div>
+
+            <!-- Post 2 -->
+            <div class="post">
+                <div class="post-header">
+                    <div class="post-header-left">
+                        <div class="profile-pic">R</div>
+                        <div class="post-author">
+                            <div class="post-author-name">Roshni Rai</div>
+                            <div class="post-time">4 hours ago</div>
+                        </div>
+                    </div>
+                    <div class="post-options">⋯</div>
+                </div>
+                <div class="post-content">
+                    Beautiful sunset at the beach today! Nature is amazing 🌅
+                </div>
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='250'%3E%3Crect fill='%23FF9500' width='400' height='250'/%3E%3Ctext x='50%25' y='50%25' font-size='24' fill='white' text-anchor='middle' dy='.3em'%3ESunset%3C/text%3E%3C/svg%3E" class="post-image" alt="post image">
+                <div class="post-stats">
+                    👍 340 Likes • 💬 52 Comments • 🔄 18 Shares
+                </div>
+                <div class="post-actions">
+                    <button class="post-action">👍 Like</button>
+                    <button class="post-action">💬 Comment</button>
+                    <button class="post-action">🔄 Share</button>
+                </div>
+            </div>
+
+            <!-- Post 3 -->
+            <div class="post">
+                <div class="post-header">
+                    <div class="post-header-left">
+                        <div class="profile-pic">A</div>
+                        <div class="post-author">
+                            <div class="post-author-name">Ashish Kumar</div>
+                            <div class="post-time">6 hours ago</div>
+                        </div>
+                    </div>
+                    <div class="post-options">⋯</div>
+                </div>
+                <div class="post-content">
+                    Just got back from an incredible road trip across the country! Met so many amazing people. Here are some of my favorite moments 🚗✨
+                </div>
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='250'%3E%3Crect fill='%2334C759' width='400' height='250'/%3E%3Ctext x='50%25' y='50%25' font-size='24' fill='white' text-anchor='middle' dy='.3em'%3ERoad Trip%3C/text%3E%3C/svg%3E" class="post-image" alt="post image">
+                <div class="post-stats">
+                    👍 560 Likes • 💬 89 Comments • 🔄 34 Shares
+                </div>
+                <div class="post-actions">
+                    <button class="post-action">👍 Like</button>
+                    <button class="post-action">💬 Comment</button>
+                    <button class="post-action">🔄 Share</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Sidebar -->
+        <div class="right-sidebar">
+            <div class="sidebar-title">Friends Online</div>
+            <div class="friend-item">
+                <div class="friend-pic">A</div>
+                <div class="friend-name">Ashish Kumar</div>
+            </div>
+            <div class="friend-item">
+                <div class="friend-pic">R</div>
+                <div class="friend-name">Roshni Rai</div>
+            </div>
+            <div class="friend-item">
+                <div class="friend-pic">D</div>
+                <div class="friend-name">David Lama</div>
+            </div>
+            <div class="friend-item">
+                <div class="friend-pic">L</div>
+                <div class="friend-name">Laxmi Tamang</div>
+            </div>
+            <div class="friend-item">
+                <div class="friend-pic">P</div>
+                <div class="friend-name">Pemba Tamang</div>
+            </div>
+            <div class="friend-item">
+                <div class="friend-pic">N</div>
+                <div class="friend-name">Nima Tamang</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

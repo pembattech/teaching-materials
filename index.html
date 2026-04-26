@@ -43,6 +43,7 @@
             <a href="#tables">Tables</a>
             <a href="#image">Image</a>
             <a href="#iframe">Iframe</a>
+            <a href="#formtag">Form in HTML</a>
             <a href="#layout">Layout</a>
             <a href="#flexbox">Flexbox</a>
             <a href="#grid">Grid</a>
@@ -269,6 +270,24 @@
                             <td><code>&lt;p&gt;This is a paragraph.&lt;/p&gt;</code></td>
                         </tr>
 
+                        <tr>
+                            <td><code>&lt;br&gt;</code></td>
+                            <td>Inserts a line break</td>
+                            <td>
+                                Line 1<br>
+                                Line 2
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><code>&lt;hr&gt;</code></td>
+                            <td>Creates a horizontal line</td>
+                            <td>
+                                Line above
+                                <hr>
+                                Line below
+                            </td>
+                        </tr>
                     </table>
 
                     <h3>List in HTML</h3>
@@ -277,7 +296,7 @@
 
                     <div class="code-card">
                         <pre>
-<span class="tag">&lt;ol&gt;</span>
+<span class="tag">&lt;ol&gt; <span class="attr">type</span>="A" <span class="attr">start</span>="1"</span>
   <span class="tag">&lt;li&gt;</span>HTML<span class="tag">&lt;/li&gt;</span>
   <span class="tag">&lt;li&gt;</span>CSS<span class="tag">&lt;/li&gt;</span>
   <span class="tag">&lt;li&gt;</span>JavaScript<span class="tag">&lt;/li&gt;</span>
@@ -287,7 +306,7 @@
 
                     <div class="example-box">
                         <strong>Output:</strong>
-                        <ol>
+                        <ol type="A" start="1">
                             <li>HTML</li>
                             <li>CSS</li>
                             <li>JavaScript</li>
@@ -299,7 +318,7 @@
 
                     <div class="code-card">
                         <pre>
-<span class="tag">&lt;ul&gt;</span>
+<span class="tag">&lt;ul&gt; <span class="attr">type</span>="disc"</span>
   <span class="tag">&lt;li&gt;</span>Home<span class="tag">&lt;/li&gt;</span>
   <span class="tag">&lt;li&gt;</span>About<span class="tag">&lt;/li&gt;</span>
   <span class="tag">&lt;li&gt;</span>Contact<span class="tag">&lt;/li&gt;</span>
@@ -403,15 +422,9 @@
                     <p>Hyperlinks allow you to navigate between pages and resources.</p>
 
                     <h3>Creating Links <code>&lt;a&gt;</code></h3>
-                    <p>The <code>&lt;a&gt;</code> tag creates a hyperlink.</p>
+                    <p>The <code>&lt;a&gt;</code> anchor tag creates a hyperlink.</p>
                     <div class="code-card">
                         <pre><span class="tag">&lt;a href="https://www.example.com"&gt;</span>Visit Example<span class="tag">&lt;/a&gt;</span></pre>
-                    </div>
-
-                    <h3>Linking to Internal Pages</h3>
-                    <p>You can link to other sections within the same page or different pages.</p>
-                    <div class="code-card">
-                        <pre><span class="tag">&lt;a href="#intro"&gt;</span>Go to Introduction<span class="tag">&lt;/a&gt;</span></pre>
                     </div>
 
                     <h3>Using the target attribute to open links in a new tab:</h3>
@@ -444,15 +457,24 @@
                     <h3>Creating Tables <code>&lt;table&gt;</code></h3>
                     <p>The <code>&lt;table&gt;</code> tag creates a table.</p>
                     <div class="code-card">
-                        <pre><span class="tag">&lt;table&gt;</span>
+                        <pre>
+<span class="tag">&lt;table&gt;</span>
+<span class="tag">&lt;thead&gt;</span>
     <span class="tag">&lt;tr&gt;</span>
         <span class="tag">&lt;th&gt;</span>Name<span class="tag">&lt;/th&gt;</span>
         <span class="tag">&lt;th&gt;</span>Age<span class="tag">&lt;/th&gt;</span>
     <span class="tag">&lt;/tr&gt;</span>
+<span class="tag">&lt;/thead&gt;</span>
+<span class="tag">&lt;tbody&gt;</span>
     <span class="tag">&lt;tr&gt;</span>
         <span class="tag">&lt;td&gt;</span>John<span class="tag">&lt;/td&gt;</span>
         <span class="tag">&lt;td&gt;</span>25<span class="tag">&lt;/td&gt;</span>
     <span class="tag">&lt;/tr&gt;</span>
+    <span class="tag">&lt;tr&gt;</span>
+        <span class="tag">&lt;td&gt;</span>Nima<span class="tag">&lt;/td&gt;</span>
+        <span class="tag">&lt;td&gt;</span>35<span class="tag">&lt;/td&gt;</span>
+    <span class="tag">&lt;/tr&gt;</span>
+<span class="tag">&lt;/tbody&gt;</span>
 <span class="tag">&lt;/table&gt;</span></pre>
                     </div>
 
@@ -460,14 +482,22 @@
                         <strong>Output:</strong>
 
                         <table class="demo-table">
-                            <tr>
-                                <th>Name</th>
-                                <th>Age</th>
-                            </tr>
-                            <tr>
-                                <td>John</td>
-                                <td>25</td>
-                            </tr>
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Age</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>John</td>
+                                    <td>25</td>
+                                </tr>
+                                <tr>
+                                    <td>Nima</td>
+                                    <td>35</td>
+                                </tr>
+                            </tbody>
                         </table>
 
                     </div>
@@ -524,37 +554,79 @@
                     <div>
                         <h3>Practice Task</h3>
 
-                        <p>Create a table that includes the following columns:</p>
-
-                        <ul>
-                            <li>Subject</li>
-                            <li>Marks</li>
-                            <li>Grade</li>
-                        </ul>
-
-                        <p><b><u>Student Result</u></b></p>
+                        <p><b><u>1.Student Result Table</u></b></p>
 
                         <table class="result-table">
-                            <tr>
-                                <th>Subject</th>
-                                <th>Marks</th>
-                                <th>Grade</th>
-                            </tr>
-                            <tr>
-                                <td>Math</td>
-                                <td>85</td>
-                                <td>A</td>
-                            </tr>
-                            <tr>
-                                <td>Science</td>
-                                <td>78</td>
-                                <td>B</td>
-                            </tr>
-                            <tr>
-                                <td>English</td>
-                                <td>90</td>
-                                <td>A+</td>
-                            </tr>
+                            <thead>
+
+                                <tr>
+                                    <th>Subject</th>
+                                    <th>Marks</th>
+                                    <th>Grade</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Math</td>
+                                    <td>85</td>
+                                    <td>A</td>
+                                </tr>
+                                <tr>
+                                    <td>Science</td>
+                                    <td>78</td>
+                                    <td>B</td>
+                                </tr>
+                                <tr>
+                                    <td>English</td>
+                                    <td>90</td>
+                                    <td>A+</td>
+                                </tr>
+                                <tr style="background-color: #e7e7e772; font-weight: 900;">
+                                    <td colspan="2">Total Marks</td>
+                                    <td>343</td>
+                                </tr>
+                                <tr style="background-color: #e7e7e772; font-weight: 900;">
+                                    <td colspan="2">Overall Grade</td>
+                                    <td>A</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <p><b><u>2.User Info Table</u></b></p>
+
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th colspan="4"
+                                        style="background-color: #4CAF50; color: white; font-size: 16px; text-align: center;">
+                                        User Info</th>
+                                </tr>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Age</th>
+                                    <th>Father name</th>
+                                    <th>Mother name</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>Sujan</td>
+                                    <td>30</td>
+                                    <td>Jit Tamang</td>
+                                    <td>Uma Tamang</td>
+                                </tr>
+                                <tr>
+                                    <td>Nima</td>
+                                    <td>25</td>
+                                    <td rowspan="2">Bom Bahadur Tamang</td>
+                                    <td rowspan="2">Laxmi Tamang</td>
+                                </tr>
+                                <tr>
+                                    <td>Pemba</td>
+                                    <td>25</td>
+                                </tr>
+                            </tbody>
                         </table>
                     </div>
                 </section>
@@ -624,9 +696,191 @@
 
                 </section>
 
+                <!-- Image Tag Section -->
+                <section id="formtag">
+                    <h2>11. Form Tag</h2>
+                    <p>The HTML form is used to collect user input and send it to a server for processing.</p>
+
+
+                    <div class="code-card">
+<pre>
+<span class="tag">&lt;form</span> <span class="attr">id</span>=<span class="tag">"userForm"</span> <span class="attr">name</span>=<span class="tag">"userForm"</span><span class="tag">&gt;</span>
+
+    <span class="tag">&lt;label</span> <span class="attr">for</span>=<span class="tag">"name"</span><span class="tag">&gt;</span>Name:<span class="tag">&lt;/label&gt;</span>
+    <span class="tag">&lt;input</span> 
+        <span class="attr">type</span>=<span class="tag">"text"</span> 
+        <span class="attr">id</span>=<span class="tag">"name"</span> 
+        <span class="attr">name</span>=<span class="tag">"name"</span> 
+        <span class="attr">placeholder</span>=<span class="tag">"Enter your name"</span><span class="tag">&gt;</span>
+
+    <span class="tag">&lt;br&gt;&lt;br&gt;</span>
+
+    <span class="tag">&lt;label</span> <span class="attr">for</span>=<span class="tag">"email"</span><span class="tag">&gt;</span>Email:<span class="tag">&lt;/label&gt;</span>
+    <span class="tag">&lt;input</span> 
+        <span class="attr">type</span>=<span class="tag">"email"</span> 
+        <span class="attr">id</span>=<span class="tag">"email"</span> 
+        <span class="attr">name</span>=<span class="tag">"email"</span> 
+        <span class="attr">placeholder</span>=<span class="tag">"Enter your email"</span><span class="tag">&gt;</span>
+
+    <span class="tag">&lt;br&gt;&lt;br&gt;</span>
+
+    <span class="tag">&lt;label&gt;</span>Gender:<span class="tag">&lt;/label&gt;</span>
+
+    <span class="tag">&lt;input</span> 
+        <span class="attr">type</span>=<span class="tag">"radio"</span> 
+        <span class="attr">id</span>=<span class="tag">"male"</span> 
+        <span class="attr">name</span>=<span class="tag">"gender"</span> 
+        <span class="attr">value</span>=<span class="tag">"male"</span><span class="tag">&gt;</span> Male
+
+    <span class="tag">&lt;input</span> 
+        <span class="attr">type</span>=<span class="tag">"radio"</span> 
+        <span class="attr">id</span>=<span class="tag">"female"</span> 
+        <span class="attr">name</span>=<span class="tag">"gender"</span> 
+        <span class="attr">value</span>=<span class="tag">"female"</span><span class="tag">&gt;</span> Female
+
+    <span class="tag">&lt;input</span> 
+        <span class="attr">type</span>=<span class="tag">"radio"</span> 
+        <span class="attr">id</span>=<span class="tag">"other"</span> 
+        <span class="attr">name</span>=<span class="tag">"gender"</span> 
+        <span class="attr">value</span>=<span class="tag">"other"</span><span class="tag">&gt;</span> Other
+
+    <span class="tag">&lt;br&gt;&lt;br&gt;</span>
+
+    <span class="tag">&lt;button</span> <span class="attr">type</span>=<span class="tag">"submit"</span><span class="tag">&gt;</span>Submit<span class="tag">&lt;/button&gt;</span>
+
+<span class="tag">&lt;/form&gt;</span>
+</pre>
+</div>
+
+                    <h3>Common Input Tags</h3>
+
+                    <table border="1" cellpadding="10" cellspacing="0">
+                        <tr>
+                            <th>Type</th>
+                            <th>Use</th>
+                            <th>Example</th>
+                            <th>Output</th>
+                        </tr>
+
+                        <tr>
+                            <td>text</td>
+                            <td>Single-line text input</td>
+                            <td><code>&lt;input type="text"&gt;</code></td>
+                            <td><input type="text" placeholder="Enter text"></td>
+                        </tr>
+
+                        <tr>
+                            <td>password</td>
+                            <td>Hidden text input</td>
+                            <td><code>&lt;input type="password"&gt;</code></td>
+                            <td><input type="password" placeholder="Enter password"></td>
+                        </tr>
+
+                        <tr>
+                            <td>email</td>
+                            <td>Email input validation</td>
+                            <td><code>&lt;input type="email"&gt;</code></td>
+                            <td><input type="email" placeholder="Enter email"></td>
+                        </tr>
+
+                        <tr>
+                            <td>number</td>
+                            <td>Numeric input</td>
+                            <td><code>&lt;input type="number"&gt;</code></td>
+                            <td><input type="number" placeholder="Enter number"></td>
+                        </tr>
+
+                        <tr>
+                            <td>radio</td>
+                            <td>Select one option</td>
+                            <td><code>&lt;input type="radio"&gt;</code></td>
+                            <td>
+                                <input type="radio" name="demo"> Option 1
+                                <input type="radio" name="demo"> Option 2
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>checkbox</td>
+                            <td>Select multiple options</td>
+                            <td><code>&lt;input type="checkbox"&gt;</code></td>
+                            <td>
+                                <input type="checkbox"> A
+                                <input type="checkbox"> B
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>file</td>
+                            <td>Upload file</td>
+                            <td><code>&lt;input type="file"&gt;</code></td>
+                            <td><input type="file" style="width: 200px;"></td>
+                        </tr>
+
+                        <tr>
+                            <td>date</td>
+                            <td>Select date</td>
+                            <td><code>&lt;input type="date"&gt;</code></td>
+                            <td><input type="date"></td>
+                        </tr>
+
+                        <tr>
+                            <td>submit</td>
+                            <td>Submit form</td>
+                            <td><code>&lt;input type="submit" value="Submit"&gt;</code></td>
+                            <td><input type="submit" value="Submit"></td>
+                        </tr>
+
+                        <tr>
+                            <td>hidden</td>
+                            <td>Stores data that is not visible to the user</td>
+                            <td><code>&lt;input type="hidden" value="123"&gt;</code></td>
+                            <td>(Not visible on page)</td>
+                        </tr>
+                    </table>
+
+                   <h3>Textarea</h3>
+                   <p>Used for <b>long text input</b></p>
+
+                    <div class="code-card">
+                        <pre>
+<span class="tag">&lt;label</span> <span class="attr">for</span>=<span class="tag">"message"</span><span class="tag">&gt;</span>Message:<span class="tag">&lt;/label&gt;</span>
+
+<span class="tag">&lt;textarea</span> 
+    <span class="attr">id</span>=<span class="tag">"message"</span> 
+    <span class="attr">name</span>=<span class="tag">"message"</span> 
+    <span class="attr">placeholder</span>=<span class="tag">"Write your message here..."</span> 
+    <span class="attr">rows</span>=<span class="tag">4</span> 
+    <span class="attr">cols</span>=<span class="tag">30</span><span class="tag">&gt;</span>
+<span class="tag">&lt;/textarea&gt;</span>
+</pre>
+                    </div>
+
+                    <h3>Select (Dropdown)</h3>
+                    <p> Used to create dropdown list.</p>
+
+                    <div class="code-card">
+                        <pre>
+<span class="tag">&lt;label</span> <span class="attr">for</span>=<span class="tag">"country"</span><span class="tag">&gt;</span>Country:<span class="tag">&lt;/label&gt;</span>
+
+<span class="tag">&lt;select</span> 
+    <span class="attr">id</span>=<span class="tag">"country"</span> 
+    <span class="attr">name</span>=<span class="tag">"country"</span><span class="tag">&gt;</span>
+
+    <span class="tag">&lt;option&gt;</span>Nepal<span class="tag">&lt;/option&gt;</span>
+    <span class="tag">&lt;option&gt;</span>India<span class="tag">&lt;/option&gt;</span>
+    <span class="tag">&lt;option&gt;</span>USA<span class="tag">&lt;/option&gt;</span>
+
+<span class="tag">&lt;/select&gt;</span>
+</pre>
+                    </div>
+
+
+                </section>
+
                 <!-- Webpage Layout Section -->
                 <section id="layout">
-                    <h2>11. Webpage Layout</h2>
+                    <h2>12. Webpage Layout</h2>
                     <p>A webpage layout is the arrangement of different sections on a webpage, such as:</p>
                     <ul>
                         <li><strong>Header</strong> - The top section of the webpage that typically contains the
@@ -651,7 +905,7 @@
 
                 <!-- Flexbox Section -->
                 <section id="flexbox">
-                    <h2>12. Flexbox</h2>
+                    <h2>13. Flexbox</h2>
                     <p>Flexbox is a CSS layout system used to arrange and align elements easily inside a container.
                         It
                         allows items to be organized in rows or columns with flexible spacing and alignment.</p>
@@ -928,7 +1182,7 @@
 
                 <!-- Grid Section -->
                 <section id="grid">
-                    <h2>13. Grid</h2>
+                    <h2>14. Grid</h2>
                     <p>Grid is a CSS layout system used to create complex, two-dimensional layouts. It allows for
                         precise
                         control over rows and columns.</p>
@@ -1102,7 +1356,7 @@
 
                 <!-- Media Query Section -->
                 <section id="mediaquery">
-                    <h2>14. Media Query</h2>
+                    <h2>15. Media Query</h2>
                     <p>A media query is a CSS technique that allows you to apply styles based on the device’s screen
                         size or type.</p>
 

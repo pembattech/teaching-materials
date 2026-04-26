@@ -192,6 +192,13 @@ p <span class="bracket">{</span>
                         </tr>
 
                         <tr>
+                            <td><strong>border-radius</strong></td>
+                            <td>Rounds the corners</td>
+                            <td><code>.box { border-radius: 10px; }</code></td>
+                            <td>Makes the box corners rounded</td>
+                        </tr>
+
+                        <tr>
                             <td><strong>width</strong></td>
                             <td>Sets element width</td>
                             <td><code>img { width: 200px; }</code></td>
@@ -231,6 +238,13 @@ p <span class="bracket">{</span>
                             <td>Controls boldness</td>
                             <td><code>p { font-weight: bold; }</code></td>
                             <td>Makes text bold</td>
+                        </tr>
+
+                        <tr>
+                            <td><strong>object-fit</strong></td>
+                            <td>Controls how media fits inside container</td>
+                            <td><code>img { object-fit: cover; }</code></td>
+                            <td>Fills container while maintaining aspect ratio</td>
                         </tr>
 
                     </table>
@@ -339,9 +353,9 @@ p <span class="bracket">{</span>
 
                         <tr>
                             <td><strong>overflow</strong></td>
-                            <td>Controls content overflow</td>
+                            <td>Controls content that exceeds container</td>
                             <td><code>.box { overflow: hidden; }</code></td>
-                            <td>Hides extra content</td>
+                            <td>Hides extra content outside the box</td>
                         </tr>
 
                         <tr>
@@ -433,33 +447,76 @@ p <span class="bracket">{</span>
 
                             <a class="go-link" href="./practice-and-examples/example-static.html" target="_blank">
                                 Static (default)</a>
+                            <ul type="square">
+                                <li>
+                                    This is the default position for all elements.
+                                </li>
+                                <li>
+                                    The element follows the normal document flow (top to bottom).
+                                </li>
+                                <li>
+                                    You CANNOT use top, left, right, or bottom.
+                                </li>
+                            </ul>
                         </li>
                         <li>
 
                             <a class="go-link" href="./practice-and-examples/example-relative.html" target="_blank">
                                 Relative</a>
+                            <ul type="square">
+                                <li>
+                                    The element still stays in the normal flow.
+                                </li>
+                                <li>
+                                    But now you CAN move it using top, left, right, bottom.
+                                </li>
+                                <li>
+                                    It moves relative to its original position.
+                                </li>
+                            </ul>
                         </li>
                         <li>
 
                             <a class="go-link" href="./practice-and-examples/example-absolute.html" target="_blank">
                                 Absolute</a>
+                            <ul type="square">
+                                <li>
+                                    The element is REMOVED from the normal flow.
+                                </li>
+                                <li>
+                                    It positions itself relative to the nearest positioned parent (not static).
+                                </li>
+                                <li>
+                                    If no parent is positioned, it uses the whole page (body).
+                                </li>
+                            </ul>
                         </li>
                         <li>
 
                             <a class="go-link" href="./practice-and-examples/example-fixed.html" target="_blank">
                                 Fixed</a>
+                            <ul type="square">
+                                <li>The element is REMOVED from the normal flow.</li>
+                                <li>It is positioned relative to the browser window (viewport).</li>
+                                <li>It stays fixed even when you scroll.</li>
+                            </ul>
                         </li>
                         <li>
 
                             <a class="go-link" href="./practice-and-examples/example-sticky.html" target="_blank">
                                 Sticky</a>
+                            <ul type="square">
+                                <li>The element acts like relative at first.</li>
+                                <li>Then it becomes fixed when you scroll past a certain point.</li>
+                                <li>You MUST use top, left, etc. to define when it sticks.</li>
+                            </ul>
                         </li>
                     </ol>
 
+                    <a class="go-link" href="./practice-and-examples/example-CSS-position.html" target="_blank">CSS
+                        Position Example</a>
 
                 </section>
-
-
 
 
                 <section>

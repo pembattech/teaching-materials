@@ -26,7 +26,7 @@ body {
     overflow: hidden;
 }
 
-::-webkit-scrollbar {
+.sidebar::-webkit-scrollbar, .main-container::-webkit-scrollbar {
     display: none;
 }
 

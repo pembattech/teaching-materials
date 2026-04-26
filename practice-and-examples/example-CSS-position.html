@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Position Practice</title>
+  <style>
+    body {
+      height: 2000px;
+      font-family: Arial;
+    }
+
+    /* Navbar */
+    .navbar {
+      position: sticky;
+      top: 0;
+      background: black;
+      color: white;
+      padding: 10px;
+    }
+
+    /* Card */
+    .card {
+      position: relative;
+      width: 300px;
+      margin: 50px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+    }
+
+    /* Badge */
+    .badge {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      background: red;
+      color: white;
+      border-radius: 50%;
+      padding: 5px 10px;
+    }
+
+    /* Fixed Button */
+    .help-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: blue;
+      color: white;
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    /* Static vs Relative */
+    .box {
+      width: 100px;
+      height: 100px;
+      margin: 20px;
+    }
+
+    .static-box {
+      background: gray;
+      position: static;
+    }
+
+    .relative-box {
+      background: green;
+      position: relative;
+      top: 20px;
+      left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">Sticky Navbar</div>
+
+  <div class="card">
+    <div class="badge">3</div>
+    <h3>Notification Card</h3>
+    <p>This is a sample card.</p>
+    <button>Click Me</button>
+  </div>
+
+  <div class="box static-box">Static</div>
+  <div class="box relative-box">Relative</div>
+
+  <div class="help-btn">Help 💬</div>
+
+</body>
+</html>
