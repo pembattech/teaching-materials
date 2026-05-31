@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PembaTTech | JavaScript</title>
 
-    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
 
     <!-- <style>
         .keyword {
@@ -58,15 +58,19 @@
     <div class="container">
 
         <!-- Sidebar -->
-        <div class="sidebar" id="sidebar" style="display: none;">
+        <div class="sidebar" id="sidebar">
             <a href="#intro">Intro</a>
             <a href="#syntax">JS Syntax</a>
             <a href="#variables">Variables</a>
             <a href="#datatypes">Data Types</a>
             <a href="#operators">Operators</a>
             <a href="#functions">Functions</a>
+            <a href="#controlflow">Control Flow</a>
+            <a href="#ifstatment">If Statement</a>
+            <a href="#loop">Loops</a>
+            <a href="#jsinhtml">JavaScript in HTML</a>
             <a href="#dom">DOM</a>
-            <a href="#events">Events</a>
+            <a href="#domevents">DOM Events</a>
         </div>
 
         <div class="main-container">
@@ -635,7 +639,7 @@ console.log(result);</code></pre>
                 </section>
 
 
-                <section id="control-flow">
+                <section id="controlflow">
 
                     <h2>06. Control Flow</h2>
 
@@ -661,7 +665,7 @@ console.log(result);</code></pre>
 
                     <h3>Types of Control Flow in JavaScript</h3>
 
-                    <h3>1. Sequential Control Flow</h3>
+                    <h2>1. Sequential Control Flow</h2>
 
                     <p>
                         In sequential flow, code runs line by line in order.
@@ -678,85 +682,88 @@ console.log(a + b);</code></pre>
                         ✔ JavaScript executes the code from top to bottom.
                     </p>
 
-                    <h3>2. Conditional Control Flow (Decision Making)</h3>
+                    <section id="ifstatment">
+                        <h2>
+                            2. Conditional Control Flow (Decision Making)
+                        </h2>
 
-                    <p>
-                        Conditional statements allow JavaScript to make decisions
-                        based on conditions.
-                    </p>
+                        <p>
+                            Conditional statements allow JavaScript to make decisions
+                            based on conditions.
+                        </p>
 
-                    <ul>
-                        <li>
+                        <ul>
+                            <li>
 
-                            <h3>Basic if Statement</h3>
+                                <h3>Basic if Statement</h3>
 
-                            <p>
-                                The <code>if</code> statement is used to execute code
-                                only if a condition is <strong>true</strong>.
-                            </p>
+                                <p>
+                                    The <code>if</code> statement is used to execute code
+                                    only if a condition is <strong>true</strong>.
+                                </p>
 
 
-                            <h4>Syntax</h4>
+                                <h4>Syntax</h4>
 
-                            <div class="code-card">
-<pre><code>if (condition) {
+                                <div class="code-card">
+                                    <pre><code>if (condition) {
     // code runs if condition is true
 }</code></pre>
-                            </div>
+                                </div>
 
-                            <h4>Example</h4>
+                                <h4>Example</h4>
 
-                            <div class="code-card">
-                                <pre><code>let age = 20;
+                                <div class="code-card">
+                                    <pre><code>let age = 20;
 if (age >= 18) {
     console.log("You are an adult");
 }</code></pre>
-                            </div>
-                        </li>
+                                </div>
+                            </li>
 
-                        <li>
+                            <li>
 
-                            <h3>if...else Statement</h3>
+                                <h3>if...else Statement</h3>
 
-                            <p>
-                                Used when you want two possible outcomes.
-                            </p>
+                                <p>
+                                    Used when you want two possible outcomes.
+                                </p>
 
-                            <h4>Syntax</h4>
+                                <h4>Syntax</h4>
 
-                            <div class="code-card">
-                                <pre><code>if (condition) {
+                                <div class="code-card">
+                                    <pre><code>if (condition) {
 // runs if true
 } else {
 // runs if false
 }</code></pre>
-                            </div>
+                                </div>
 
-                            <h4>Example</h4>
+                                <h4>Example</h4>
 
-                            <div class="code-card">
-                                <pre><code>let age = 16;
+                                <div class="code-card">
+                                    <pre><code>let age = 16;
         
 if (age >= 18) {
     console.log("Adult");
 } else {
     console.log("Minor");
 }</code></pre>
-                            </div>
-                        </li>
+                                </div>
+                            </li>
 
-                        <li>
+                            <li>
 
-                            <h3>if...else if...else Statement</h3>
+                                <h3>if...else if...else Statement</h3>
 
-                            <p>
-                                Used when checking multiple conditions.
-                            </p>
+                                <p>
+                                    Used when checking multiple conditions.
+                                </p>
 
-                            <h4>Syntax</h4>
+                                <h4>Syntax</h4>
 
-                            <div class="code-card">
-                                <pre><code>if (condition1) {
+                                <div class="code-card">
+                                    <pre><code>if (condition1) {
 
     // block 1
 
@@ -769,12 +776,12 @@ if (age >= 18) {
     // default block
 
 }</code></pre>
-                            </div>
+                                </div>
 
-                            <h4>Example</h4>
+                                <h4>Example</h4>
 
-                            <div class="code-card">
-                                <pre><code>let score = 75;
+                                <div class="code-card">
+                                    <pre><code>let score = 75;
         
 if (score >= 90) {
     console.log("Grade A");
@@ -785,27 +792,27 @@ if (score >= 90) {
 } else {
     console.log("Fail");
 }</code></pre>
-                            </div>
-                        </li>
+                                </div>
+                            </li>
 
-                        <li>
+                            <li>
 
-                            <h3>Switch Statement in JavaScript</h3>
+                                <h3>Switch Statement in JavaScript</h3>
 
-                            <p>
-                                The <code>switch</code> statement is another way to make
-                                decisions in JavaScript.
-                            </p>
+                                <p>
+                                    The <code>switch</code> statement is another way to make
+                                    decisions in JavaScript.
+                                </p>
 
-                            <p>
-                                It is useful when you have multiple conditions
-                                based on a single value.
-                            </p>
+                                <p>
+                                    It is useful when you have multiple conditions
+                                    based on a single value.
+                                </p>
 
-                            <h3>Syntax</h3>
+                                <h3>Syntax</h3>
 
-                            <div class="code-card">
-                                <pre><code>switch (expression) {
+                                <div class="code-card">
+                                    <pre><code>switch (expression) {
 
 case value1:
 // code
@@ -819,12 +826,12 @@ default:
 // default code
 
 }</code></pre>
-                            </div>
+                                </div>
 
-                            <h3>Example: Basic Switch Statement</h3>
+                                <h3>Example: Basic Switch Statement</h3>
 
-                            <div class="code-card">
-                                <pre><code>let day = 3;
+                                <div class="code-card">
+                                    <pre><code>let day = 3;
 let dayName;
 
 switch (day) {
@@ -851,39 +858,750 @@ switch (day) {
 }
 
 console.log(dayName);</code></pre>
-                            </div>
+                                </div>
 
-                            <div class="example-box">
-                                <pre><code>Output:
+                                <div class="example-box">
+                                    <pre><code>Output:
 Wednesday</code></pre>
-                            </div>
-                        </li>
-                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+
+                    </section>
+
+                    <section id="loop">
+
+                        <h2>3. Looping Control Flow (Iteration)</h2>
+
+                        <p>
+                            Loops are used to repeat code multiple times.
+                        </p>
+
+                        <h3>Types of Loops in JavaScript</h3>
+
+                        <ul>
+                            <li><strong>for loop</strong> – Repeats code a specific number of times.</li>
+                            <li><strong>while loop</strong> – Repeats code while a condition is true.</li>
+                            <li><strong>do...while loop</strong> – Runs the code once, then repeats while a condition is
+                                true.</li>
+                            <li><strong>for...of loop</strong> – Iterates through values in an iterable object like an
+                                array.</li>
+                            <li><strong>for...in loop</strong> – Iterates through the properties of an object.</li>
+                        </ul>
 
 
+                        <ul type="square">
+
+                            <li>
+                                <h3>For Loop</h3>
+
+                                <p>
+                                    The <strong>for loop</strong> is used when you know how many times you want
+                                    to repeat a block of code.
+                                </p>
+
+                                <h3>Syntax</h3>
+                                <div class="code-card">
 
 
-                    <h3>3. Looping Control Flow (Iteration)</h3>
+                                    <pre><code>for (initialization; condition; increment/decrement) {
+    // code to run
+}</code></pre>
+                                </div>
+
+                                <h3>Example</h3>
+
+                                <div class="code-card">
+
+                                    <pre><code>for (let i = 1; i <= 5; i++) {
+    console.log("Number: " + i);
+}</code></pre>
+                                </div>
+
+                                <h4>Output</h4>
+                                <div class="code-card">
+                                    <pre><code>Number: 1
+Number: 2
+Number: 3
+Number: 4
+Number: 5</code></pre>
+                                </div>
+
+                            </li>
+                            <li>
+                                <h3>While Loop</h3>
+
+                                <p>
+                                    The <strong>while loop</strong> executes a block of code repeatedly as long
+                                    as the specified condition is true.
+                                </p>
+
+                                <h3>Syntax</h3>
+                                <div class="code-card">
+                                    <pre><code>while (condition) {
+    // code to run
+}</code></pre>
+                                </div>
+
+                                <h4>Example</h4>
+                                <div class="code-card">
+                                    <pre><code>let i = 1;
+
+while (i <= 5) {
+    console.log("Count: " + i);
+    i++;
+}</code></pre>
+                                </div>
+
+                                <h4>Output</h4>
+                                <div class="code-card">
+                                    <pre><code>Count: 1
+Count: 2
+Count: 3
+Count: 4
+Count: 5</code></pre>
+                                </div>
+
+                            </li>
+
+                            <li>
+
+                                <h3>Do...While Loop</h3>
+
+                                <p>
+                                    The <strong>do...while loop</strong> executes the code block once before
+                                    checking the condition. It will always run at least one time.
+                                </p>
+
+                                <h3>Syntax</h3>
+
+                                <div class="code-card">
+                                    <pre><code>do {
+    // code to run
+} while (condition);</code></pre>
+                                </div>
+
+                                <h4>Example</h4>
+
+                                <div class="code-card">
+                                    <pre><code>let i = 1;
+
+do {
+    console.log("Step: " + i);
+    i++;
+} while (i <= 5);</code></pre>
+                                </div>
+
+                                <h4>Output</h4>
+                                <div class="code-card">
+                                    <pre><code>Step: 1
+Step: 2
+Step: 3
+Step: 4
+Step: 5</code></pre>
+                                </div>
+
+                                <p>
+                                    Even if the condition is false, the <strong>do...while</strong> loop
+                                    executes the code once before checking the condition.
+                                </p>
+                            </li>
+
+                            <li>
+
+                                <h3>For...of Loop</h3>
+
+                                <p>
+                                    The <strong>for...of loop</strong> is used to iterate through the values of
+                                    an array or other iterable objects.
+                                </p>
+
+                                <h4>Example</h4>
+
+                                <div class="code-card">
+                                    <pre><code>let fruits = ["Apple", "Banana", "Mango"];
+
+for (let fruit of fruits) {
+    console.log(fruit);
+}</code></pre>
+                                </div>
+
+                                <h4>Output</h4>
+                                <div class="code-card">
+                                    <pre><code>Apple
+Banana
+Mango</code></pre>
+                                </div>
+                            </li>
+                            <li>
+                                <h3>For...in Loop</h3>
+
+                                <p>
+                                    The <strong>for...in loop</strong> is used to iterate through the keys
+                                    (properties) of an object.
+                                </p>
+
+                                <h4>Example</h4>
+
+                                <div class="code-card">
+                                    <pre><code>let person = {
+    name: "John",
+    age: 30,
+    city: "NY"
+};
+
+for (let key in person) {
+    console.log(key + ": " + person[key]);
+}</code></pre>
+                                </div>
+
+                                <h4>Output</h4>
+                                <div class="code-card">
+                                    <pre><code>name: John
+age: 30
+city: NY</code></pre>
+                                </div>
+
+
+                            </li>
+                        </ul>
+
+                    </section>
+
+                </section>
+
+                <section id="jsinhtml">
+
+                    <h2>07. JavaScript in HTML</h2>
 
                     <p>
-                        Loops are used to repeat code multiple times.
+                        JavaScript can be added inside an HTML file using the
+                        <span class="tag">&lt;script&gt;</span> tag.
+                        It makes webpages interactive and dynamic.
                     </p>
 
-                    <p><strong>Examples:</strong></p>
+                    <p>There are 3 common ways to add JavaScript to HTML:</p>
+
+
+                    <h3>1. Inline JavaScript</h3>
+
+                    <p>
+                        Inline JavaScript is written directly inside an HTML element using event attributes.
+                    </p>
+
+                    <div class="code-card">
+                        <pre>
+<span class="tag">&lt;button <span class="attr">onclick</span>="alert('Hello World')"&gt;</span>Click Me<span class="tag">&lt;/button&gt;</span>
+        </pre>
+                    </div>
+
+                    <p><strong>Use case:</strong> Small actions like button clicks.</p>
+
+                    <p>
+                        Not recommended for large projects because it mixes HTML and JavaScript.
+                    </p>
+
+
+                    <h3>2. Internal JavaScript</h3>
+
+                    <p>
+                        Internal JavaScript is written inside the
+                        <span class="tag">&lt;script&gt;</span> tag within the same HTML file.
+                    </p>
+
+                    <div class="code-card">
+                        <pre>
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html&gt;</span>
+<span class="tag">&lt;head&gt;</span>
+    <span class="tag">&lt;title&gt;</span>Internal JS<span class="tag">&lt;/title&gt;</span>
+<span class="tag">&lt;/head&gt;</span>
+<span class="tag">&lt;body&gt;</span>
+
+<span class="tag">&lt;button <span class="attr">onclick</span>="showMessage()"&gt;</span>Click<span class="tag">&lt;/button&gt;</span>
+
+<span class="tag">&lt;script&gt;</span>
+function showMessage(){
+    alert("Hello World");
+}
+<span class="tag">&lt;/script&gt;</span>
+
+<span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+        </pre>
+                    </div>
+
+                    <p><strong>Use case:</strong> Small projects or quick testing.</p>
+
+
+                    <h3>3. External JavaScript (Best Practice)</h3>
+
+                    <p>
+                        External JavaScript is written in a separate
+                        <span class="tag">.js</span> file and linked to the HTML file.
+                    </p>
+
+                    <p><strong>HTML file:</strong></p>
+
+                    <div class="code-card">
+                        <pre>
+<span class="tag">&lt;script <span class="attr">src</span>="script.js"&gt;&lt;/script&gt;</span>
+        </pre>
+                    </div>
+
+                    <p><strong>script.js file:</strong></p>
+
+                    <div class="code-card">
+                        <pre>
+function showMessage(){
+    alert("Hello World");
+}
+        </pre>
+                    </div>
+
+                    <p><strong>Advantages:</strong></p>
 
                     <ul>
-                        <li><code>for</code></li>
-                        <li><code>while</code></li>
-                        <li><code>do...while</code></li>
+                        <li>Cleaner HTML</li>
+                        <li>Reusable code</li>
+                        <li>Easier maintenance</li>
+                        <li>Faster loading with caching</li>
                     </ul>
 
+                </section>
 
+
+                <section id="dom">
+
+                    <h2>08. DOM (Document Object Model) in JavaScript</h2>
+
+                    <p>
+                        The <strong>DOM</strong> is a representation of the HTML document as a tree of objects.
+                    </p>
+
+                    <p>
+                        Each element, attribute, and text node in HTML becomes a node in the DOM.
+                        JavaScript can read, update, add, or remove nodes dynamically.
+                    </p>
+
+
+                    <h2>1️⃣ Selecting DOM Elements</h2>
+
+                    <h3>🔹 1. getElementById</h3>
+
+                    <div class="code-card">
+                        <pre>
+<span class="tag">&lt;p <span class="attr">id</span>="demo"&gt;</span>Hello!<span class="tag">&lt;/p&gt;</span>
+
+<span class="tag">&lt;script&gt;</span>
+let p = document.getElementById("demo");
+console.log(p);
+<span class="tag">&lt;/script&gt;</span>
+        </pre>
+                    </div>
+
+                    <p><strong>Output in console:</strong></p>
+
+                    <div class="example-box">
+                        <pre>
+&lt;p id="demo"&gt;Hello!&lt;/p&gt;
+        </pre>
+                    </div>
+
+
+                    <h3>🔹 2. getElementsByClassName / getElementsByTagName</h3>
+
+                    <div class="code-card">
+                        <pre>
+<span class="tag">&lt;p <span class="attr">class</span>="text"&gt;</span>First<span class="tag">&lt;/p&gt;</span>
+<span class="tag">&lt;p <span class="attr">class</span>="text"&gt;</span>Second<span class="tag">&lt;/p&gt;</span>
+
+<span class="tag">&lt;script&gt;</span>
+let texts = document.getElementsByClassName("text");
+console.log(texts[0].innerText); // Access first element
+<span class="tag">&lt;/script&gt;</span>
+        </pre>
+                    </div>
+
+                    <p><strong>Output:</strong></p>
+
+                    <div class="example-box">
+                        <pre>
+First
+        </pre>
+                    </div>
+
+
+                    <h3>🔹 3. querySelector & querySelectorAll (Modern Way)</h3>
+
+                    <div class="code-card">
+                        <pre>
+<span class="tag">&lt;p <span class="attr">class</span>="text"&gt;</span>Hello<span class="tag">&lt;/p&gt;</span>
+
+<span class="tag">&lt;script&gt;</span>
+let para = document.querySelector(".text"); // selects first element
+console.log(para.innerText);
+
+let allParas = document.querySelectorAll("p"); // selects all &lt;p&gt; elements
+console.log(allParas.length);
+<span class="tag">&lt;/script&gt;</span>
+        </pre>
+                    </div>
+
+                    <p><strong>Output:</strong></p>
+
+                    <div class="example-box">
+                        <pre>
+Hello
+2
+        </pre>
+                    </div>
+
+                    <p>
+                        <strong>querySelector</strong> uses CSS selectors, so it is very flexible.
+                    </p>
+
+
+                    <h2>Changing Content & Attributes</h2>
+
+                    <h3>🔹 1. Change Text</h3>
+
+                    <div class="code-card">
+                        <pre>
+<span class="tag">&lt;p <span class="attr">id</span>="demo"&gt;</span>Old Text<span class="tag">&lt;/p&gt;</span>
+
+<span class="tag">&lt;script&gt;</span>
+let p = document.getElementById("demo");
+p.innerText = "New Text!";
+<span class="tag">&lt;/script&gt;</span>
+        </pre>
+                    </div>
+
+                    <p><strong>Result on page:</strong></p>
+
+                    <div class="example-box">
+                        New Text!
+                    </div>
+
+
+                    <h3>🔹 2. Change HTML</h3>
+
+                    <div class="code-card">
+                        <pre>
+<span class="tag">&lt;div <span class="attr">id</span>="box"&gt;</span>Hello<span class="tag">&lt;/div&gt;</span>
+
+<span class="tag">&lt;script&gt;</span>
+let box = document.getElementById("box");
+box.innerHTML = "&lt;b&gt;Bold Text!&lt;/b&gt;";
+<span class="tag">&lt;/script&gt;</span>
+        </pre>
+                    </div>
+
+                    <p><strong>Result on page:</strong></p>
+
+                    <div class="example-box">
+                        <b>Bold Text!</b>
+                    </div>
+
+
+                    <h3>🔹 3. Change Attributes</h3>
+
+                    <div class="code-card">
+                        <pre>
+<span class="tag">&lt;img <span class="attr">id</span>="logo" <span class="attr">src</span>="old.png" <span class="attr">alt</span>="Logo"&gt;</span>
+
+<span class="tag">&lt;script&gt;</span>
+let logo = document.getElementById("logo");
+logo.src = "new.png"; // update image source
+logo.alt = "New Logo";
+<span class="tag">&lt;/script&gt;</span>
+        </pre>
+                    </div>
+
+
+                    <h2>3️⃣ Adding & Removing Elements</h2>
+
+                    <h3>🔹 1. Create Element</h3>
+
+                    <div class="code-card">
+                        <pre>
+let newPara = document.createElement("p");
+newPara.innerText = "I am a new paragraph!";
+document.body.appendChild(newPara);
+        </pre>
+                    </div>
+
+                    <p>
+                        <strong>Result:</strong> A new paragraph is added at the end of the page.
+                    </p>
+
+
+                    <h3>🔹 2. Remove Element</h3>
+
+                    <div class="code-card">
+                        <pre>
+let oldPara = document.getElementById("demo");
+oldPara.remove();
+        </pre>
+                    </div>
+
+                    <p>
+                        <strong>Result:</strong> The element with id <code>demo</code> is removed from the page.
+                    </p>
+
+
+                    <h2>4️⃣ Changing Styles Dynamically</h2>
+
+                    <div class="code-card">
+                        <pre>
+let box = document.getElementById("box");
+box.style.backgroundColor = "lightblue";
+box.style.fontSize = "20px";
+box.style.padding = "10px";
+        </pre>
+                    </div>
+
+                    <p>
+                        <strong>Result:</strong> The element’s style is updated in real-time.
+                    </p>
 
 
                 </section>
 
+
+                <section id="domevents">
+
+                    <h2>09. DOM Events in JavaScript</h2>
+
+                    <p>
+                        DOM events are actions that happen in the browser, such as:
+                    </p>
+
+                    <ul>
+                        <li>Clicking a button</li>
+                        <li>Typing in an input field</li>
+                        <li>Hovering over an element</li>
+                        <li>Submitting a form</li>
+                    </ul>
+
+                    <p>
+                        JavaScript can listen to these events and run code when they occur.
+                    </p>
+
+
+                    <h3>1️⃣ How to Add Events</h3>
+
+
+                    <h4>🔹 1. Using HTML onclick (Old Way)</h4>
+
+                    <div class="code-card">
+                        <pre>
+<span class="tag">&lt;button <span class="attr">onclick</span>="alert('Button clicked!')"&gt;</span>Click Me<span class="tag">&lt;/button&gt;</span>
+        </pre>
+                    </div>
+
+                    <p><strong>Output:</strong> Clicking the button shows an alert.</p>
+
+                    <p>
+                        ✅ Works but not recommended for large projects because it mixes HTML and JavaScript.
+                    </p>
+
+
+                    <h4>🔹 2. Using JavaScript onclick</h4>
+
+                    <div class="code-card">
+                        <pre>
+<span class="tag">&lt;button <span class="attr">id</span>="btn"&gt;</span>Click Me<span class="tag">&lt;/button&gt;</span>
+
+<span class="tag">&lt;script&gt;</span>
+let button = document.getElementById("btn");
+
+button.onclick = function() {
+    alert("Button clicked using JS!");
+};
+<span class="tag">&lt;/script&gt;</span>
+        </pre>
+                    </div>
+
+                    <p><strong>Output:</strong> Clicking the button shows an alert.</p>
+
+                    <p>
+                        ❌ Limitation: If you assign another <strong>onclick</strong>, it overwrites the first one.
+                    </p>
+
+
+                    <h4>🔹 3. Using addEventListener (Recommended)</h4>
+
+                    <div class="code-card">
+                        <pre>
+<span class="tag">&lt;button <span class="attr">id</span>="btn"&gt;</span>Click Me<span class="tag">&lt;/button&gt;</span>
+
+<span class="tag">&lt;script&gt;</span>
+let button = document.getElementById("btn");
+
+button.addEventListener("click", () => {
+    alert("Button clicked with addEventListener!");
+});
+<span class="tag">&lt;/script&gt;</span>
+        </pre>
+                    </div>
+
+                    <p>
+                        <strong>Output:</strong> Works the same, but you can add multiple events without overwriting.
+                    </p>
+
+
+                    <h3>2️⃣ Common DOM Events</h3>
+
+                    <div class="code-card">
+                        <pre>
+click      → Fired when an element is clicked
+dblclick   → Fired on double click
+mouseover  → When mouse moves over an element
+mouseout   → When mouse leaves an element
+keydown    → When a key is pressed
+keyup      → When a key is released
+input      → When input value changes
+change     → When input loses focus after value change
+submit     → When form is submitted
+focus      → When an element gains focus
+blur       → When an element loses focus
+        </pre>
+                    </div>
+
+
+                    <h3>3️⃣ Examples</h3>
+
+
+                    <h4>🔹 Click Event</h4>
+
+                    <div class="code-card">
+                        <pre>
+<span class="tag">&lt;button <span class="attr">id</span>="btn"&gt;</span>Click Me<span class="tag">&lt;/button&gt;</span>
+
+<span class="tag">&lt;script&gt;</span>
+document.getElementById("btn").addEventListener("click", () => {
+    console.log("Button was clicked!");
+});
+<span class="tag">&lt;/script&gt;</span>
+        </pre>
+                    </div>
+
+                    <p><strong>Output in console:</strong></p>
+
+                    <div class="example-box">
+                        Button was clicked!
+                    </div>
+
+
+                    <h4>🔹 Mouseover Event</h4>
+
+                    <div class="code-card">
+                        <pre>
+<span class="tag">&lt;p <span class="attr">id</span>="hoverText"&gt;</span>Hover over me!<span class="tag">&lt;/p&gt;</span>
+
+<span class="tag">&lt;script&gt;</span>
+let text = document.getElementById("hoverText");
+
+text.addEventListener("mouseover", () => {
+    text.style.color = "red";
+});
+
+text.addEventListener("mouseout", () => {
+    text.style.color = "black";
+});
+<span class="tag">&lt;/script&gt;</span>
+        </pre>
+                    </div>
+
+                    <p>
+                        <strong>Result:</strong> Text turns red when hovered, black when mouse leaves.
+                    </p>
+
+
+                    <h4>🔹 Input Event</h4>
+
+                    <div class="code-card">
+                        <pre>
+<span class="tag">&lt;input <span class="attr">type</span>="text" <span class="attr">id</span>="nameInput" <span class="attr">placeholder</span>="Type your name"&gt;</span>
+<span class="tag">&lt;p <span class="attr">id</span>="greeting"&gt;</span><span class="tag">&lt;/p&gt;</span>
+
+<span class="tag">&lt;script&gt;</span>
+let input = document.getElementById("nameInput");
+let greeting = document.getElementById("greeting");
+
+input.addEventListener("input", () => {
+    greeting.innerText = "Hello, " + input.value + "!";
+});
+<span class="tag">&lt;/script&gt;</span>
+        </pre>
+                    </div>
+
+                    <p>
+                        <strong>Result:</strong> As you type, the paragraph updates in real-time.
+                    </p>
+
+
+                    <h4>🔹 Form Submit Event</h4>
+
+                    <div class="code-card">
+                        <pre>
+<span class="tag">&lt;form <span class="attr">id</span>="myForm"&gt;</span>
+  <span class="tag">&lt;input <span class="attr">type</span>="text" <span class="attr">placeholder</span>="Enter something" <span class="attr">id</span>="myInput"&gt;</span>
+  <span class="tag">&lt;button <span class="attr">type</span>="submit"&gt;</span>Submit<span class="tag">&lt;/button&gt;</span>
+<span class="tag">&lt;/form&gt;</span>
+
+<span class="tag">&lt;script&gt;</span>
+let form = document.getElementById("myForm");
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault(); // Prevent page reload
+    alert("Form Submitted!");
+});
+<span class="tag">&lt;/script&gt;</span>
+        </pre>
+                    </div>
+
+                    <p>
+                        <strong>Result:</strong> Clicking submit triggers alert without reloading the page.
+                    </p>
+
+
+                    <h3>4️⃣ Removing Events</h3>
+
+                    <div class="code-card">
+                        <pre>
+function sayHi() {
+    console.log("Hi!");
+}
+
+button.addEventListener("click", sayHi);
+
+// Later remove it
+button.removeEventListener("click", sayHi);
+        </pre>
+                    </div>
+
+
+                    <h3>5️⃣ Event Object</h3>
+
+                    <p>
+                        When an event occurs, JavaScript passes an event object with information about the event.
+                    </p>
+
+                    <div class="code-card">
+                        <pre>
+document.getElementById("btn").addEventListener("click", (event) => {
+    console.log(event.type);   // "click"
+    console.log(event.target); // The element clicked
+});
+        </pre>
+                    </div>
+
+                </section>
+
                 <!-- DOM -->
-                <section id="dom">
+                <!-- <section id="dom">
                     <h2>06. DOM Manipulation</h2>
 
                     <div class="code-card">
@@ -893,10 +1611,10 @@ document.getElementById("title").innerText = "Changed!";
                     </div>
 
                     <p>JavaScript can change HTML content, styles, and attributes.</p>
-                </section>
+                </section> -->
 
                 <!-- Events -->
-                <section id="events">
+                <!-- <section id="events">
                     <h2>07. Events</h2>
 
                     <div class="code-card">
@@ -910,12 +1628,12 @@ function sayHi(){
                     </div>
 
                     <p>Events allow interaction like clicks, hover, typing, etc.</p>
-                </section>
+                </section> -->
 
                 <!-- Practice Button -->
-                <section>
+                <!-- <section>
                     <button class="btn-try" onclick="showAlert()">Test Your Knowledge</button>
-                </section>
+                </section> -->
 
             </main>
 
