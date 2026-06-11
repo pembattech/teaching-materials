@@ -26,7 +26,8 @@ body {
     overflow: hidden;
 }
 
-.sidebar::-webkit-scrollbar, .main-container::-webkit-scrollbar {
+.sidebar::-webkit-scrollbar,
+.main-container::-webkit-scrollbar {
     display: none;
 }
 
@@ -146,6 +147,7 @@ h3 {
     margin-top: 30px;
     margin-bottom: 12px;
     font-weight: 600;
+    text-decoration: underline dotted;
 }
 
 /* List Styling */
