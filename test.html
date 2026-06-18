@@ -1,0 +1,151 @@
+
+section#
+<h2>Different Ways to Print Data in PHP</h2>
+
+<p>
+    PHP provides several ways to display output and inspect variables.
+</p>
+
+<h3>1. Basic Output with echo</h3>
+
+<p>
+    The <code>echo</code> statement is used to display text, variables, and HTML content.
+</p>
+
+<div class="code-card">
+    <pre>
+<span class="tag">&lt;?php</span>
+
+$name = <span class="string">"Alice"</span>;
+
+echo <span class="string">"Hello, $name!"</span>;
+
+<span class="tag">?&gt;</span>
+</pre>
+</div>
+
+<p><strong>Output:</strong></p>
+
+<div class="code-card">
+    <pre>
+Hello, Alice!
+</pre>
+</div>
+
+<h3>2. Debugging Variable Structure with print_r()</h3>
+
+<p>
+    The <code>print_r()</code> function displays human-readable information about arrays and objects.
+</p>
+
+<div class="code-card">
+    <pre>
+<span class="tag">&lt;?php</span>
+
+$fruits = array(
+    <span class="string">"apple"</span>,
+    <span class="string">"banana"</span>,
+    <span class="string">"orange"</span>
+);
+
+print_r($fruits);
+
+<span class="tag">?&gt;</span>
+</pre>
+</div>
+
+<p><strong>Output:</strong></p>
+
+<div class="code-card">
+    <pre>
+Array
+(
+    [0] => apple
+    [1] => banana
+    [2] => orange
+)
+</pre>
+</div>
+
+<p>
+    <code>print_r()</code> is useful when working with arrays and objects during development.
+</p>
+
+<h3>3. In-depth Debugging with var_dump()</h3>
+
+<p>
+    The <code>var_dump()</code> function displays detailed information about a variable, including its data type and value.
+</p>
+
+<div class="code-card">
+    <pre>
+<span class="tag">&lt;?php</span>
+
+$person = array(
+    <span class="string">"name"</span> => <span class="string">"Bob"</span>,
+    <span class="string">"age"</span> => <span class="number">30</span>,
+    <span class="string">"hobbies"</span> => array(
+        <span class="string">"reading"</span>,
+        <span class="string">"hiking"</span>
+    )
+);
+
+var_dump($person);
+
+<span class="tag">?&gt;</span>
+</pre>
+</div>
+
+<p><strong>Output:</strong></p>
+
+<div class="code-card">
+    <pre>
+array(3) {
+  ["name"]=>
+  string(3) "Bob"
+  ["age"]=>
+  int(30)
+  ["hobbies"]=>
+  array(2) {
+    [0]=>
+    string(7) "reading"
+    [1]=>
+    string(6) "hiking"
+  }
+}
+</pre>
+</div>
+
+<p>
+    <code>var_dump()</code> is especially useful for debugging because it shows:
+</p>
+
+<ul>
+    <li>Data type of the variable</li>
+    <li>Length of strings</li>
+    <li>Array size</li>
+    <li>Actual stored values</li>
+</ul>
+
+<h3>Summary</h3>
+
+<table>
+    <tr>
+        <th>Method</th>
+        <th>Purpose</th>
+    </tr>
+    <tr>
+        <td><code>echo</code></td>
+        <td>Display text, variables, and HTML content</td>
+    </tr>
+    <tr>
+        <td><code>print_r()</code></td>
+        <td>Display arrays and objects in readable form</td>
+    </tr>
+    <tr>
+        <td><code>var_dump()</code></td>
+        <td>Display detailed type and value information</td>
+    </tr>
+</table>
+
+</section>

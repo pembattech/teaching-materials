@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PembaTTech | Learn Web Dev - HTML</title>
+
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+
+<body>
+    <nav>
+        <div style="display: flex; gap: 10px; align-items: center;">
+
+            <p onclick="toggleSidebar()" style="cursor:pointer;">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#333">
+                    <path d="M120-680v-80h720v80H120Zm0 480v-80h720v80H120Zm0-240v-80h720v80H120Z" />
+                </svg>
+            </p>
+            <p class="logo">PembaTTech</p>
+        </div>
+        <div class="nav-links">
+            <a href="./index.html" class="nav-active"><strong>HTML</strong></a>
+            <a href="./CSS.html">CSS</a>
+            <a href="./js.html">JavaScript</a>
+            <a href="./db.html">Database</a>
+            <a href="./php.html">PHP</a>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <div class="sidebar" id="sidebar">
+            <a href="#intro">Intro</a>
+            <a href="#tags">Tags</a>
+            <a href="#structure">Basic Structure</a>
+            <a href="#elements">Elements</a>
+            <a href="#attributes">Attributes</a>
+            <a href="#textfundamental">Text Fundamentals</a>
+            <a href="#formatting">Formatting</a>
+            <a href="#hyperlinks">Hyperlinks</a>
+            <a href="#tables">Tables</a>
+            <a href="#image">Image</a>
+            <a href="#iframe">Iframe</a>
+            <a href="#formtag">Form in HTML</a>
+            <a href="#layout">Layout</a>
+            <a href="#flexbox">Flexbox</a>
+            <a href="#grid">Grid</a>
+            <a href="#mediaquery">Media Query</a>
+        </div>
+
+        <div class="main-container">
+
+            <header>
+                <h1>Build for the web.</h1>
+                <img src="./assets/memes/338-1733217432633.jpg" alt="" class="meme zoomable">
+            </header>
+
+            <!-- Modal -->
+            <div class="modal" id="modal">
+                <img id="modalImg">
+            </div>
+
+            <main>
+                <!-- PHP Introduction Section -->
+                <section id="php-intro">
+                    <h2>00. Introduction to PHP</h2>
+
+                    <p><strong>PHP (Hypertext Preprocessor)</strong> is a server-side scripting language used to build
+                        dynamic websites and web applications.</p>
+
+                    <ul>
+                        <li>PHP code runs on the <strong>server</strong>, not in the browser.</li>
+                        <li>PHP files are saved with the <code>.php</code> file extension.</li>
+                    </ul>
+
+                    <p>
+                        Unlike HTML, which is used to structure web pages, <strong>PHP can perform calculations, process
+                            data, make decisions, and interact with databases</strong> to create dynamic content.
+                    </p>
+
+                    <h3>Popular Websites Built with PHP</h3>
+                    <ul>
+                        <li>Facebook (originally built with PHP)</li>
+                        <li>WordPress</li>
+                        <li>Wikipedia</li>
+                    </ul>
+
+                    <h3>Setting Up PHP</h3>
+
+                    <p>To run PHP on your computer, install one of the following packages:</p>
+
+                    <ul>
+                        <li><strong>XAMPP</strong> – Easy for beginners</li>
+                        <li><strong>WAMP</strong> – For Windows</li>
+                        <li><strong>MAMP</strong> – For Mac</li>
+                    </ul>
+
+                    <p>These packages include:</p>
+
+                    <ul>
+                        <li>Apache (Web Server)</li>
+                        <li>PHP</li>
+                        <li>MySQL (Database)</li>
+                    </ul>
+
+                    <p><strong>After installation:</strong></p>
+
+                    <ol>
+                        <li>Start Apache.</li>
+                        <li>Place PHP files inside the <code>htdocs</code> folder.</li>
+                        <li>Open your browser and visit <code>http://localhost/filename.php</code>.</li>
+                    </ol>
+                </section>
+
+                <section id="basicsyntax">
+
+                    <h2>02. Basic PHP Syntax</h2>
+
+                    <p>PHP code is written inside special tags and can be embedded within HTML.</p>
+
+                    <div class="code-card">
+                        <pre>
+<span class="tag">&lt;?php</span>
+
+<span class="comment">// Your PHP code here</span>
+
+<span class="tag">?&gt;</span>
+</pre>
+                    </div>
+
+                    <p>Every PHP statement must end with a semicolon <code>;</code>.</p>
+
+                </section>
+
+                <section id="variable">
+
+                    <h2>03. Variables</h2>
+
+                    <p>Variables are used to store data values.</p>
+
+                    <div class="code-card">
+                        <pre>
+<span class="tag">&lt;?php</span>
+
+$name = <span class="string">"John"</span>;
+$age = <span class="number">25</span>;
+
+echo $name;
+
+<span class="tag">?&gt;</span>
+</pre>
+                    </div>
+
+                    <h3>Rules for Variables</h3>
+
+                    <ul>
+                        <li>Variables must start with the <code>$</code> symbol.</li>
+                        <li>No need to declare a data type.</li>
+                        <li>Variable names are case-sensitive.</li>
+                        <li>Variable names cannot start with a number.</li>
+                    </ul>
+
+                </section>
+
+
+
+                <section id="variableScope">
+
+                    <h2>Variable Scope in PHP</h2>
+
+                    <p>
+                        <strong>Variable Scope</strong> defines where a variable can be accessed or used in a PHP
+                        program.
+                    </p>
+
+                    <p>PHP has three main types of variable scope:</p>
+
+                    <ul>
+                        <li>Local Scope</li>
+                        <li>Global Scope</li>
+                        <li>Static Scope</li>
+                    </ul>
+
+                    <h3>1️⃣ Local Scope</h3>
+
+                    <p>
+                        A variable declared inside a function can only be accessed within that function.
+                    </p>
+
+                    <div class="code-card">
+                        <pre>
+        <span class="tag">&lt;?php</span>
+
+function test() <span class="bracket">{</span>
+    $x = <span class="number">10</span>;   <span class="comment">// Local variable</span>
+    echo $x;
+<span class="bracket">}</span>
+
+test();   <span class="comment">// Works</span>
+// echo $x;  <span class="comment">❌ Error (cannot access outside)</span>
+
+<span class="tag">?&gt;</span>
+</pre>
+                    </div>
+
+                    <p>
+                        Local variables are created when the function starts and are destroyed when the function ends.
+                    </p>
+
+                    <h3>2️⃣ Global Scope</h3>
+
+                    <p>
+                        A variable declared outside a function is called a <strong>global variable</strong>.
+                    </p>
+
+                    <div class="code-card">
+                        <pre>
+<span class="tag">&lt;?php</span>
+
+$y = <span class="number">20</span>;   <span class="comment">// Global variable</span>
+
+function show() <span class="bracket">{</span>
+    // echo $y; <span class="comment">❌ Error</span>
+<span class="bracket">}</span>
+
+echo $y;  <span class="comment">// ✅ Works</span>
+
+<span class="tag">?&gt;</span>
+</pre>
+                    </div>
+
+                    <p>
+                        By default, global variables cannot be accessed directly inside functions.
+                    </p>
+
+                    <h4>Using the global Keyword</h4>
+
+                    <p>
+                        To use a global variable inside a function, use the <code>global</code> keyword.
+                    </p>
+
+                    <div class="code-card">
+                        <pre>
+        <span class="tag">&lt;?php</span>
+        
+        $y = <span class="number">20</span>;
+        
+function show() <span class="bracket">{</span>
+    global $y;
+    echo $y;
+<span class="bracket">}</span>
+
+show();   <span class="comment">// Outputs: 20</span>
+
+<span class="tag">?&gt;</span>
+</pre>
+                    </div>
+
+                    <h3>3️⃣ Static Scope</h3>
+
+                    <p>
+                        Normally, local variables are deleted when a function finishes execution.
+                    </p>
+
+                    <p>
+                        Using the <code>static</code> keyword allows a variable to retain its value between function
+                        calls.
+                    </p>
+
+                    <div class="code-card">
+                        <pre>
+        <span class="tag">&lt;?php</span>
+
+function counter() <span class="bracket">{</span>
+    static $count = <span class="number">0</span>;
+
+    $count++;
+    
+    echo $count . <span class="string">"&lt;br&gt;"</span>;
+    <span class="bracket">}</span>
+    
+    counter(); <span class="comment">// 1</span>
+    counter(); <span class="comment">// 2</span>
+    counter(); <span class="comment">// 3</span>
+    
+    <span class="tag">?&gt;</span>
+</pre>
+                    </div>
+
+                    <p>
+                        Without the <code>static</code> keyword, the variable would be recreated each time the function
+                        runs, so it would always output <strong>1</strong>.
+                    </p>
+
+                </section>
+
+
+                <section id="dataTypes">
+
+
+                    <h2>04. Data Types in PHP</h2>
+
+                    <p>
+                        <strong>Data Types</strong> define the type of information a variable can store.
+                    </p>
+
+                    <ul>
+                        <li><strong>String</strong> → "Hello"</li>
+                        <li><strong>Integer</strong> → 10</li>
+                        <li><strong>Float</strong> → 10.5</li>
+                        <li><strong>Boolean</strong> → true / false</li>
+                        <li><strong>Null</strong> → NULL</li>
+                        <li><strong>Array</strong> → array()</li>
+                    </ul>
+
+                    <h3>Examples of Data Types</h3>
+
+                    <div class="code-card">
+                        <pre>
+<span class="tag">&lt;?php</span>
+
+$name = <span class="string">"Hello"</span>;      <span class="comment">// String</span>
+$age = <span class="number">10</span>;            <span class="comment">// Integer</span>
+$price = <span class="number">10.5</span>;       <span class="comment">// Float</span>
+$isActive = true;        <span class="comment">// Boolean</span>
+$data = NULL;            <span class="comment">// Null</span>
+$colors = array(<span class="string">"Red"</span>, <span class="string">"Blue"</span>); <span class="comment">// Array</span>
+
+<span class="tag">?&gt;</span>
+</pre>
+                    </div>
+
+                </section>
+
+
+                <section id="typeCasting">
+
+                    <h2>Type Casting in PHP</h2>
+
+                    <p>
+                        <strong>Type Casting</strong> is the process of converting a variable from one data type to
+                        another.
+                    </p>
+
+                    <h3>Syntax</h3>
+
+                    <div class="code-card">
+                        <pre>
+$newVar = (<span class="keyword">type</span>) $variable;
+</pre>
+                    </div>
+
+                    <p>Common casting types:</p>
+
+                    <ul>
+                        <li><code>(int)</code> → Integer</li>
+                        <li><code>(float)</code> → Float</li>
+                        <li><code>(string)</code> → String</li>
+                        <li><code>(bool)</code> → Boolean</li>
+                        <li><code>(array)</code> → Array</li>
+                        <li><code>(object)</code> → Object</li>
+                    </ul>
+
+                    <h3>Examples</h3>
+
+                    <div class="code-card">
+                        <pre>
+<span class="tag">&lt;?php</span>
+
+$var = <span class="string">"123.45"</span>;
+
+$intVar   = (int)$var;          <span class="comment">// 123</span>
+$floatVar = (float)$var;        <span class="comment">// 123.45</span>
+$strVar   = (string)<span class="number">100</span>;   <span class="comment">// "100"</span>
+$boolVar  = (bool)<span class="number">0</span>;     <span class="comment">// false</span>
+$arrayVar = (array)<span class="string">"Hi"</span>;  <span class="comment">// ["Hi"]</span>
+
+$objVar = (object)[
+    <span class="string">"a"</span> => <span class="number">1</span>
+];                             <span class="comment">// Object with property a = 1</span>
+
+<span class="tag">?&gt;</span>
+</pre>
+                    </div>
+
+                    <h3>Important Notes</h3>
+
+                    <ul>
+                        <li>
+                            <strong>Boolean Casting:</strong>
+                            <code>0</code>, <code>""</code>, and <code>NULL</code> become
+                            <code>false</code>. Everything else becomes <code>true</code>.
+                        </li>
+
+                        <li>
+                            <strong>Integer Casting:</strong>
+                            Decimal values are truncated (the fractional part is removed).
+                        </li>
+                    </ul>
+
+                    <div class="code-card">
+                        <pre>
+<span class="tag">&lt;?php</span>
+
+echo (int)<span class="number">10.99</span>;   <span class="comment">// Output: 10</span>
+
+<span class="tag">?&gt;</span>
+</pre>
+                    </div>
+
+                </section>
+
+
+                <section id="operatorsinPHP">
+
+                    <h2>05. Operators in PHP</h2>
+
+                    <p>
+                        <strong>Operators</strong> are symbols used to perform operations on variables and values.
+                    </p>
+
+                    <h3>1. Arithmetic Operators</h3>
+
+                    <p>Used for mathematical calculations.</p>
+
+                    <table>
+                        <tr>
+                            <th>Operator</th>
+                            <th>Description</th>
+                            <th>Example</th>
+                            <th>Output</th>
+                        </tr>
+                        <tr>
+                            <td>+</td>
+                            <td>Addition</td>
+                            <td>5 + 3</td>
+                            <td>8</td>
+                        </tr>
+                        <tr>
+                            <td>-</td>
+                            <td>Subtraction</td>
+                            <td>5 - 3</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>*</td>
+                            <td>Multiplication</td>
+                            <td>5 * 3</td>
+                            <td>15</td>
+                        </tr>
+                        <tr>
+                            <td>/</td>
+                            <td>Division</td>
+                            <td>6 / 3</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>%</td>
+                            <td>Modulus</td>
+                            <td>5 % 3</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>**</td>
+                            <td>Exponentiation</td>
+                            <td>2 ** 3</td>
+                            <td>8</td>
+                        </tr>
+                    </table>
+
+                    <h3>2. Assignment Operators</h3>
+
+                    <p>Used to assign values to variables.</p>
+
+                    <table>
+                        <tr>
+                            <th>Operator</th>
+                            <th>Example</th>
+                            <th>Meaning</th>
+                        </tr>
+                        <tr>
+                            <td>=</td>
+                            <td>$a = 5</td>
+                            <td>Assign 5</td>
+                        </tr>
+                        <tr>
+                            <td>+=</td>
+                            <td>$a += 3</td>
+                            <td>$a = $a + 3</td>
+                        </tr>
+                        <tr>
+                            <td>-=</td>
+                            <td>$a -= 2</td>
+                            <td>$a = $a - 2</td>
+                        </tr>
+                        <tr>
+                            <td>*=</td>
+                            <td>$a *= 2</td>
+                            <td>$a = $a * 2</td>
+                        </tr>
+                        <tr>
+                            <td>/=</td>
+                            <td>$a /= 2</td>
+                            <td>$a = $a / 2</td>
+                        </tr>
+                        <tr>
+                            <td>%=</td>
+                            <td>$a %= 2</td>
+                            <td>$a = $a % 2</td>
+                        </tr>
+                    </table>
+
+                    <h3>3. Comparison Operators</h3>
+
+                    <p>Used to compare values.</p>
+
+                    <table>
+                        <tr>
+                            <th>Operator</th>
+                            <th>Example</th>
+                            <th>Meaning</th>
+                        </tr>
+                        <tr>
+                            <td>==</td>
+                            <td>$a == $b</td>
+                            <td>True if values are equal</td>
+                        </tr>
+                        <tr>
+                            <td>===</td>
+                            <td>$a === $b</td>
+                            <td>True if values and data types are equal</td>
+                        </tr>
+                        <tr>
+                            <td>!=</td>
+                            <td>$a != $b</td>
+                            <td>True if values are not equal</td>
+                        </tr>
+                        <tr>
+                            <td>!==</td>
+                            <td>$a !== $b</td>
+                            <td>True if values are not equal or types differ</td>
+                        </tr>
+                        <tr>
+                            <td>&lt;</td>
+                            <td>$a &lt; $b</td>
+                            <td>True if less than</td>
+                        </tr>
+                        <tr>
+                            <td>&gt;</td>
+                            <td>$a &gt; $b</td>
+                            <td>True if greater than</td>
+                        </tr>
+                        <tr>
+                            <td>&lt;=</td>
+                            <td>$a &lt;= $b</td>
+                            <td>True if less than or equal</td>
+                        </tr>
+                        <tr>
+                            <td>&gt;=</td>
+                            <td>$a &gt;= $b</td>
+                            <td>True if greater than or equal</td>
+                        </tr>
+                    </table>
+
+                    <h3>4. Increment / Decrement Operators</h3>
+
+                    <p>Used to increase or decrease variable values.</p>
+
+                    <table>
+                        <tr>
+                            <th>Operator</th>
+                            <th>Type</th>
+                            <th>Meaning</th>
+                        </tr>
+                        <tr>
+                            <td>++$a</td>
+                            <td>Pre-increment</td>
+                            <td>Increment before use</td>
+                        </tr>
+                        <tr>
+                            <td>$a++</td>
+                            <td>Post-increment</td>
+                            <td>Increment after use</td>
+                        </tr>
+                        <tr>
+                            <td>--$a</td>
+                            <td>Pre-decrement</td>
+                            <td>Decrement before use</td>
+                        </tr>
+                        <tr>
+                            <td>$a--</td>
+                            <td>Post-decrement</td>
+                            <td>Decrement after use</td>
+                        </tr>
+                    </table>
+
+                    <h3>5. Logical Operators</h3>
+
+                    <p>Used in conditional statements.</p>
+
+                    <table>
+                        <tr>
+                            <th>Operator</th>
+                            <th>Example</th>
+                            <th>Meaning</th>
+                        </tr>
+                        <tr>
+                            <td>&amp;&amp;</td>
+                            <td>$a &amp;&amp; $b</td>
+                            <td>True if both conditions are true</td>
+                        </tr>
+                        <tr>
+                            <td>||</td>
+                            <td>$a || $b</td>
+                            <td>True if at least one condition is true</td>
+                        </tr>
+                        <tr>
+                            <td>!</td>
+                            <td>!$a</td>
+                            <td>True if $a is false</td>
+                        </tr>
+                        <tr>
+                            <td>and</td>
+                            <td>$a and $b</td>
+                            <td>Same as &amp;&amp; but with lower precedence</td>
+                        </tr>
+                        <tr>
+                            <td>or</td>
+                            <td>$a or $b</td>
+                            <td>Same as || but with lower precedence</td>
+                        </tr>
+                        <tr>
+                            <td>xor</td>
+                            <td>$a xor $b</td>
+                            <td>True if only one condition is true</td>
+                        </tr>
+                    </table>
+
+                    <h3>6. String Operators</h3>
+
+                    <p>Used to join strings together.</p>
+
+                    <table>
+                        <tr>
+                            <th>Operator</th>
+                            <th>Example</th>
+                            <th>Output</th>
+                        </tr>
+                        <tr>
+                            <td>.</td>
+                            <td>"Hello" . " World"</td>
+                            <td>Hello World</td>
+                        </tr>
+                        <tr>
+                            <td>.=</td>
+                            <td>$str .= "!"</td>
+                            <td>Append text to a string</td>
+                        </tr>
+                    </table>
+
+                    <h3>7. Array Operators</h3>
+
+                    <p>Used to compare or combine arrays.</p>
+
+                    <table>
+                        <tr>
+                            <th>Operator</th>
+                            <th>Example</th>
+                            <th>Meaning</th>
+                        </tr>
+                        <tr>
+                            <td>+</td>
+                            <td>$a + $b</td>
+                            <td>Union of arrays</td>
+                        </tr>
+                        <tr>
+                            <td>==</td>
+                            <td>$a == $b</td>
+                            <td>True if arrays have the same key/value pairs</td>
+                        </tr>
+                        <tr>
+                            <td>===</td>
+                            <td>$a === $b</td>
+                            <td>True if arrays have the same key/value pairs in the same order</td>
+                        </tr>
+                        <tr>
+                            <td>!=</td>
+                            <td>$a != $b</td>
+                            <td>True if arrays are not equal</td>
+                        </tr>
+                        <tr>
+                            <td>!==</td>
+                            <td>$a !== $b</td>
+                            <td>True if arrays are not identical</td>
+                        </tr>
+                    </table>
+
+                    <h3>8. Conditional (Ternary) Operator</h3>
+
+                    <p>
+                        The ternary operator is a shorthand form of an <code>if...else</code> statement.
+                    </p>
+
+                    <div class="code-card">
+                        <pre>
+<span class="tag">&lt;?php</span>
+
+$age = <span class="number">20</span>;
+
+echo ($age &gt;= <span class="number">18</span>)
+    ? <span class="string">"Adult"</span>
+    : <span class="string">"Minor"</span>;
+
+<span class="comment">// Output: Adult</span>
+
+<span class="tag">?&gt;</span>
+</pre>
+                    </div>
+
+                </section>
+
+
+
+
+<section id="localhost">
+<h2>Localhost</h2>
+
+<p>
+    <strong>localhost</strong> is a hostname that points to your own computer.
+</p>
+
+<p>
+    It uses the <strong>loopback network interface</strong>, meaning any request sent to localhost stays on your device instead of going through the internet.
+</p>
+
+<h3>How to Access Localhost</h3>
+
+<p>Using a Web Browser:</p>
+
+<ol>
+    <li>Open any web browser (Chrome, Firefox, Edge, etc.).</li>
+    <li>Type <code>http://localhost</code> or <code>http://127.0.0.1</code> in the address bar.</li>
+    <li>Press Enter to access your local web server.</li>
+</ol>
+
+<div class="code-card">
+    <pre>
+http://localhost
+
+or
+
+http://127.0.0.1
+</pre>
+</div>
+
+<h3>Benefits of Localhost</h3>
+
+<h5>1. Safe Testing Environment</h5>
+
+<p>
+    Test websites, web applications, and scripts without exposing them to the internet.
+</p>
+
+<h5>2. Faster Development</h5>
+
+<p>
+    Access your server and applications locally without network delays.
+</p>
+
+<h5>3. No Internet Required</h5>
+
+<p>
+    Since everything runs on your own computer, an internet connection is not required.
+</p>
+
+<h5>4. Debugging & Troubleshooting</h5>
+
+<p>
+    Errors can be identified and fixed before deploying the application to a live server.
+</p>
+
+<h5>5. Better Security</h5>
+
+<p>
+    Localhost is isolated from external networks, reducing security risks during development.
+</p>
+
+<h5>6. Easy Experimentation</h5>
+
+<p>
+    Developers can test different configurations, databases, and server settings without affecting the live system.
+</p>
+
+<h3>Example</h3>
+
+<p>
+    If a file named <code>index.php</code> is stored inside the <code>htdocs</code> folder of XAMPP, it can be accessed using:
+</p>
+
+<div class="code-card">
+    <pre>
+http://localhost/index.php
+</pre>
+</div>
+
+<p>
+    Localhost is commonly used with web development tools such as <strong>XAMPP</strong>, <strong>WAMP</strong>, and <strong>MAMP</strong> for testing PHP applications.
+</p>
+
+</section>
+
+
+
+<section id="typesOfPrint">
+<h2>Different Ways to Print Data in PHP</h2>
+
+<p>
+    PHP provides several ways to display output and inspect variables.
+</p>
+
+<h3>1. Basic Output with echo</h3>
+
+<p>
+    The <code>echo</code> statement is used to display text, variables, and HTML content.
+</p>
+
+<div class="code-card">
+    <pre>
+<span class="tag">&lt;?php</span>
+
+$name = <span class="string">"Alice"</span>;
+
+echo <span class="string">"Hello, $name!"</span>;
+
+<span class="tag">?&gt;</span>
+</pre>
+</div>
+
+<p><strong>Output:</strong></p>
+
+<div class="code-card">
+    <pre>
+Hello, Alice!
+</pre>
+</div>
+
+<h3>2. Debugging Variable Structure with print_r()</h3>
+
+<p>
+    The <code>print_r()</code> function displays human-readable information about arrays and objects.
+</p>
+
+<div class="code-card">
+    <pre>
+<span class="tag">&lt;?php</span>
+
+$fruits = array(
+    <span class="string">"apple"</span>,
+    <span class="string">"banana"</span>,
+    <span class="string">"orange"</span>
+);
+
+print_r($fruits);
+
+<span class="tag">?&gt;</span>
+</pre>
+</div>
+
+<p><strong>Output:</strong></p>
+
+<div class="code-card">
+    <pre>
+Array
+(
+    [0] => apple
+    [1] => banana
+    [2] => orange
+)
+</pre>
+</div>
+
+<p>
+    <code>print_r()</code> is useful when working with arrays and objects during development.
+</p>
+
+<h3>3. In-depth Debugging with var_dump()</h3>
+
+<p>
+    The <code>var_dump()</code> function displays detailed information about a variable, including its data type and value.
+</p>
+
+<div class="code-card">
+    <pre>
+<span class="tag">&lt;?php</span>
+
+$person = array(
+    <span class="string">"name"</span> => <span class="string">"Bob"</span>,
+    <span class="string">"age"</span> => <span class="number">30</span>,
+    <span class="string">"hobbies"</span> => array(
+        <span class="string">"reading"</span>,
+        <span class="string">"hiking"</span>
+    )
+);
+
+var_dump($person);
+
+<span class="tag">?&gt;</span>
+</pre>
+</div>
+
+<p><strong>Output:</strong></p>
+
+<div class="code-card">
+    <pre>
+array(3) {
+  ["name"]=>
+  string(3) "Bob"
+  ["age"]=>
+  int(30)
+  ["hobbies"]=>
+  array(2) {
+    [0]=>
+    string(7) "reading"
+    [1]=>
+    string(6) "hiking"
+  }
+}
+</pre>
+</div>
+
+<p>
+    <code>var_dump()</code> is especially useful for debugging because it shows:
+</p>
+
+<ul>
+    <li>Data type of the variable</li>
+    <li>Length of strings</li>
+    <li>Array size</li>
+    <li>Actual stored values</li>
+</ul>
+
+<h3>Summary</h3>
+
+<table>
+    <tr>
+        <th>Method</th>
+        <th>Purpose</th>
+    </tr>
+    <tr>
+        <td><code>echo</code></td>
+        <td>Display text, variables, and HTML content</td>
+    </tr>
+    <tr>
+        <td><code>print_r()</code></td>
+        <td>Display arrays and objects in readable form</td>
+    </tr>
+    <tr>
+        <td><code>var_dump()</code></td>
+        <td>Display detailed type and value information</td>
+    </tr>
+</table>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <section>
+                    <button class="btn-try" onclick="showAlert()">Test Your Knowledge</button>
+                </section>
+
+            </main>
+
+            <footer>
+                &copy; 2024-<span id="year"></span> Learn with PembaTTech
+            </footer>
+
+        </div>
+
+    </div>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
