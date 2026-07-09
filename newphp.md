@@ -619,18 +619,6 @@ echo "Connected successfully!";
 ?>
 ```
 
----
-
-## 🎯 6. Why Learn PHP?
-
-✅ Easy for beginners
-✅ Huge community
-✅ Powers many websites
-✅ Good for backend development
-✅ Works well with MySQL
-
----
-
 ## 📚 What To Learn Next?
 
 1. PHP Arrays in depth
@@ -641,10 +629,84 @@ echo "Connected successfully!";
 
 ---
 
-If you want, I can:
+## 🗄️ 6. MySQL CRUD operations
+**Create: Inserting New Data**
 
-* Create a **30-day PHP learning roadmap**
-* Give you **practice exercises**
-* Help you build a **simple project step-by-step**
+```php
+<?php
 
-Just tell me 😊
+$sql = "INSERT INTO users (name, email, phone)
+VALUES ('John Doe', 'johndoe@example.com', '123-456-7890')";
+
+if ($conn->query($sql) === TRUE) {
+  echo "New record created successfully";
+} else {
+  echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+$conn->close();
+?>
+```
+
+**Read: Retrieving Data**
+
+```php
+<?php
+
+$sql = "SELECT * FROM users";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+  // output data of each row
+  while($row = $result->fetch_assoc()) {
+    echo "id: " . $row["id"]. " - Name: " . $row["name"]. "<br>";
+  }
+} else {
+  echo "0 results";
+}
+
+$conn->close();
+?>
+```
+
+**Update: Modifying Existing Data**
+
+```php
+<?php
+
+$sql = "UPDATE users SET name='Jane Doe' WHERE id=2";
+
+if ($conn->query($sql) === TRUE) {
+  echo "Record updated successfully";
+} else {
+  echo "Error updating record: " . $conn->error;
+}
+
+$conn->close();
+?>
+```
+
+
+**Delete: Removing Data**
+
+```php
+<?php
+
+$sql = "DELETE FROM users WHERE id=3";
+
+if ($conn->query($sql) === TRUE) {
+  echo "Record deleted successfully";
+} else {
+  echo "Error deleting record: " . $conn->error;
+}
+
+$conn->close();
+?>
+```
+
+**Learn about keywords**
+* `$result->num_rows`: This property of the result object checks if any rows were returned by the query (useful for handling empty results).
+* `$result->fetch_assoc()`: This function fetches a single row of data from the result set as an associative array, where the keys correspond to the column names.
+
+
+
