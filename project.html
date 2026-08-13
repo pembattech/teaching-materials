@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PembaTTech | Team Projects</title>
+  <link rel="stylesheet" href="./assets/css/styles.css">
+  <style>
+    :root {
+      --ink: #1c1c1c;
+      --paper: #f6f4ef;
+      --line: #dedad0;
+      --accent: #3a5a40;
+      --accent-soft: #e7efe6;
+      --muted: #6f6a5e;
+    }
+
+
+    .name-item {
+      display: block;
+      width: 100%;
+      text-align: left;
+      background: none;
+      border: none;
+      font-size: 20px;
+      padding: 10px 0;
+      cursor: pointer;
+      color: var(--ink);
+      border-bottom: 1px solid transparent;
+      transition: color .15s ease, padding-left .15s ease;
+    }
+
+    .name-item.active {
+      color: #fff;
+      font-weight: 700;
+      padding-left: 6px;
+      border-bottom: 1px solid var(--accent);
+    }
+
+    .projects {
+      flex: 1;
+    }
+
+    .projects h2 {
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 0 0 20px;
+    }
+
+    #selectedName {
+      color: var(--ink);
+      font-weight: 700;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 18px;
+    }
+
+    .project-card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 20px;
+      transition: transform .15s ease, box-shadow .15s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+    }
+
+    .project-card .tag {
+      display: inline-block;
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      background: var(--accent-soft);
+      color: var(--accent);
+      padding: 3px 8px;
+      border-radius: 3px;
+      margin-bottom: 10px;
+    }
+
+    .project-card h3 {
+      margin: 0 0 6px;
+      font-size: 18px;
+    }
+
+    .project-card p {
+      font-size: 13px;
+      color: var(--muted);
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    .empty-state {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+
+    .project-card a.project-link {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid var(--accent);
+      padding-bottom: 1px;
+    }
+
+    .project-card a.project-link:hover {
+      color: var(--ink);
+      border-color: var(--ink);
+    }
+
+    @media(max-width:700px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .names {
+        border-right: none;
+        border-bottom: 1px solid var(--line);
+        padding-right: 0;
+        padding-bottom: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div style="display: flex; gap: 10px; align-items: center;">
+
+      <p onclick="toggleSidebar()" style="cursor:pointer;">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#333">
+          <path d="M120-680v-80h720v80H120Zm0 480v-80h720v80H120Zm0-240v-80h720v80H120Z" />
+        </svg>
+      </p>
+      <p class="logo">PembaTTech</p>
+    </div>
+    <div class="nav-links">
+      <a href="./index.html">HTML</a>
+      <a href="./CSS.html">CSS</a>
+      <a href="./js.html">JavaScript</a>
+      <a href="./db.html">Database</a>
+      <a href="./php.html">PHP</a>
+      <a href="./project.html" class="nav-active"><strong>Projects</strong></a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="sidebar" id="sidebar">
+
+      <div class="names">
+        <h2>Students</h2>
+        <div id="nameList"></div>
+      </div>
+    </div>
+
+    <div class="main-container">
+
+      <div class="projects">
+        <h2>Projects — <span id="selectedName">Select a name</span></h2>
+        <div class="project-grid" id="projectGrid">
+          <p class="empty-state">Choose someone from the list to view their project work.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="./assets/js/script.js"></script>
+
+  <script>
+    const nameList = document.getElementById('nameList');
+    const projectGrid = document.getElementById('projectGrid');
+    const selectedName = document.getElementById('selectedName');
+
+    let data = {};
+
+    fetch('./projects/student_projects/p_data.json')
+      .then(res => {
+        if (!res.ok) throw new Error('Network response was not ok');
+        return res.json();
+      })
+      .then(json => {
+        data = json;
+        buildNameList();
+      })
+      .catch(err => {
+        console.error('Could not load data.json:', err);
+        projectGrid.innerHTML = `<p class="empty-state">
+        Couldn't load data.json. If you opened this file directly (file://),
+        run a local server instead, e.g. <code>python3 -m http.server</code>,
+        then open the page via http://localhost.
+      </p>`;
+      });
+
+    function buildNameList() {
+      nameList.innerHTML = '';
+      Object.keys(data).forEach(name => {
+        const btn = document.createElement('button');
+        btn.className = 'name-item';
+        btn.textContent = name;
+        btn.onclick = () => selectName(name, btn);
+        nameList.appendChild(btn);
+      });
+    }
+
+    function selectName(name, btn) {
+      document.querySelectorAll('.name-item').forEach(el => el.classList.remove('active'));
+      btn.classList.add('active');
+      selectedName.textContent = name;
+
+      projectGrid.innerHTML = '';
+      data[name].forEach(project => {
+        const card = document.createElement('div');
+        card.className = 'project-card';
+        card.innerHTML = `
+        <span class="tag">${project.tag}</span>
+        <h3>${project.title}</h3>
+        <p>${project.desc}</p>
+        <a class="project-link" href="${project.link}" target="_blank" rel="noopener noreferrer">View Project →</a>
+      `;
+        projectGrid.appendChild(card);
+      });
+    }
+  </script>
+
+</body>
+
+</html>

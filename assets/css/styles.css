@@ -62,22 +62,26 @@ body {
 }
 
 .sidebar h2,
-.sidebar a {
+.sidebar a,
+.sidebar .name-item {
     white-space: nowrap;
     transition: opacity 0.2s;
 }
 
 .sidebar.hidden h2,
-.sidebar.hidden a {
+.sidebar.hidden a,
+.sidebar .hidden .name-item {
     opacity: 0;
     pointer-events: none;
 }
 
-.sidebar h2 {
+.sidebar h2,
+.sidebar .name-item {
     font-size: 18px;
 }
 
-.sidebar a {
+.sidebar a,
+.sidebar .name-item {
     display: block;
     color: #ccc;
     text-decoration: none;
@@ -85,7 +89,8 @@ body {
     border-radius: 5px;
 }
 
-.sidebar a:hover {
+.sidebar a:hover,
+.sidebar .name-item:hover {
     color: white;
     background-color: #222222;
 }

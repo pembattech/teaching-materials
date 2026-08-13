@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+<link rel="shortcut icon" href="assets/img/youtube (1).png" type="image/x-icon">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+
+            font-family: "Roboto", sans-serif;
+        }
+
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .main-div {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: rgb(255, 255, 255);
+
+        }
+
+
+
+        body {
+            background-color: rgb(255, 253, 253);
+        }
+
+        .noti {
+            height: 30px;
+            width: 30px;
+            padding: 6px 6px;
+        }
+
+        .sign {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .menu {
+            padding: 8px 8px;
+        }
+
+        .person {
+            height: 30px;
+            width: 30px;
+
+        }
+
+        .person:hover {
+            background-color: rgb(190, 218, 255);
+            ;
+        }
+
+        .sign {
+            border: 2px solid rgb(213, 213, 221);
+            padding: 6px 6px;
+            border-radius: 30px;
+        }
+
+        .sign:hover {
+            background-color: rgb(190, 218, 255);
+        }
+
+        .signin {
+            text-decoration: none;
+            color: rgb(0, 68, 255);
+            font-size: large;
+        }
+
+
+        .logo {
+            height: 25px;
+            width: 115px;
+            object-fit: fill;
+        }
+
+        .mic {
+            height: 30px;
+            width: 30px;
+            padding: 8px 8px;
+            border-radius: 50%;
+            background-color: rgb(238, 236, 236);
+        }
+
+        .men {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .search-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+
+        }
+
+        .search_ {
+            position: relative;
+
+        }
+
+        .search {
+            position: absolute;
+            top: 1px;
+            right: 1px;
+            padding: 4px 10px;
+            border: 1px solid rgb(0, 0, 0);
+            border-top-width: 0;
+            border-right-width: 0;
+            border-top-width: 0;
+            border-bottom-width: 0;
+            border-radius: 20px;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            height: 26px;
+            width: 27px;
+        }
+
+        .search_input {
+            border: 1px solid black;
+            border-radius: 20px;
+            padding: 10px 15px;
+            width: 500px;
+        }
+
+        .search:hover {
+            background-color: rgb(239, 233, 233);
+
+        }
+
+        .noti:hover {
+            background-color: rgb(239, 233, 233);
+            border-radius: 50%;
+
+        }
+
+        .mic:hover {
+            background-color: rgb(211, 208, 208);
+            border-radius: 50%;
+
+        }
+
+        .person:hover {
+            background-color: rgb(239, 233, 233);
+            border-radius: 50%;
+
+        }
+
+        .menu:hover {
+            background-color: rgb(239, 233, 233);
+            border-radius: 50%;
+        }
+
+        .hry {
+            border: 2px solid rgb(211, 209, 209);
+            border-right-width: 0px;
+            border-bottom-width: 0px;
+            border-left-width: 0px;
+            font-size: 16px;
+            font-weight: 500;
+            padding: 10px 15px;
+
+        }
+
+        .total {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+
+        .text {
+            text-decoration: none;
+            color: black;
+            font-size: 14px;
+        }
+
+        .img {
+            height: 24px;
+            width: 24px;
+        }
+
+        .sidebar-item {
+            display: flex;
+            align-items: center;
+            padding: 15px 20px;
+            text-decoration: none;
+            color: black;
+            gap: 2px;
+
+        }
+
+        .sidebar-item:hover {
+            background-color: rgb(233, 233, 230);
+            border-radius: 15px;
+            border: none;
+        }
+
+        .container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .keywords {
+            display: flex;
+            gap: 20px;
+            background-color: white;
+        }
+
+        .keywords>p {
+            border: 1px solid rgb(239, 239, 239);
+            background-color: rgb(239, 239, 239);
+            border-radius: 10px;
+            padding: 5px 8px;
+            font-weight: 400;
+            font-size: 14px;
+        }
+
+        .keywords>p:hover {
+            background-color: rgb(197, 191, 191);
+        }
+
+        .keywords>.all {
+            background-color: black;
+            color: white;
+        }
+
+        .keywords>.all:hover {
+            background-color: rgb(188, 185, 185);
+            color: black
+        }
+
+
+        .thumbnail1 {
+            height: 250px;
+            width: 415px;
+            object-fit: cover;
+
+        }
+
+        .main-item {
+            display: flex;
+            gap: 10px;
+        }
+
+        .pfp1 {
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+        }
+
+        .view {
+            margin: 5px 0;
+        }
+
+        .view a {
+            color: grey;
+        }
+
+        .titletext {
+            font-weight: 800;
+            font-size: 16px;
+            color: black;
+            margin-bottom: 4px;
+        }
+
+        .videos {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .main-div {
+            position: sticky;
+            top: 0;
+
+        }
+
+        .keywords {
+            position: sticky;
+            position: sticky;
+            top: 50px;
+            padding: 20px;
+        }
+
+        .sidebar {
+            min-width: 250px;
+            max-height: 700px;
+            overflow: auto;
+            position: sticky;
+            top: 50px;
+        }
+
+        .video {
+            padding: 10px;
+            width: fit-content;
+        }
+
+        .video:hover {
+            border-radius: 20px;
+            background-color: #ffe9ec;
+        }
+
+        .video1 {
+            padding: 10px;
+            width: fit-content;
+        }
+
+        .video1:hover {
+            border-radius: 20px;
+            background-color: rgb(218, 234, 252);
+        }
+
+        .video2 {
+            padding: 8px 12px;
+        }
+
+        .video2:hover {
+
+            border-radius: 20px;
+            background-color: rgb(238, 236, 236);
+        }
+
+        .video3 {
+            padding: 10px;
+            width: fit-content;
+        }
+
+        .video3:hover {
+            border-radius: 20px;
+            background-color: rgb(238, 219, 255);
+        }
+
+        .video4 {
+            padding: 10px;
+            width: fit-content;
+        }
+
+        .video4:hover {
+
+            border-radius: 20px;
+            background-color: rgb(254, 254, 204);
+        }
+
+        .video5 {
+            padding: 10px;
+            width: fit-content;
+        }
+
+        .video5:hover {
+
+            border-radius: 20px;
+            background-color: rgb(255, 237, 219);
+        }
+
+        .video6 {
+            padding: 10px;
+            width: fit-content;
+        }
+
+        .video6:hover {
+
+            border-radius: 20px;
+            background-color: rgb(235, 255, 232);
+        }
+
+        .shorty {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .shortpic {
+            height: 30px;
+        }
+
+        .textshort {
+            font-weight: 700;
+            font-size: 22px;
+        }
+
+        .shortpics {
+            height: 420px;
+            width: 245px;
+            border-radius: 20px;
+            object-fit: cover;
+        }
+
+        .topic {
+            font-size: 18px;
+            font-weight: 500;
+            width: 220px;
+            margin: 5px 0px;
+        }
+
+        .sub-topic {
+            font-size: 14px;
+            font-weight: 400;
+            color: grey;
+            margin: 2px 0px;
+        }
+
+        .videoshort {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .shortt {
+            padding: 8px 8px;
+        }
+
+        .shortt1 {
+            padding: 8px 8px;
+        }
+
+        .shortt2 {
+            padding: 8px 8px;
+        }
+
+        .shortt:hover {
+            border-radius: 20px;
+            background-color: rgb(255, 216, 223);
+        }
+
+        .shortt1:hover {
+            border-radius: 20px;
+            background-color: rgb(250, 255, 216);
+        }
+
+        .shortt2:hover {
+            border-radius: 20px;
+            background-color: rgb(216, 245, 255);
+        }
+
+        .main-container {
+            flex: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-div">
+
+        <div class="men">
+            <div>
+                <img class="menu" src="assets/img/menu_24dp_000000_FILL0_wght400_GRAD0_opsz24.png" alt="">
+            </div>
+            <div>
+                <img class="logo" src="assets/img/youtube.png" alt="">
+            </div>
+        </div>
+        <div class="search-button">
+            <div class="search_">
+
+                <div>
+                    <input class="search_input" type="text" placeholder="Search">
+                </div>
+                <div>
+                    <img class="search" src="assets/img/search_24dp_000000_FILL0_wght400_GRAD0_opsz24.png" alt="">
+                </div>
+            </div>
+            <div>
+                <img class="mic" src="assets/img/mic_24dp_000000_FILL0_wght400_GRAD0_opsz24.png" alt="">
+            </div>
+        </div>
+        <div class="total">
+            <div>
+                <img class="noti" src="assets/img/more_vert_30dp_000000_FILL0_wght400_GRAD0_opsz24.png" alt="">
+            </div>
+            <div class="sign">
+                <img class="person" src="assets/img/account_circle_30dp_0000F5_FILL0_wght400_GRAD0_opsz24.png" alt="">
+                <a class="signin" href="#">Sign in</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="sidebar">
+            <div class="sidebar-item">
+                <div>
+                    <img class="img" src="./assets/img/home_40dp_1F1F1F_FILL0_wght400_GRAD0_opsz40.png" alt="">
+                </div>
+                <div>
+                    <a class="text" href="#">Home</a>
+                </div>
+            </div>
+            <div class="sidebar-item">
+                <div>
+                    <img class="img" src="./assets/img/web_stories_40dp_1F1F1F_FILL0_wght400_GRAD0_opsz40.png" alt="">
+                </div>
+                <div>
+                    <a class="text" href="#">Shorts</a>
+                </div>
+            </div>
+            <div class="sidebar-item">
+                <div>
+                    <img class="img" src="assets/img/subscriptions_40dp_1F1F1F_FILL0_wght400_GRAD0_opsz40.png" alt="">
+                </div>
+                <div>
+                    <a class="text" href="#">Subscription</a>
+                </div>
+            </div>
+            <div class="sidebar-item">
+                <div>
+                    <img class="img" src="assets/img/account_circle_40dp_1F1F1F_FILL0_wght400_GRAD0_opsz40.png" alt="">
+                </div>
+                <div>
+                    <a class="text" href="#">You</a>
+                </div>
+            </div>
+            <div>
+
+                <p class="hry">Explore</p>
+
+            </div>
+
+            <div class="sidebar-item">
+
+                <div>
+                    <img class="img" src="assets/img/history_40dp_1F1F1F_FILL0_wght400_GRAD0_opsz40.png" alt="">
+                </div>
+                <div>
+                    <a class="text" href="#">History</a>
+                </div>
+            </div>
+            <div class="sidebar-item">
+                <div>
+                    <img class="img" src="assets/img/account_circle_40dp_1F1F1F_FILL0_wght400_GRAD0_opsz40.png" alt="">
+                </div>
+                <div>
+                    <a class="text" href="#">Sign in</a>
+                </div>
+            </div>
+            <div class="sidebar-item">
+                <div>
+                    <img class="img" src="assets/img/music_note_40dp_1F1F1F_FILL0_wght400_GRAD0_opsz40.png" alt="">
+                </div>
+                <div>
+                    <a class="text" href="#">Music</a>
+                </div>
+            </div>
+            <div class="sidebar-item">
+                <div>
+                    <img class="img" src="assets/img/stadia_controller_40dp_1F1F1F_FILL0_wght400_GRAD0_opsz40.png"
+                        alt="">
+                </div>
+                <div>
+                    <a class="text" href="#">Gaming</a>
+                </div>
+            </div>
+            <div class="sidebar-item">
+                <div>
+                    <img class="img" src="assets/img/trophy_40dp_1F1F1F_FILL0_wght400_GRAD0_opsz40.png" alt="">
+                </div>
+                <div>
+                    <a class="text" href="#">Sports</a>
+                </div>
+            </div>
+            <div>
+
+                <p class="hry">More from youtube</p>
+
+            </div>
+            <div class="sidebar-item">
+                <div>
+                    <img class="img" src="assets/img/live_tv_40dp_1F1F1F_FILL0_wght400_GRAD0_opsz40.png" alt="">
+                </div>
+                <div>
+                    <a class="text" href="#">Youtube Premium</a>
+                </div>
+            </div>
+            <div class="sidebar-item">
+                <div>
+                    <img class="img" src="assets/img/music_note_40dp_1F1F1F_FILL0_wght400_GRAD0_opsz40.png" alt="">
+                </div>
+
+                <div>
+                    <a class="text" href="#">Youtube music</a>
+                </div>
+            </div>
+            <div class="sidebar-item">
+
+                <div>
+                    <img class="img" src="assets/img/child_care_40dp_1F1F1F_FILL0_wght400_GRAD0_opsz40.png" alt="">
+                </div>
+                <div>
+                    <a class="text" href="#">Youtube kids</a>
+                </div>
+            </div>
+            <div class="sidebar-item">
+
+                <div>
+                    <img class="img" src="assets/img/flag_40dp_1F1F1F_FILL0_wght400_GRAD0_opsz40.png" alt="">
+                </div>
+                <div>
+                    <a class="text" href="#">Report history</a>
+                </div>
+
+            </div>
+            <div>
+
+
+            </div>
+        </div>
+        <div class="main-container">
+            <div class="keywords">
+                <p class="all">All</p>
+                <p>Gaming</p>
+                <p>Music</p>
+                <p>Chinese Drama</p>
+                <p>Podcasts</p>
+                <p>Playlist</p>
+                <p>Cortis music</p>
+                <p>K-pop</p>
+                <p>Nepali movies</p>
+                <p>Art</p>
+                <p>Zhang linghe</p>
+                <p>K-drama</p>
+                <p>Mukbang</p>
+            </div>
+
+
+            <div class="videos">
+                <div class="video">
+                    <a href="https://www.youtube.com/watch?v=FMX98ROVRCE&list=RDFMX98ROVRCE&start_radio=1">
+                        <div class="1">
+                            <img class="thumbnail1" src="assets/img/lisa.png" alt="">
+                        </div>
+                    </a>
+                    <div class="main-item">
+                        <a href="https://www.youtube.com/@wearelloud">
+                            <div>
+                                <img class="pfp1" src="assets/img/lloud.jpg" alt="">
+                            </div>
+                        </a>
+
+                        <div class="item">
+
+                            <div class="titletext">
+
+                                <a href="https://www.youtube.com/watch?v=FMX98ROVRCE&list=RDFMX98ROVRCE&start_radio=1">
+                                    LISA - DREAM feat. Kentaro Sakaguchi
+                                    <br>(Official Short Film MV)
+                                </a>
+                            </div>
+
+                            <div class="view">
+                                <a class="pfpname"
+                                    href="https://www.youtube.com/watch?v=FMX98ROVRCE&list=RDFMX98ROVRCE&start_radio=1">
+                                    LLOUD Offical ✓ <br>
+                                </a>
+                                <a href="https://www.youtube.com/watch?v=FMX98ROVRCE&list=RDFMX98ROVRCE&start_radio=1">
+                                    55M views • 9 months ago
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video6">
+                    <a href="https://www.youtube.com/watch?v=sSxKZbU2Alc">
+                        <div class="1">
+                            <img class="thumbnail1" src="assets/img/thumbnail2 zhao.png" alt="">
+                        </div>
+                    </a>
+                    <div class="main-item">
+                        <a href="https://www.youtube.com/@youkuenglish">
+                            <div>
+                                <img class="pfp1" src="assets/img/youku.jpg" alt="">
+                            </div>
+                        </a>
+
+                        <div class="item">
+
+                            <div class="titletext">
+
+                                <a href="https://www.youtube.com/watch?v=sSxKZbU2Alc">
+                                    My Royal Consort EP1！Zhao Lusi time travels to <br>
+                                    ancient China, loves cold emperor & becomes queen
+                                </a>
+                            </div>
+
+                            <div class="view">
+                                <a class="pfpname" href="https://www.youtube.com/watch?v=sSxKZbU2Alc">
+                                    Youku-Get English App ✓ <br>
+                                </a>
+                                <a href="https://www.youtube.com/watch?v=sSxKZbU2Alc">
+                                    2.4M views • 5 months ago
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video5">
+                    <a href="https://www.youtube.com/watch?v=U6BDbXIah-Y&list=RDU6BDbXIah-Y&start_radio=1">
+                        <div class="1">
+                            <img class="thumbnail1" src="assets/img/red-red.png" alt="">
+                        </div>
+                    </a>
+                    <div class="main-item">
+                        <a href="https://www.youtube.com/@cortis_bighit">
+                            <div>
+                                <img class="pfp1" src="assets/img/cortis.jpg" alt="">
+                            </div>
+                        </a>
+
+                        <div class="item">
+
+                            <div class="titletext">
+
+                                <a href="https://www.youtube.com/watch?v=U6BDbXIah-Y&list=RDU6BDbXIah-Y&start_radio=1">
+                                    CORTIS (코르티스) 'REDRED' Official MV
+                                </a>
+                            </div>
+
+                            <div class="view">
+                                <a class="pfpname"
+                                    href="https://www.youtube.com/watch?v=U6BDbXIah-Y&list=RDU6BDbXIah-Y&start_radio=1">
+                                    CORTIS ✓ <br>
+                                </a>
+                                <a href="https://www.youtube.com/watch?v=U6BDbXIah-Y&list=RDU6BDbXIah-Y&start_radio=1">
+                                    22M views • 1 months ago
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="video4">
+                    <a href="https://www.youtube.com/watch?v=8fav54zjKsg">
+                        <div class="1">
+                            <img class="thumbnail1" src="assets/img/mukbang.png" alt="">
+                        </div>
+                    </a>
+                    <div class="main-item">
+                        <a href="https://www.youtube.com/@gongsam_table203">
+                            <div>
+                                <img class="pfp1" src="assets/img/unnamed.jpg" alt="">
+                            </div>
+                        </a>
+
+                        <div class="item">
+
+                            <div class="titletext">
+
+                                <a href="https://www.youtube.com/watch?v=8fav54zjKsg">
+                                    ASMR MUKBANG | Crispy Fried Chicken, fire <br> noodles, cheese ball recipe ! eating
+                                </a>
+                            </div>
+
+                            <div class="view">
+                                <a class="pfpname" href="https://www.youtube.com/watch?v=8fav54zjKsg">
+                                    GONGSAM TABLE 이공삼 ✓ <br>
+                                </a>
+                                <a href="https://www.youtube.com/watch?v=8fav54zjKsg">
+                                    10M views • 4 months ago
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video3">
+                    <a href="https://www.youtube.com/watch?v=PRpiBpDy7MQ&list=RDPRpiBpDy7MQ&start_radio=1">
+                        <div class="1">
+                            <img class="thumbnail1" src="assets/img/americanpie.png" alt="">
+                        </div>
+                    </a>
+                    <div class="main-item">
+                        <a href="https://www.youtube.com/@donmcleanvevo7263">
+                            <div>
+                                <img class="pfp1" src="assets/img/don.jpg" alt="">
+                            </div>
+                        </a>
+
+                        <div class="item">
+
+                            <div class="titletext">
+
+                                <a href="https://www.youtube.com/watch?v=PRpiBpDy7MQ&list=RDPRpiBpDy7MQ&start_radio=1">
+                                    Don McLean - American Pie (Lyric Video)
+                                </a>
+                            </div>
+
+                            <div class="view">
+                                <a class="pfpname"
+                                    href="https://www.youtube.com/watch?v=PRpiBpDy7MQ&list=RDPRpiBpDy7MQ&start_radio=1">
+                                    Don McLean ✓ <br>
+                                </a>
+                                <a href="https://www.youtube.com/watch?v=PRpiBpDy7MQ&list=RDPRpiBpDy7MQ&start_radio=1">
+                                    77M views • 4 years ago
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video2">
+                    <a href="https://www.youtube.com/watch?v=ioNng23DkIM&list=RDioNng23DkIM&start_radio=1">
+                        <div class="1">
+                            <img class="thumbnail1" src="assets/img/QUEEN.png" alt="">
+                        </div>
+                    </a>
+                    <div class="main-item">
+                        <a href="https://www.youtube.com/channel/UCOmHUn--16B90oW2L6FRR3A">
+                            <div>
+                                <img class="pfp1" src="assets/img/BP.jpg" alt="">
+                            </div>
+                        </a>
+
+                        <div class="item">
+
+                            <div class="titletext">
+
+                                <a href="https://www.youtube.com/watch?v=ioNng23DkIM&list=RDioNng23DkIM&start_radio=1">
+                                    BLACKPINK - 'How You Like That' M/V
+                                </a>
+                            </div>
+
+                            <div class="view">
+                                <a class="pfpname"
+                                    href="https://www.youtube.com/watch?v=ioNng23DkIM&list=RDioNng23DkIM&start_radio=1">
+                                    BLACKPINK ✓<br>
+                                </a>
+                                <a href="https://www.youtube.com/watch?v=ioNng23DkIM&list=RDioNng23DkIM&start_radio=1">
+                                    1.3B views • 5 years ago
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="Shorts">
+
+                <div class="shorty">
+                    <div>
+                        <img class="shortpic" src="assets/img/web_stories_40dp_1F1F1F_FILL0_wght400_GRAD0_opsz40.png"
+                            alt="">
+                    </div>
+                    <div>
+                        <p class="textshort">Shorts</p>
+                    </div>
+                </div>
+
+                <div class="videoshort">
+                    <div class="shortt">
+                        <div>
+                            <img class="shortpics" src="assets/img/panipuri.png" alt="">
+                        </div>
+                        <div class="description">
+                            <p class="topic">ASMR: Eating Pani Puri eating challenge 😍🤤...</p>
+                            <p class="sub-topic">2.4M Views</p>
+                        </div>
+                    </div>
+
+                    <div class="shortt1">
+                        <div>
+                            <img class="shortpics" src="assets/img/ella.png" alt="">
+                        </div>
+                        <div class="description">
+                            <p class="topic">Ella and her bond with blackpink #unchild #ella...</p>
+                            <p class="sub-topic">345K Views</p>
+                        </div>
+                    </div>
+
+                    <div class="shortt2">
+                        <div>
+                            <img class="shortpics" src="assets/img/hwachae.png" alt="">
+                        </div>
+                        <div class="description">
+                            <p class="topic">Its 3 AM and I am craving hwachae. Day 3 of living...</p>
+                            <p class="sub-topic">1M Views</p>
+                        </div>
+                    </div>
+
+                    <div class="shortt">
+                        <div>
+                            <img class="shortpics" src="assets/img/indian.png" alt="">
+                        </div>
+                        <div class="description">
+                            <p class="topic">Just WOW.#INDIAN #traditional this girl is 😍...</p>
+                            <p class="sub-topic">127K Views</p>
+                        </div>
+                    </div>
+
+                    <div class="shortt1">
+                        <div>
+                            <img class="shortpics" src="assets/img/cake.png" alt="">
+                        </div>
+                        <div class="description">
+                            <p class="topic">This japanese cake is so good. Must tryy...</p>
+                            <p class="sub-topic">785K Views</p>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+
+            </div>
+
+
+
+            <div class="videos">
+                <div class="video">
+                    <a href="https://www.youtube.com/watch?v=hbcGx4MGUMg">
+                        <div class="1">
+                            <img class="thumbnail1" src="assets/img/lisaa.png" alt="">
+                        </div>
+                    </a>
+                    <div class="main-item">
+                        <a href="https://www.youtube.com/@wearelloud">
+                            <div>
+                                <img class="pfp1" src="assets/img/lloud.jpg" alt="">
+                            </div>
+                        </a>
+
+                        <div class="item">
+
+                            <div class="titletext">
+
+                                <a href="https://www.youtube.com/watch?v=hbcGx4MGUMg">
+                                    LISA - ROCKSTAR (Official Music Video)
+                                </a>
+                            </div>
+
+                            <div class="view">
+                                <a class="pfpname"
+                                    href="https://www.youtube.com/watch?v=hbcGx4MGUMg">
+                                    LLOUD Offical ✓ <br>
+                                </a>
+                                <a href="https://www.youtube.com/watch?v=hbcGx4MGUMg">
+                                    55M views • 9 months ago
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video6">
+                    <a href="https://www.youtube.com/watch?v=zeMd3-MR28g">
+                        <div class="1">
+                            <img class="thumbnail1" src="assets/img/drama.png" alt="">
+                        </div>
+                    </a>
+                    <div class="main-item">
+                        <a href="https://www.youtube.com/@youkuenglish">
+                            <div>
+                                <img class="pfp1" src="assets/img/youku.jpg" alt="">
+                            </div>
+                        </a>
+
+                        <div class="item">
+
+                            <div class="titletext">
+
+                                <a href="https://www.youtube.com/watch?v=zeMd3-MR28g">
+                                   MULTISUB【翘楚 Ashes To Crown】首发预告：开启宿命棋局 |
+                                    陈都灵 /周翊然 /唐晓天 /王瑞昌 | 古装 | 优酷 YOUKUn
+                                </a>
+                            </div>
+
+                            <div class="view">
+                                <a class="pfpname" href="https://www.youtube.com/watch?v=zeMd3-MR28g">
+                                    Youku-Get English App ✓ <br>
+                                </a>
+                                <a href="https://www.youtube.com/watch?v=zeMd3-MR28g">
+                                    70K views • 1 week ago
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video5">
+                    <a href="https://www.youtube.com/watch?v=nCElUD0jvgo&list=RDnCElUD0jvgo&start_radio=1">
+                        <div class="1">
+                            <img class="thumbnail1" src="assets/img/acai.png" alt="">
+                        </div>
+                    </a>
+                    <div class="main-item">
+                        <a href="https://www.youtube.com/@cortis_bighit">
+                            <div>
+                                <img class="pfp1" src="assets/img/cortis.jpg" alt="">
+                            </div>
+                        </a>
+
+                        <div class="item">
+
+                            <div class="titletext">
+
+                                <a href="https://www.youtube.com/watch?v=nCElUD0jvgo&list=RDnCElUD0jvgo&start_radio=1">
+                                    CORTIS (코르티스) 'ACAI' Official MV
+                                </a>
+                            </div>
+
+                            <div class="view">
+                                <a class="pfpname"
+                                    href="https://www.youtube.com/watch?v=nCElUD0jvgo&list=RDnCElUD0jvgo&start_radio=1">
+                                    CORTIS ✓ <br>
+                                </a>
+                                <a href="https://www.youtube.com/watch?v=nCElUD0jvgo&list=RDnCElUD0jvgo&start_radio=1">
+                                    6M views • 2 weeks ago
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    </div>
+    </div>
+</body>
+
+</html>

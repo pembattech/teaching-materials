@@ -1,0 +1,1013 @@
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+.header {
+    background-color: rgb(241, 236, 236);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+}
+
+.logo {
+    height: 90px;
+    width: 80px;
+    position: relative;
+    left: 40px;
+}
+
+.text {
+    padding: 15px 5px 15px 15px;
+    width: 700px;
+    border: 2px solid black;
+    border-radius: 30px;
+    font-size: 16px;
+}
+
+.total {
+    position: relative;
+}
+
+.scout {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    top: 10px;
+    left: 620px;
+    border-radius: 50%;
+    background-color: rgb(212, 207, 207);
+}
+
+.search {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    top: 3px;
+    right: 1px;
+    background-color: rgb(194, 170, 216);
+    color: white;
+    border-radius: 40px;
+    padding: 8px 9px;
+}
+
+.link>a {
+    font-size: x-large;
+    text-decoration: none;
+    color: black;
+}
+
+.imgmail {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    border: 1px solid rgb(116, 48, 116);
+    padding: 6px 10px;
+    border-radius: 40px;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 5px;
+
+}
+
+.link1>a {
+    color: purple;
+    font-size: x-large;
+    text-decoration: none;
+
+}
+
+.link>a:hover {
+    color: rgb(145, 53, 145);
+}
+
+.link1>a:hover {
+    color: rgb(145, 53, 145);
+}
+
+.mail {
+    height: 30px;
+    width: 30px;
+}
+
+.in>a {
+    border: 1px solid rgb(172, 167, 167);
+    padding: 8px 12px;
+    font-size: x-large;
+    border-radius: 40px;
+    text-decoration: none;
+    color: black;
+}
+
+.in>a:hover {
+    color: rgb(126, 48, 126);
+}
+
+.ad {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(213, 213, 213);
+}
+
+.grid-container {
+    display: flex;
+    gap: 2px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.item:hover {
+    box-shadow: 2px 2px 10px gray;
+}
+
+.item {
+    border: 2px solid rgb(214, 214, 214);
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+}
+
+.taurus {
+    font-size: 14px;
+    text-align: left;
+    font-weight: 100;
+    color: rgb(137, 137, 137);
+}
+
+.auspicious {
+    font-size: medium;
+    text-align: justify;
+    font-weight: 600;
+
+}
+
+.trumpp {
+    height: 150px;
+    width: 220px;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+.nickp {
+    height: 150px;
+    width: 220px;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+.dinop {
+    height: 150px;
+    width: 220px;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+.dinot {
+    font-size: 12px;
+    font-weight: 600;
+    width: 200px;
+}
+
+.trumpt {
+    font-size: 12px;
+    font-weight: 600;
+    width: 200px;
+}
+
+.nickt {
+    font-size: 12px;
+    font-weight: 600;
+    width: 200px;
+}
+
+.nickt:hover {
+    text-decoration: underline;
+}
+
+.trumpt:hover {
+    text-decoration: underline;
+}
+
+.dinot:hover {
+    text-decoration: underline;
+}
+
+.maintrending {
+    display: flex;
+    gap: 10px;
+    margin: 10px;
+    justify-content: space-between;
+}
+
+p {
+    text-decoration: none;
+}
+
+.maint {
+    padding: 10px 15px;
+    border-radius: 30px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 5px;
+    gap: 10px;
+
+}
+
+.horoscope {
+    display: flex;
+    justify-content: space-between;
+    gap: 3px;
+}
+
+.cow {
+
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.crown {
+    font-weight: 700;
+}
+
+.crown1 {
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.a {
+    font-size: 14px;
+    color: rgb(171, 170, 170);
+}
+
+.bc {
+    display: flex;
+    gap: 30px;
+}
+
+.de {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.b {
+    font-weight: 900;
+}
+
+.c {
+    font-weight: 900;
+}
+
+.e {
+    color: red;
+    font-weight: 300;
+}
+
+.f {
+    font-size: 14px;
+    color: rgb(199, 199, 199);
+}
+
+.gh {
+    display: flex;
+    justify-content: space-between;
+}
+
+.g {
+    font-weight: 700;
+}
+
+body {
+    background-color: rgb(233, 233, 233);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.imgmail:hover {
+    box-shadow: 2px 2px 10px gray;
+}
+
+.in>a:hover {
+    box-shadow: 2px 2px 10px gray;
+}
+
+.contentside {
+    background-color: rgb(255, 255, 255);
+    padding: 10px 15px;
+    height: max-content;
+    border-radius: 30px;
+}
+
+.main-news {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-gap: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 10px;
+
+}
+
+.read {
+    font-weight: 800;
+    font-size: 19px;
+
+}
+
+.weekend {
+    background-color: white;
+    margin-top: 20px;
+    height: max-content;
+    border-radius: 30px;
+    padding: 10px 15px;
+}
+
+.footer {
+    background-color: aqua;
+}
+
+.trending {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: left;
+}
+
+.text2 {
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.odysseytext {
+    font-weight: 700;
+}
+
+.idoltext {
+    font-weight: 700;
+}
+
+.trumptext {
+    font-weight: 700;
+}
+
+.odyssey {
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    margin: 10px;
+}
+
+.odyssey1 {
+    display: flex;
+    align-items: center;
+}
+
+.odysseytext>p:hover {
+    text-decoration: underline;
+}
+
+.idol {
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    margin: 10px;
+}
+
+.idol1 {
+    display: flex;
+    align-items: center;
+}
+
+.idoltext:hover {
+    text-decoration: underline;
+}
+
+.images {
+    margin: 30px;
+}
+
+.trump {
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    margin: 10px;
+}
+
+.trump1 {
+    display: flex;
+    align-items: center;
+}
+
+.trumptext:hover {
+    text-decoration: underline;
+}
+
+.alex {
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    margin: 10px;
+}
+
+.alex1 {
+    display: flex;
+    align-items: center;
+}
+
+.alextext {
+    font-weight: 700;
+}
+
+.alextext:hover {
+    text-decoration: underline;
+}
+
+.chud {
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    margin: 10px;
+}
+
+.chud1 {
+    display: flex;
+    align-items: center;
+}
+
+.chudtext {
+    font-weight: 700;
+}
+
+.chudtext:hover {
+    text-decoration: underline;
+}
+
+.yahootrend {
+    font-weight: 900;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    width: 300px;
+}
+
+.yahootrend:hover {
+    color: rgb(160, 56, 160);
+}
+
+.trending {
+    margin-top: 25px;
+    margin-bottom: 0px;
+    margin-left: 30px;
+}
+
+.for {
+    font-size: 34px;
+}
+
+.hero {
+    height: 400px;
+    width: 97%;
+    object-fit: cover;
+    border-radius: 30px;
+    padding: 10px;
+    border-radius: 30px;
+
+}
+
+.hero-section {
+    position: relative;
+
+}
+
+.desc {
+    position: absolute;
+    bottom: 34px;
+    color: white;
+    font-size: 34px;
+    margin-left: 29px;
+    text-align: left;
+    font-weight: 900;
+    text-decoration: none;
+}
+
+.desc:hover {
+    text-decoration: underline;
+}
+
+.la1 {
+    height: 35px;
+    width: 35px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.la {
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+}
+
+.totalla {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 5px;
+    position: absolute;
+    bottom: 170px;
+    margin-left: 28px;
+}
+
+.labox {
+    color: white;
+
+}
+
+.number {
+    color: white;
+}
+
+.number:hover {
+    text-decoration: underline;
+}
+
+.la:hover {
+    text-decoration: underline;
+}
+
+.finance1 {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.trending-topic {
+    gap: 10px;
+    border-radius: 30px;
+    padding: 10px 15px;
+}
+
+.finance1 {
+    margin: 20px;
+    background-color: white;
+}
+
+.locationt {
+    font-weight: 900;
+
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    background-color: #dad5eb;
+
+    padding: 5px;
+}
+
+.location:hover,
+.location:hover .locationset {
+    background-color: #c3b0ff;
+}
+
+.locationset::placeholder {
+    color: #8765ff;
+    font-weight: 700;
+}
+
+.locationset {
+    background-color: #dad5eb;
+    width: 250px;
+    padding: 8px 10px;
+    font-size: 16px;
+    border-color: #8B7DBE;
+
+}
+
+
+.locationlook {
+    text-align: center;
+    padding: 10px;
+}
+
+.location1 {
+    gap: 10px;
+    background-color: white;
+    border-radius: 30px;
+    padding: 10px 15px;
+}
+
+.patel {
+    height: 170px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+.patelt:hover {
+    text-decoration: underline;
+}
+
+.foryou-news-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 15px;
+}
+
+.patelt {
+    font-size: 20px;
+    font-weight: 700;
+
+}
+
+.sidebar {
+    border-radius: 30px;
+}
+
+.sidebar,
+.maintrending,
+.foryou-news-section {
+    border-radius: 30px;
+    background-color: rgb(255, 255, 255);
+}
+
+.foryou-news-section {
+    padding: 15px 20px;
+}
+
+.fort {
+    font-weight: 900;
+    font-size: 26px;
+}
+
+.tt {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+}
+
+.imgg {
+    height: 50px;
+    width: 80px;
+    object-fit: cover;
+    border-radius: 10px;
+
+}
+
+.rondat {
+    font-size: 14x;
+}
+
+.rondat:hover {
+    text-decoration: underline;
+}
+
+.rondatt {
+    font-weight: 600;
+    font-size: 14x;
+}
+
+.mn {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.main-newss {
+    border-radius: 30px;
+    margin-top: 20px;
+    padding: 15px 20px;
+    background-color: rgb(255, 255, 255);
+}
+
+.log {
+    height: 20px;
+    width: 20px;
+    object-fit: cover;
+
+}
+
+.newss {
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.ss {
+    height: 250px;
+    width: 350px;
+    object-fit: cover;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.newsimg {
+    height: 30px;
+    width: 30px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.textt {
+    font-size: 16px;
+    color: grey;
+    font-weight: 400;
+}
+
+.cassidy {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.texxtt {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.texxtt:hover {
+    text-decoration: underline;
+}
+
+.deals {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.dealst {
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.main-deals {
+    background-color: white;
+    border-radius: 30px;
+    margin-top: 20px;
+    padding: 15px 20px;
+}
+
+.shop {
+    display: flex;
+    gap: 10px;
+    margin: 15px;
+}
+
+.ship {
+    height: 100px;
+    width: 60px;
+    object-fit: cover;
+}
+
+.main-num {
+    display: flex;
+    gap: 10px;
+}
+
+.no {
+    font-weight: 700;
+}
+
+.numb {
+    color: blueviolet;
+}
+
+.numb2 {
+    text-decoration: line-through;
+}
+
+.p {
+    color: rgb(126, 43, 43);
+}
+
+.po {
+    color: rgb(112, 47, 112);
+}
+
+.po:hover {
+    text-decoration: underline;
+
+}
+
+.p:hover {
+    text-decoration: underline;
+
+}
+
+.more {
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.explore {
+    border-radius: 30px;
+    margin-top: 20px;
+    padding: 15px 20px;
+    background-color: rgb(255, 255, 255);
+}
+
+.finance12 {
+    width: 300px;
+    height: 160px;
+    margin: 20px;
+    object-fit: fill;
+}
+.finance123 {
+    width: 300px;
+    height: 300px;
+    margin: 20px;
+    object-fit: fill;
+}
+.ad1{
+    color: rgb(177, 169, 169);
+    position: relative;
+    left: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    width: 300px;
+    background-color: rgb(221, 221, 221);
+}
+
+.cassidy1 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+}
+.main-explore{
+    position: sticky;
+    top: 8px;
+}
+
+.texxtt1 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.texxtt1:hover {
+
+    color: rgb(197, 36, 197);
+}
+
+.stanley {
+    align-items: center;
+    height: 300px;
+    width: 630px;
+    object-fit: fill;
+    margin: 5px;
+    border-radius: 30px;
+}
+
+.reuters {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+
+.ross {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.baker:hover {
+    text-decoration: underline;
+}
+
+.monkey {
+    font-size: 20px;
+    font-weight: 800;
+    padding: 8px 10px;
+}
+
+.ross p {
+    font-size: 16px;
+}
+
+.baker {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.locationset {
+    outline: none;
+    border: none;
+    color: #8B7DBE;
+}
+
+.brand {
+    height: 120px;
+    width: 180px;
+    border-radius: 20px;
+}
+
+.brands {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brandt {
+    font-size: 14px;
+    width: 150px;
+    font-weight: 800;
+}
+
+.brandt:hover {
+    text-decoration: underline;
+}
+
+.main-brand {
+    padding: 5px 10px;
+    border-radius: 20px;
+    border: 1px solid rgb(182, 181, 181);
+}
+
+.dinotext {
+    font-size: 16px;
+    font-weight: 800;
+    margin: 10px 0;
+}
+.Advertisement{
+    position: sticky;
+    top: 10px;
+}
+.item1{
+    display: flex;
+    margin: 35px 5px 0px 5px;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+.fb{
+    height: 20px;
+    width: 20px;
+}
+.twitter{
+    height: 16px;
+    width: 16px;
+}
+.insta{
+    height: 20px;
+    width: 20px;
+}
+.tiktok{
+    height: 20px;
+    width: 20px;
+}
+
+.privacytext1{
+    display: flex;
+    font-size: 14px;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+.privacy{
+    position: sticky;
+    top: 550px;
+}
+.privacytext12:hover{
+    color: rgb(158, 77, 158);
+
+}
+.and:hover{
+    color: black;
+}
+.reserved{
+    font-size: 14px;
+    text-align: center;
+}

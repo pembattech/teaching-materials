@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .head {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 15px 80px;
+            background-color: #f2f2f2;
+            box-shadow: 0 2px 3px rgba(0, 0, 0, 0.15);
+        }
+
+
+        .insta {
+            height: 50px;
+            width: 45px;
+            object-fit: contain;
+            display: block;
+            cursor: pointer;
+        }
+
+        .fb {
+            height: 30px;
+            width: 30px;
+            object-fit: contain;
+            display: block;
+            cursor: pointer;
+        }
+
+        .yt {
+            height: 40px;
+            width: 40px;
+            object-fit: contain;
+            display: block;
+            cursor: pointer;
+        }
+
+        .loc {
+            width: 30px;
+        }
+
+
+
+        .contact {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-left: 100px;
+            cursor: pointer;
+        }
+
+        .contact1 {
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-left: auto;
+            cursor: pointer;
+        }
+
+        .logo {
+            display: flex;
+            padding: 20px 100px;
+            gap: 20px;
+            justify-content: space-between;
+        }
+
+        .logo1 {
+            width: 200px;
+            height: 100px;
+            gap: 20px;
+            object-fit: contain;
+        }
+
+        .home {
+            background-color: #003366;
+            padding: 12px 0;
+            text-align: center;
+        }
+
+        .home1 {
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            font-size: 16px;
+        }
+
+        .line {
+            height: 20px;
+            width: 2px;
+        }
+
+        .main-body {
+            width: 1344px;
+        }
+
+        .nobel-1 {
+            height: 400px;
+            width: 350px;
+            border-radius: 30px;
+            margin-left: 200px;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .nobel1 {
+            display: flex;
+        }
+
+        .main {
+            display: flex;
+            gap: 40px;
+            padding: 50px 80px;
+        }
+
+        .about {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            width: 70%;
+        }
+
+        .notice {
+            width: 200px;
+            border: 10px solid #ddd;
+            padding: 20px;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+
+        .nobel-1:hover {
+            transition: scale(1.05);
+        }
+
+
+
+        .text p {
+            text-align: justify;
+            line-height: 1.7;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: 2px solid blue;
+            border-radius: 25px;
+            background: white;
+            color: blue;
+        }
+
+        .academy {
+            color: blue;
+        }
+
+
+
+        .nobel-1:hover {
+            transform: scale(1.05);
+        }
+
+
+
+
+
+
+        .last {
+            display: flex;
+            justify-content: space-between;
+            background: #001f66;
+            color: white;
+            padding: 50px;
+        }
+
+        .left {
+            width: 30%;
+        }
+
+        .middle {
+            width: 30%;
+        }
+
+        .right {
+            width: 30%;
+        }
+
+        .nobel {
+            width: 170px;
+        }
+
+        .small {
+            width: 18px;
+            margin-right: 8px;
+            background-attachment: darkblue;
+        }
+
+        .icon {
+            width: 30px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .icon:hover {
+            transform: scale(1.1);
+            transition: 0.3s;
+        }
+
+        .email {
+            width: 55px;
+        }
+
+
+        .copyright {
+            background: #002147;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 80px;
+        }
+
+        .powered {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .powered p {
+            margin: 0;
+        }
+
+        .powered h3 {
+            margin: 0;
+        }
+
+        .powered img {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="head">
+        <div>
+            <img class="fb" src="Assets/IMG/facebook.png" alt="">
+        </div>
+        <div>
+            <img class="yt" src="Assets/IMG/youtube.webp" alt="">
+        </div>
+        <div>
+            <img class="insta" src="Assets/IMG/insta.webp" alt="">
+        </div>
+        <div class="contact">
+            <img class="loc" src="Assets/IMG/location.png" alt="">
+            <p>New Baneshwor, Kathmandu </p>
+
+            <img class="loc" src="Assets/IMG/call.jpg" alt="">
+            <p>01-765898  </p>
+
+            <img class="email" src="Assets/IMG/email.png" alt="">
+            <p>info@nep.edu.np </p>
+        </div>
+        <div class="contact1">
+            <p>Online Entrance Login</p>
+            <img class="loc" src="Assets/IMG/login.png" alt="">
+            <a href="login.html" style="text-decoration:none; color:black;">
+                Login
+            </a>
+        </div>
+    </div>
+    <div class="logo">
+
+        <img class="logo1" src="Assets/IMG/british.webp" alt="">
+        <img class="logo1 " src="Assets/IMG/nobel.jpg" alt="">
+        <img class="logo1" src="Assets/IMG/year.webp" alt="">
+    </div>
+    <div class="home">
+        <a class="home1" href="#">Home</a>
+        <a class="home1" href="#">About Us</a>
+        <a class="home1" href="#">Programs</a>
+        <a class="home1" href="#">Facilities</a>
+        <a class="home1" href="#">Nobel Achievers </a>
+        <a class="home1" href="#">News </a>
+        <a class="home1" href="#">Gallery </a>
+        <a class="home1" href="#">Nobel Student's Club </a>
+        <a class="home1" href="#">Contact Us </a>
+    </div>
+
+    <div>
+        <img class="main-body" src="Assets/IMG/nobel-2.jpg" alt="">
+    </div>
+
+    <div class="main">
+
+        <div class="about">
+            <img class="nobel-1" src="Assets/IMG/nobel-1.jpg">
+
+            <div class="text">
+                <h3>Welcome To</h3>
+                <h1 class="academy">Nobel Academy</h1>
+
+                <p>
+                    Nobel Academy is one of the high ranking co-educational
+                    institutions established in 1998.Since its establishment, it has been providing high quality
+                    education to its students. School education is being run from its own building at New Baneshwor...
+                </p>
+
+                <button>Read More</button>
+            </div>
+        </div>
+
+        <div class="notice">
+            <h2>NOTICE BOARD</h2>
+
+            <p>June 20, 2025</p>
+            <p>IMPORTANT NOTICE FOR ALL STUDENTS</p>
+            <hr>
+
+            <p>September 5, 2024</p>
+            <p>IMPORTANT NOTICE FOR ALL STUDENTS</p>
+            <hr>
+
+            <p>September 1, 2024</p>
+            <p>Examination 2081</p>
+        </div>
+
+    </div>
+    <div class="last">
+
+        <div class="left">
+
+            <img class="nobel" src="Assets/IMG/nobel.jpg" alt="">
+
+            <p>
+                Nobel Academy is a pioneer co-education secondary school
+                providing quality education to students.
+            </p>
+
+        </div>
+
+        <div class="middle">
+
+            <h2>Useful Link</h2>
+
+            <p>About Us</p>
+            <p>Programs</p>
+            <p>Facilities</p>
+            <p>Nobel Achievers</p>
+            <p>Gallery</p>
+
+        </div>
+
+        <div class="right">
+            <h2>Contact Us</h2>
+
+            <p>📍 New Baneshwor, Kathmandu</p>
+            <p>📞 01-765898</p>
+            <p>✉ info@nep.edu.np</p>
+
+            <h3>Follow Us</h3>
+
+            <img class="icon" src="Assets/IMG/facebook.png" alt="">
+            <img class="icon" src="Assets/IMG/youtube.webp" alt="">
+            <img class="icon" src="Assets/IMG/insta.webp" alt="">
+        </div>
+        <div>
+            <h1>Facilities</h1>
+
+            <p>📚 Library</p>
+            <p>💻 Computer Lab</p>
+            <p>🧪 Science Lab</p>
+            <p>⚽ Sports</p>
+            <p>🚌 Transport</p>
+        </div>
+
+    </div>
+    <div class="copyright">
+
+        <p>© 2026 Nobel Academy. All Rights Reserved.</p>
+
+        <div class="powered">
+           
+            <p>Powered By:</p>
+            <h3>Jems Tamang</h3>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipkart Clone</title>
+
+    <style>
+        .head1 {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 5px 5px;
+            background: white;
+        }
+
+
+        .head2 p {
+            font-size: 25px;
+            font-weight: bold;
+            color: blue;
+        }
+
+        .head3 p {
+            font-size: 18px;
+        }
+
+        .head4 p {
+            font-size: 18px;
+        }
+
+        .head4 {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .head5 {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 25px;
+            background: white;
+        }
+
+        .head6 {
+            width: 60%;
+        }
+
+        .head6 input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid lightgray;
+            outline: none;
+        }
+
+        .head7 {
+            margin-left: 20px;
+        }
+
+        .head8 {
+            margin-left: 20px;
+        }
+
+        .head9 {
+            margin-left: 20px;
+        }
+
+        .head10 {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 20px 10px;
+            background: white;
+            margin-top: 10px;
+        }
+
+       
+        .box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .head10 p {
+            font-size: 14px;
+        }
+
+        .offer {
+            width: 1000px;
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 200px;
+        }
+
+        .ads {
+            display: flex;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+        }
+
+        .ad {
+            min-width: 50px;
+            height: 267px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        .ad-box {
+            padding: 4px 4px 4px 4px;
+        }
+
+
+
+        .ad2 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            padding: 10px;
+        }
+
+
+
+
+        .text {
+            font-size: large;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .Trending {
+            width: 1000px;
+
+            padding: 15px;
+            border-radius: 10px;
+            background-color: antiquewhite;
+            margin: 20px auto;
+        }
+
+
+        .trend-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+
+        .ad2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ffffff;
+            padding: 10px;
+            border-radius: 5px;
+            object-fit: cover;
+            height: 200px;
+        }
+
+        .ad2 a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        .Trend {
+            width: 245px;
+            height: 175px;
+        }
+
+        .Trend {
+            width: 100%;
+            height: 100%;
+            max-height: 175px;
+            object-fit: contain;
+        }
+
+        .advertisements {
+            display: flex;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            min-width: 430px;
+        }
+
+        .advertisement {
+            min-width: 430px;
+            height: 444px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        .keywords {
+            background: #172337;
+            color: white;
+            display: flex;
+            justify-content: space-around;
+            padding: 40px 30px;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .keywords>div {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .keywords>div>div {
+            width: 16%;
+        }
+
+        .keywords p {
+            color: #878787;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .keywords p {
+            font-size: 13px;
+            line-height: 1.8;
+            margin: 0;
+        }
+    </style>
+
+<body>
+
+    <div class="head1">
+
+
+        <div class="head2">
+            <p>Flipkart</p>
+        </div>
+
+        <div class="head3">
+            <p>Travel</p>
+        </div>
+
+
+        <div class="head4">
+            <p>Location not set</p>
+            <p>Select delivery location</p>
+        </div>
+
+    </div>
+
+    <div class="head5">
+
+        <div class="head6">
+            <input type="text" placeholder="Search for Products, Brands and More">
+        </div>
+
+        <div class="head7">
+            <p>Login</p>
+        </div>
+
+        <div class="head8">
+            <p>More</p>
+        </div>
+
+        <div class="head9">
+            <p>Cart</p>
+        </div>
+
+    </div>
+
+    <div class="head10">
+
+        <div class="box">
+            <p>For You</p>
+        </div>
+        <div class="box">
+            <p>Fashion</p>
+        </div>
+        <div class="box">
+            <p>Mobiles</p>
+        </div>
+        <div class="box">
+            <p>Electronics</p>
+        </div>
+        <div class="box">
+            <p>Beauty</p>
+        </div>
+        <div class="box">
+            <p>Home</p>
+        </div>
+        <div class="box">
+            <p>Appliances</p>
+        </div>
+        <div class="box">
+            <p>Toys</p>
+        </div>
+        <div class="box">
+            <p>Food & Health</p>
+        </div>
+        <div class="box">
+            <p>Auto Access...</p>
+        </div>
+        <div class="box">
+            <p>Sports & More</p>
+        </div>
+
+    </div>
+
+    <div class="advertisements">
+        <div>
+
+
+            <img src="assets/img/d.jpg" alt="" class="advertisement">
+
+        </div>
+
+        <div>
+
+            <img src="assets/img/b.jpg" alt="" class="advertisement">
+
+        </div>
+
+        <div>
+            <img src="assets/img/a.jpg" alt="" class="advertisement">
+        </div>
+
+        
+
+    </div>
+
+    <div>
+        <img src="assets/img/discount.webp" alt="" class="offer">
+    </div>
+
+    <div class="ads">
+
+        <div class="ad-box">
+            <img src="assets/img/ad1.webp" alt="" class="ad">
+        </div>
+
+        <div class="ad-box">
+            <img src="assets/img/ad2.webp" alt="" class="ad">
+        </div>
+
+        <div class="ad-box">
+            <img src="assets/img/ad3.webp" alt="" class="ad">
+        </div>
+
+        <div class="ad-box">
+            <img src="assets/img/ad4.webp" alt="" class="ad">
+        </div>
+
+        <div class="ad-box">
+            <img src="assets/img/ad5.webp" alt="" class="ad">
+        </div>
+
+
+    </div>
+
+    <div class="Trending">
+        <div>
+            <p class="text">Trending Gadgets and Applicants</p>
+        </div>
+
+        <div class="trend-container">
+
+            <div class="ad2">
+                <a href="product2.html">
+
+                    <img src="assets/img/1.webp" alt="" class="Trend">
+                </a>
+            </div>
+
+            <div class="ad2">
+                <a href="product1.html">
+
+                    <img src="assets/img/2.webp" alt="" class="Trend">
+                </a>
+            </div>
+
+            <div class="ad2">
+                <a href="product3.html">
+
+                    <img src="assets/img/3.webp" alt="" class="Trend">
+                </a>
+            </div>
+
+            <div class="ad2">
+                <a href="product4.html">
+
+                    <img src="assets/img/4.webp" alt="" class="Trend">
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <div>
+        <div class="keywords">
+
+            <div>
+
+                <p>About</p>
+                <div>
+
+                    <p>
+                        Contact us
+                    </p>
+                    <p>About us</p>
+                    <p>Careers</p>
+                    <p>Flipkart stories</p>
+                    <p>Press</p>
+                    <p>Cooperative operation</p>
+                </div>
+
+
+
+                <div>
+                    <p>Group companies</p>
+
+                    <div>
+                        <p>Myntra</p>
+                        <p>Cleartrip</p>
+                        <p>Shopsy</p>
+                    </div>
+                </div>
+
+                <div>
+                    <p>Help</p>
+                    <div>
+                        <p>Payments</p>
+                        <p>Shipping issues</p>
+                        <p>Cancellations and returns</p>
+                        <p>FAQ</p>
+                    </div>
+                </div>
+
+                <div>
+                    <p>Consume Policy</p>
+                    <div>
+                        <p>Cancellations and return</p>
+                        <p>Terms of use</p>
+                        <p>Security</p>
+                        <p>Privacy</p>
+                        <p>
+
+                            Sitemap
+                        </p>
+                        <p>
+
+                            Grievance Redressal
+                        </p>
+                        <p>
+
+                            EPR Compliance
+                        </p>
+                        <p>
+
+                            FSSAI Food Safety Connect App
+                        </p>
+                    </div>
+                </div>
+
+                <div>
+                    <p>
+
+                        Mail us
+                    </p>
+                    <div>
+                        <p>
+
+                            Flipkart Internet Private Limited,
+                        </p>
+                        <p>
+
+                            Buildings Alyssa,
+                            Begonia &
+                        </p>
+                        <p>
+
+                            Clove Embassy Tech Village,
+                        </p>
+
+                        <p>
+
+                            Outer Ring Road, Devarabeesanahalli Village
+                        </p>
+
+                        <p>
+
+                            Bengaluru, 560103, Karnataka, India
+                        </p>
+
+                    </div>
+                </div>
+
+                <div>
+                    <p>
+                        Registered Office Address:
+                    </p>
+
+                    <div>
+                        <p>
+                            Flipkart Internet Private Limited,
+                        </p>
+                        <p>
+
+                            Buildings Alyssa, Begonia &
+                        </p>
+                        <p>
+
+                            Clove Embassy Tech Village,
+                        </p>
+                        <p>
+
+                            Outer Ring Road, Devarabeesanahalli Village,
+                        </p>
+                        <p>
+
+                            Bengaluru, 560103,
+                        </p>
+                        <p>
+
+                            Karnataka, India
+                        </p>
+                        <p>
+
+                            CIN: U51109KA2012PTC066107
+                        </p>
+                        <p>
+
+                            Telephone: 044-45514709/044-45714709
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
