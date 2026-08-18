@@ -1,5 +1,58 @@
 {
-  "Ayush Khatri": [
-    { "title": "Shopkart", "tag": "Frontend", "desc": "A simplified version of Twitter with tweet posting and user profiles.", "link": "projects/student_projects/2083-aayush_shopkart/ShopKard.html" }
-  ]
+  "Ayush Khatri": {
+    "image": "assets/img/students/ayush_khatri.jpg",
+    "projects": [
+      {
+        "title": "Shopkart",
+        "tag": "Frontend",
+        "desc": "A simplified version of Twitter with tweet posting and user profiles.",
+        "link": "projects/student_projects/2083-aayush_shopkart/ShopKard.html"
+      }
+    ]
+  },
+  "Jems Tamang": {
+    "image": "assets/img/students/jems_tamang.jpg",
+    "projects": [
+      {
+        "title": "Noble School",
+        "tag": "Frontend",
+        "desc": "A simplified version of Twitter with tweet posting and user profiles.",
+        "link": "projects/student_projects/2083-jems_noble_school/Noble.html"
+      }
+    ]
+  },
+  "Samrat": {
+    "image": "assets/img/students/samrat.jpg",
+    "projects": [
+      {
+        "title": "flipkart",
+        "tag": "Frontend",
+        "desc": "A simplified version of Twitter with tweet posting and user profiles.",
+        "link": "projects/student_projects/2083-samrat_flipkart/flipkart.html"
+      }
+    ]
+  },
+  "Sekaina": {
+    "image": "assets/img/students/sekaina.jpg",
+    "projects": [
+      {
+        "title": "Facebook Clone",
+        "tag": "Frontend",
+        "desc": "A simplified version of Twitter with tweet posting and user profiles.",
+        "link": "projects/student_projects/2083-sekaina/facebook_clone/facebook.html"
+      },
+      {
+        "title": "Yahoo Clone",
+        "tag": "Frontend",
+        "desc": "A simplified version of Twitter with tweet posting and user profiles.",
+        "link": "projects/student_projects/2083-sekaina/yahoo_clone/yahoo.html"
+      },
+      {
+        "title": "Youtube Clone",
+        "tag": "Frontend",
+        "desc": "A simplified version of Twitter with tweet posting and user profiles.",
+        "link": "projects/student_projects/2083-sekaina/youtube_clone/youtube.html"
+      }
+    ]
+  }
 }
