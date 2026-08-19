@@ -15,6 +15,38 @@
       --muted: #6f6a5e;
     }
 
+    .loading {
+      font-size: 16px;
+      color: #666;
+    }
+
+    .dots::after {
+      content: '';
+      animation: dots 1.5s steps(4, end) infinite;
+    }
+
+    @keyframes dots {
+      0% {
+        content: '';
+      }
+
+      25% {
+        content: '.';
+      }
+
+      50% {
+        content: '..';
+      }
+
+      75% {
+        content: '...';
+      }
+
+      100% {
+        content: '';
+      }
+    }
+
 
     .name-item {
       display: block;
@@ -36,7 +68,7 @@
       border-bottom: 1px solid var(--accent);
     }
 
-    .name-item {
+    .sidebar .name-item {
       display: flex;
       align-items: center;
       gap: 10px;
@@ -178,8 +210,74 @@
     <div class="sidebar" id="sidebar">
 
       <div class="names">
-        <h2>Students</h2>
-        <div id="nameList"></div>
+        <div id="nameList" class="name-list-loading">
+          <div class="skeleton-name">
+            <div class="skeleton-avatar"></div>
+            <div class="skeleton-text"></div>
+          </div>
+
+          <div class="skeleton-name">
+            <div class="skeleton-avatar"></div>
+            <div class="skeleton-text"></div>
+          </div>
+
+          <div class="skeleton-name">
+            <div class="skeleton-avatar"></div>
+            <div class="skeleton-text"></div>
+          </div>
+
+          <div class="skeleton-name">
+            <div class="skeleton-avatar"></div>
+            <div class="skeleton-text short"></div>
+          </div>
+        </div>
+
+        <style>
+          .name-list-loading {
+            width: 100%;
+          }
+
+          .skeleton-name {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            height: 52px;
+            padding: 5px 15px;
+          }
+
+          .skeleton-avatar {
+            width: 40px;
+            height: 40px;
+            flex-shrink: 0;
+            border-radius: 50%;
+
+            background: linear-gradient(90deg,
+                #1b1b1b 25%,
+                #303030 50%,
+                #1b1b1b 75%);
+
+            background-size: 200% 100%;
+            animation: skeleton-shimmer 1.5s infinite;
+          }
+
+          .skeleton-text {
+            width: 115px;
+            height: 17px;
+            border-radius: 5px;
+
+            background: linear-gradient(90deg,
+                #1b1b1b 25%,
+                #303030 50%,
+                #1b1b1b 75%);
+
+            background-size: 200% 100%;
+          }
+
+          .skeleton-text.short {
+            width: 95px;
+          }
+
+        </style>
       </div>
     </div>
 
